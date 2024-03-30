@@ -20,13 +20,13 @@ global.owner = [
 global.suittag = ['212717457920'];
 global.prems = ['212717457920'];
 
-global.packname = 'bobiza bot';
+global.packname = 'koba bot';
 global.author = 'bobiza';
 global.wm = 'bobiza';
 global.titulowm = 'bobiza';
 global.titulowm2 = `bobiza`
-global.igfg = 'bobiza';
-global.wait = '*|🏃| loading...*\n*نحاول تلبية طلبكم لا تستعجلوا* ♥\ninstagram.com/noureddine_ouafy';
+global.igfg = '♤koba♤';
+global.wait = '*_♤Loading♤_*';
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg');
 global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png');
@@ -48,8 +48,8 @@ global.tiempo = d.toLocaleString('en-US', {hour: 'numeric', minute: 'numeric', s
 global.wm2 = `${dia} ${fecha}\nBOBIZA`;
 global.gt = 'BOBIZA';
 global.mysticbot = 'The BOBIZA';
-global.md = 'https://instagram.com/noureddine_ouafy';
-global.mysticbot = 'https://instagram.com/noureddine_ouafy';
+global.md = 'https://www.instagram.com/mouhaobass12?igsh=MW8xbXB1ejR5YWdoMw==';
+global.mysticbot = 'https://www.instagram.com/mouhaobass12?igsh=MW8xbXB1ejR5YWdoMw==';
 global.waitt = '*[ ⏳ ] LOADING...*';
 global.waittt = '*[ ⏳ ] LOADING...*';
 global.waitttt = '*[ ⏳ ] LOADING...*';
