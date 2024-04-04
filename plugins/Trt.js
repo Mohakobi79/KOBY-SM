@@ -14,7 +14,7 @@ text = args.join(' ')}
 if (!text && m.quoted && m.quoted.text) text = m.quoted.text
 try {      
 let result = await translate(`${text}`, { to: lang, autoCorrect: true })
-await m.reply('*_♧loading♤_*' + result.text)
+await m.reply('✅' + result.text)
 } catch {
 try {    
 let lol = await fetch(`https://api.lolhuman.xyz/api/translate/auto/${lang}?apikey=85faf717d0545d14074659ad&text=${text}`)
