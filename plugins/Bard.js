@@ -1,7 +1,7 @@
 import fetch from "node-fetch";
 let handler = async (m, { text, usedPrefix, command }) => {
-	if (!text) throw `Hay adakah yang bisa saya bantu??`;
-	await m.reply("Searching...");
+	if (!text) throw `*_✅مرحبا✌🏻، كيف يمكنني مساعدتك_*`;
+	await m.reply("*_✋🏻(نحن 😇 في خدمتكم✅،إنتظر(ي..._*");
 	let putra = await fetch(`https://aemt.me/bard?text=${text}`);
 	let hasil = await putra.json();
 	let txt = `${hasil.result}`.trim();
@@ -9,9 +9,9 @@ let handler = async (m, { text, usedPrefix, command }) => {
 		text: txt,
 		contextInfo: {
 			externalAdReply: {
-				title: `Bard Google Ai`,
+				title: `👻KOBY-BOT-MD👻`,
 				body: wm,
-				thumbnailUrl: "https://telegra.ph/file/3d3535f2ea5f0f2034fff.jpg",
+				thumbnailUrl: "https://telegra.ph/file/72a25bedfd10d75e001bd.jpg",
 				sourceUrl: "https:/bard.google.com",
 				mediaType: 1,
 				renderLargerThumbnail: true,
