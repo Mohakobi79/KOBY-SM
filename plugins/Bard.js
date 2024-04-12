@@ -20,6 +20,6 @@ let handler = async (m, { text, usedPrefix, command }) => {
 	});
 };
 handler.help = ["bardgoogle *ᴛᴇxᴛ*"];
-handler.tags = [tai];
-handler.command = /^(bardgoogle)$/i;
+handler.tags = ["ai"];
+handler.command = /^(bard)$/i;
 export default handler;
