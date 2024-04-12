@@ -4,7 +4,7 @@ await conn.sendMessage(m.chat, { react: { text: '🟢', key: m.key }})
 try {
 let pp = imagen4
 //let vn = './media/menu.mp3'
-let img = await(await fetch('https://i.imgur.com/JP52fdP.jpg')).buffer()
+//let img = await(await fetch('https://i.imgur.com/JP52fdP.jpg')).buffer()
 let d = new Date(new Date + 3600000)
 let locale = 'es'
 let week = d.toLocaleDateString(locale, { weekday: 'long' })
@@ -32,7 +32,7 @@ conn.sendMessage(m.chat, { image: pp, caption: str.trim(), mentions: [...str.mat
 } catch {
 conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m)
 }}
-handler.command = /^(.)$/i
+handler.command = /^()$/i
 handler.exp = 50
 handler.fail = null
 export default handler
