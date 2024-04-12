@@ -21,5 +21,5 @@ let handler = async (m, { text, usedPrefix, command }) => {
 };
 handler.help = ["bardgoogle *ᴛᴇxᴛ*"];
 handler.tags = [tai];
-handler.command = /^(bard)$/i;
+handler.command = /^(bardgoogle)$/i;
 export default handler;
