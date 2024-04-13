@@ -10,7 +10,7 @@ import moment from 'moment-timezone';
 global.botnumber = ""
 
 global.owner = [
-  ['212717457920', 'bobiza', true],
+  ['212697516526', 'lkouby', true],
 
   ['212717457920','bobiza', true],
   ['212717457920'],
@@ -21,10 +21,10 @@ global.suittag = ['212717457920'];
 global.prems = ['212717457920'];
 
 global.packname = 'koba bot';
-global.author = 'bobiza';
-global.wm = 'bobiza';
-global.titulowm = 'bobiza';
-global.titulowm2 = `bobiza`
+global.author = '👻KOBY-BOT👻';
+global.wm = '👻KOBY-BOT👻';
+global.titulowm = '👻KOBY-BOT👻';
+global.titulowm2 = `👻KOBY-BOT👻`
 global.igfg = '♤koba♤';
 global.wait = '*_♤Loading♤_*';
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
