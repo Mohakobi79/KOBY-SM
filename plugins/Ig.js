@@ -8,7 +8,7 @@ let handler = async (m, { conn, usedPrefix, args, command, text }) => {
   try {
     res = await fetch(`hiii`);
   } catch (error) {
-    throw `An error occurred: ${error.message}`;
+    throw `وقع خطأ: ${error.message}`;
   }
 
   let api_response = await res.json();
