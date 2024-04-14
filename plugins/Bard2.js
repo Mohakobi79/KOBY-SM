@@ -3,8 +3,6 @@ import fetch from 'node-fetch';
 
 const handler = async (m, {conn, text, usedPrefix, command}) => {
   const datas = global
-  const tradutor = _translate.plugins.ia_bard
-
   if (!text) {
     throw `${tradutor.texto1[0]} _${usedPrefix + command} ${tradutor.texto1[1]}`;
   }
