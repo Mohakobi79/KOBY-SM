@@ -26,13 +26,13 @@ if (!result) throw 'Video Not Found, Try Another Title';
 const { title, thumbnail, timestamp, views, ago, url } = result;
 
 // Create a message caption with video information
-const captvid = `✼ ••๑⋯ ❀ Y O U T U B E ❀ ⋯⋅๑•• ✼
-❏ العنوان: ${title}
-❐ المدة: ${timestamp}
-❑ المشاهدتت: ${views}
-❒ تاريخ التشر: ${ago}
-❒ الرابط:* ${url}
-⊱─━━━━⊱༻●༺⊰━━━━─⊰`;
+const captvid = `👻✼ ••๑⋯ ❀ Y O U T U B E ❀ ⋯⋅๑•• ✼👻
+❏ *العنوان:* ${title}❇
+❐ *المدة:* ${timestamp}⏳
+❑ *المشاهدات:* ${views}🧿
+❒ *تاريخ النشر:* ${ago}⏱
+❒ *الرابط:* ${url} 🔗
+*⊱─KOBY━━⊱༻●༺⊰BOT━─⊰*`;
 
 // Send the video information along with the thumbnail to the Discord channel
 conn.sendMessage(m.chat, { image: { url: thumbnail }, caption: captvid, footer: author }, { quoted: m });
