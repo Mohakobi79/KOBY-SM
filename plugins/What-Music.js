@@ -18,15 +18,15 @@ let { code, msg } = res.status
 if (code !== 0) throw msg
 let { title, artists, album, genres, release_date } = res.metadata.music[0]
 let txt = `
-• 📌 Title: ${title}
-• 👨‍🎤 Singer: ${artists !== undefined ? artists.map(v => v.name).join(', ') : 'Unable to Detect'}
-• 💾 Album: ${album.name || 'Unable to Detect'}
-• 🌐 Genres: ${genres !== undefined ? genres.map(v => v.name).join(', ') : 'Unable to Detect'}
-• 📆 Release: ${release_date || 'Unable to Detect'}
+• 📥 *العنوان:* ${title}
+• 👨‍🎤 *الفنان:* ${artists !== undefined ? artists.map(v => v.name).join(', ') : 'Unable to Detect'}
+• 📘 *الألبوم:* ${album.name || 'Unable to Detect'}
+• ❇ *النوع:* ${genres !== undefined ? genres.map(v => v.name).join(', ') : 'Unable to Detect'}
+• ⏳ *بتاريخ :* ${release_date || 'Unable to Detect'}
 `.trim()
 fs.unlinkSync(`./tmp/${m.sender}.${ext}`)
 m.reply(txt)
-} else throw 'Failed to get The details'
+} else throw '*_🎧إذا كان لديك فيديو 📽 أو مقطع صوتي🎤 قصير ،إستخدم هاذا الأمر💡 لمعرفة تفاصيل  📘الموسيقى_*'
 }
 
 handler.help = ['findmusic']
