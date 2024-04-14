@@ -9,6 +9,7 @@ import axios from 'axios';
 const streamPipeline = promisify(pipeline);
  
 let handler = async (m, { conn, command, text, usedPrefix }) => {
+await conn.sendMessage(m.chat, { react: { text: '🎧', key: m.key }}) ;
 if (!text) throw `*🎧خاص بتنزيل📥 المقاطع الصوتية💡*`;
   await m.reply(`*_👻loading👻_*`)
 //await m.react(rwait);
