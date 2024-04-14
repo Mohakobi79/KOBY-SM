@@ -9,7 +9,7 @@ import axios from 'axios';
 const streamPipeline = promisify(pipeline);
 
 let handler = async (m, { conn, command, text, usedPrefix }) => {
-if (!text) throw `مثال${usedPrefix}${command} morak/manal`;
+if (!text) throw `*🎧خاص بتنزيل📥 المقاطع الصوتية💡*`;
 //await m.react(rwait);
 
 try {
@@ -27,11 +27,11 @@ const { title, thumbnail, timestamp, views, ago, url } = result;
 
 // Create a message caption with video information
 const captvid = `✼ ••๑⋯ ❀ Y O U T U B E ❀ ⋯⋅๑•• ✼
-❏ Title: ${title}
-❐ Duration: ${timestamp}
-❑ Views: ${views}
-❒ Upload: ${ago}
-❒ Link: ${url}
+❏ العنوان: ${title}
+❐ المدة: ${timestamp}
+❑ المشاهدتت: ${views}
+❒ تاريخ التشر: ${ago}
+❒ الرابط:* ${url}
 ⊱─━━━━⊱༻●༺⊰━━━━─⊰`;
 
 // Send the video information along with the thumbnail to the Discord channel
@@ -67,7 +67,7 @@ showAdAttribution: true,
 mediaType: 2,
 mediaUrl: url,
 title: title,
-body: 'HERE IS YOUR SONG',
+body: '👻KOBY-BOT👻',
 sourceUrl: url,
 thumbnail: await (await conn.getFile(thumbnail)).data
 }
