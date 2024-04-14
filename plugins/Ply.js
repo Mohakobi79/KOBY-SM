@@ -7,9 +7,10 @@ import os from 'os';
 import axios from 'axios';
 
 const streamPipeline = promisify(pipeline);
-await conn.sendMessage(m.chat, { react: { text: '🎧', key: m.key }}) 
+ 
 let handler = async (m, { conn, command, text, usedPrefix }) => {
 if (!text) throw `*🎧خاص بتنزيل📥 المقاطع الصوتية💡*`;
+  await m.reply(`*_👻loading👻_*`)
 //await m.react(rwait);
 
 try {
@@ -19,7 +20,7 @@ const query = encodeURIComponent(text);
 // Make a GET request to the API
 const response = await axios.get(`https://weeb-api.vercel.app/ytsearch?query=${query}`);
 const result = response.data[0]; // Get the first result
-await m.reply(`*_👻loading👻_*`)
+
 if (!result) throw 'Video Not Found, Try Another Title';
 
 // Extract video information from the API response
