@@ -5,7 +5,7 @@ let handler = async (m, { conn, text }) => {
         console.log('No song name provided.');
         throw `*Please enter a song name*`;
     }
-  m.react('🎶')
+ //m.react('🎶')
   await displayLoadingScreen(conn, m.chat);
   let pp = 'https://wallpapercave.com/wp/wp7932387.jpg'
     const query = encodeURIComponent(text);
