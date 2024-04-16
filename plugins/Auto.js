@@ -1,42 +1,46 @@
-
 const axios = require('axios');
 const fs = require('fs');
+const ytdl = require('ytdl-core');
 
-const handle = async (url) => {
-  // استخراج معلومات الفيديو من YouTube
-  const response = await axios.get(`https://www.youtube.com/get_video_info?video_id=${url}`);
-  const videoInfo = parseQueryParameters(response.data);
+// دالة لتنزيل مقطع فيديو من YouTube
+async function downloadVideo(videoURL, filePath) {
+  // الحصول على معلومات الفيديو
+  const videoInfo = await ytdl.getInfo(videoURL);
 
-  // تحديد أفضل تنسيق للفيديو
-  const bestFormat = videoInfo.formats[0];
+  // تحديد أفضل دقة متاحة
+  const bestFormat = videoInfo.formats.find((format) => format.container === 'mp4' && format.progressive === true);
+
+  // إنشاء مسار الملف
+  if (!fs.existsSync(filePath)) {
+    fs.mkdirSync(filePath, { recursive: true });
+  }
+
+  const fileName = `${videoInfo.video_id}.mp4`;
+  const fileFullPath = `${filePath}/${fileName}`;
 
   // تنزيل الفيديو
-  const videoStream = await axios.get(bestFormat.url, { responseType: 'stream' });
-  const videoPath = `${videoInfo.title}.${bestFormat.extension}`;
-  const writeStream = fs.createWriteStream(videoPath);
-  videoStream.data.pipe(writeStream);
+  const response = await axios.get(bestFormat.url, { responseType: 'stream' });
+  const writer = fs.createWriteStream(fileFullPath);
 
-  // انتظار اكتمال عملية التنزيل
+  response.data.pipe(writer);
+
+  // الانتظار حتى اكتمال التنزيل
   await new Promise((resolve, reject) => {
-    videoStream.on('end', resolve);
-    videoStream.on('error', reject);
+    writer.on('error', reject);
+    writer.on('finish', resolve);
   });
 
-  console.log(`تم تنزيل الفيديو بنجاح: ${videoPath}`);
-};
-
-// دالة لفك تشفير معلمات الاستعلام
-function parseQueryParameters(queryString) {
-  const params = {};
-  const pairs = queryString.split('&');
-  for (const pair of pairs) {
-    const [key, value] = pair.split('=');
-    params[decodeURIComponent(key)] = decodeURIComponent(value);
-  }
-  return params;
+  console.log(`تم تنزيل الفيديو بنجاح: ${fileName}`);
 }
 
-// تشغيل البرنامج
-const url = 'https://www.youtube.com/watch?v=VIDEO_ID'; // استبدل VIDEO_ID بمعرف الفيديو
-handle(url);
-```
+// دالة معالجة طلب تنزيل الفيديو
+async function handleDownloadRequest(videoURL, filePath) {
+  try {
+    await downloadVideo(videoURL, filePath);
+  } catch (error) {
+    console.error(`خطأ أثناء تنزيل الفيديو: ${error.message}`);
+  }
+}
+
+// تشغيل المعالج
+handleDownloadRequest('https://www.youtube.com/watch?v=VIDEO_ID', './videos');
