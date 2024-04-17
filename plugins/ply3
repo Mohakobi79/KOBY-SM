@@ -27,7 +27,7 @@ const handler = async (m, {
 
 const orderedLinks = result.allLinks.map((link, index) => {
     const sectionNumber = index + 1;
-    const {
+    const { 
         title,
         url
     } = link;
