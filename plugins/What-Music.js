@@ -31,5 +31,5 @@ m.reply(txt)
 
 handler.help = ['findmusic']
 handler.tags = ['tools']
-handler.command = /^quemusica|m|whatmusic|findmusic$/i
+handler.command = /^m$/i
 export default handler
