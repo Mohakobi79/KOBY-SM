@@ -1,4 +1,4 @@
-import fetch from 'node-fetch'
+ import fetch from 'node-fetch'
 let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, isPrems }) => {
 await conn.sendMessage(m.chat, { react: { text: '📃', key: m.key }})
 try {
