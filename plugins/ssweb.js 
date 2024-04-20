@@ -21,7 +21,7 @@ await conn.sendFile(m.chat, desktop.result, '',res, m, false)
 }
 handler.help = ['ssweb']
 handler.tags = ['tools']
-handler.command = /^(sb)$/i
+handler.command = /^(ssweb)$/i
 
 handler.limit = false
 
