@@ -1,6 +1,6 @@
 let handler = async(m, { conn, text , command }) => {
 if (command == 'focus') {
-if (!text) throw '*مثال* :\n*.focus* ♥♥';
+if (!text) throw '*مثال* :\n*.focus* 👻👻';
 let awikwok = `👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿👇🏿
 👉🏿👇🏾👇🏾👇🏾👇🏾👇🏾👇🏾👇🏾👇🏾👇🏾👈🏿
 👉🏿👉🏾👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👇🏽👈🏾👈🏿
