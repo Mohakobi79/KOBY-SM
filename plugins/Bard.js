@@ -11,7 +11,7 @@ let handler = async (m, { text, usedPrefix, command }) => {
 			externalAdReply: {
 				title: `👻KOBY-BOT-MD👻`,
 				body: wm,
-				sourceUrl: "https:/bard.google.com",
+				sourceUrl: "",
 				mediaType: 2,
 				renderLargerThumbnail: true,
 			},
