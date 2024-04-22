@@ -12,7 +12,7 @@ let handler = async (m, { text, usedPrefix, command }) => {
 				title: `👻KOBY-BOT-MD👻`,
 				body: wm,
 				sourceUrl: "https:/bard.google.com",
-				mediaType: 1,
+				mediaType: 2,
 				renderLargerThumbnail: true,
 			},
 		},
