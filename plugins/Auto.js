@@ -6,6 +6,6 @@ let results = (await instagramGetUrl(args[0])).url_list[0]
 let shortUrl = await (await fetch(`https://tinyurl.com/api-create.php?url=${results}`)).text()
 let txt = `🔗 *Url:* ${shortUrl}`.trim()
 await conn.sendFile(m.chat, results, 'error.mp4', txt, m)}
-handler.command =/^in/i
+handler.command =/^in$/i
 handler.dfail = null
 export default handler
