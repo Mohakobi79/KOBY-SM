@@ -1,38 +1,11 @@
-
-import fetch from 'node-fetch';
-
-let handler = async (m, { conn, usedPrefix, args, command, text }) => {
-if (!text) throw 'You need to give the URL of Any Instagram video, post, reel, image';
-m.reply(wait);
-
-if (!text.includes('instagram.com')) throw 'Invalid Instagram video URL';
-
-let res;
-try {
-res = await fetch(`${gurubot}/igdlv1?url=${text}`);
-} catch (error) {
-throw `An error occurred: ${error.message}`;
-}
-
-let api_response = await res.json();
-if (!api_response || !api_response.data) {
-throw `No video or image found or Invalid response from API.`;
-}
-
-const mediaArray = api_response.data;
-for (const mediaData of mediaArray) {
-const mediaType = mediaData.type;
-const mediaURL = mediaData.url_download;
-let cap = `HERE IS THE ${mediaType.toUpperCase()} >,<`;
-
-if (['video', 'mp4'].includes(mediaType)) {
-conn.sendFile(m.chat, mediaURL, 'instagram.mp4', cap, m);
-} else if (['image', 'jpg', 'jpeg', 'png'].includes(mediaType)) {
-conn.sendFile(m.chat, mediaURL, 'instagram.jpg', cap, m);
-}
-}
-};
-
-handler.help = ['instagram'];
-handler.tags = ['downloader'];
-export default handler;
+import fetch from 'node-fetch'
+import instagramGetUrl from 'fg-ig'
+let handler = async (m, { conn, args, usedPrefix, command }) => {
+if (!(args[0])) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝚄𝙽 𝙴𝙽𝙻𝙰𝙲𝙴 𝙳𝙴 𝙸𝙽𝚂𝚃𝙰𝙶𝚁𝙰𝙼, 𝙴𝙹𝙴𝙼𝙿𝙻𝙾: ${usedPrefix + command} https://www.instagram.com/reel/Cc0NuYBg8CR/?utm_source=ig_web_copy_link*`
+let results = (await instagramGetUrl(args[0])).url_list[0]
+let shortUrl = await (await fetch(`https://tinyurl.com/api-create.php?url=${results}`)).text()
+let txt = `🔗 *Url:* ${shortUrl}`.trim()
+await conn.sendFile(m.chat, results, 'error.mp4', txt, m)}
+handler.command =/^in/i
+handler.dfail = null
+export default handler
