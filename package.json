@@ -52,6 +52,7 @@
     "fg-ig": "^0.0.2",
     "google-it": "^1.6.3",
     "hispamemes": "^1.0.7",
+"uploadImage": "*";
     "human-readable": "^0.2.1",
     "jsdom": "^19.0.0",
     "link-preview-js": "^3.0.0",
