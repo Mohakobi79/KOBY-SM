@@ -95,7 +95,7 @@ throw 'An error occurred while searching for YouTube videos.';
 
 handler.help = ['play'].map((v) => v + ' <query>');
 handler.tags = ['downloader'];
-handler.command = /ply$/i;
+handler.command = /play$/i;
 
 handler.exp = 0;
 
