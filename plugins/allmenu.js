@@ -291,7 +291,7 @@ renderLargerThumbnail: true
 }
 handler.help = ['help']
 handler.tags = ['main']
-handler.command = ['all','allmenu'] 
+handler.command = ['all','menu2'] 
 
 export default handler
 
