@@ -5,6 +5,8 @@ let handler = async (m, { conn, usedPrefix, command }) => {
    /* let mime = (m.quoted ? m.quoted : m.msg).mimetype || ''
     if (!/video|audio/.test(mime)) throw `✳️ Reply to the video or voice note you want to convert to mp3 with the command :\n\n*${usedPrefix + command}*`*/
 await conn.sendMessage(m.chat, { react: { text: '🎤', key: m.key }}) ;
+
+await m.reply(wait);
     let media = await q.download?.()
     if (!media) throw '❎ Failed to download media'
     let audio = await toAudio(media, 'mp4')
