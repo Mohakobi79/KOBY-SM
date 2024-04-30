@@ -7,6 +7,8 @@ const bardHandler = async (m, { conn, text, usedPrefix, command }) => {
     try {
         conn.sendPresenceUpdate('composing', m.chat);
         const apiRes = await fetch(`https://aemt.me/bard?text=${encodeURIComponent(text)}`);
+
+await m.reply(wait);
         const res = await apiRes.json();
         await m.reply(res.result);
     } catch (error) {
