@@ -21,22 +21,18 @@ var handler = async (m, { args, conn, usedPrefix, command }) => {
   let res;
   try {
     res = await snapsave(args[0]);
-    conn.reply(m.chat, "Sedang mengunduh video... pada server snapsave", m);
+    
   } catch (error1) {
     try {
       res = await instagramdl(args[0]);
-      conn.reply(
-        m.chat,
-        "Sedang mengunduh video... pada server instagramdl",
-        m
-      );
+      
     } catch (error2) {
       try {
         res = await savefrom(args[0]);
-        conn.reply(m.chat, "Sedang mengunduh video... pada server savefrom", m);
+        
       } catch (error3) {
         console.log("error", error3);
-        conn.reply(m.chat, "Gagal mengunduh video", m);
+       
       }
     }
     conn.reply(m.chat, "error", m);
@@ -61,7 +57,7 @@ var handler = async (m, { args, conn, usedPrefix, command }) => {
       m,
     );
 
-    await conn.sendMessage(
+    ///await conn.sendMessage(
       m.chat,
       {
         document: { url: media },
