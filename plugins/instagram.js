@@ -58,42 +58,42 @@ var handler = async (m, { args, conn, usedPrefix, command }) => {
     );
 
     ///await conn.sendMessage(
-      m.chat,
-      {
-        document: { url: media },
-        mimetype: "video/mp4",
-        fileName: `instagram.mp4`,
-        caption: `ini kak videonya @${sender} versi dokumen, agar jernih`,
-        mentions: [m.sender],
-      },
-      { quoted: m },
-    );
+   //   m.chat,
+  //    {
+  //      document: { url: media },
+    //    mimetype: "video/mp4",
+      //  fileName: `instagram.mp4`,
+     //   caption: `ini kak videonya @${sender} versi dokumen, agar jernih`,
+     //   mentions: [m.sender],
+   //   },
+   //   { quoted: m },
+ //   );
 
-    const mp3FileName = `suara.mp3`;
-    await convertVideoToMp3(media, mp3FileName);
+ //   const mp3FileName = `suara.mp3`;
+  //  await convertVideoToMp3(media, mp3FileName);
 
-    await conn.sendFile(
-      m.chat,
-      mp3FileName,
-      mp3FileName,
-      `ini kak suaranya @${sender} versi MP3`,
-      m,
-    );
+ //   await conn.sendFile(
+  //    m.chat,
+ //     mp3FileName,
+    //  mp3FileName,
+     // `ini kak suaranya @${sender} versi MP3`,
+//      m,
+   // );
 
-    await fs.unlink(mp3FileName);
-  } catch (e) {
-    try {
-      let response = await fetch(
-        `https://tr.deployers.repl.co/instagramdl?url=${encodeURIComponent(
-          args[0],
-        )}`,
+   // await fs.unlink(mp3FileName);
+//  } catch (e) {
+ //   try {
+  //    let response = await fetch(
+ ////       `https://tr.deployers.repl.co/instagramdl?url=${encodeURIComponent(
+    //      args[0],
+      //  )}`,
       );
-      let data = await response.json();
+  //    let data = await response.json();
 
-      if (data.image || data.video) {
-        const sender = m.sender.split(`@`)[0];
+  //    if (data.image || data.video) {
+    //    const sender = m.sender.split(`@`)[0];
 
-        conn.reply(m.chat, "جاري التنزبل<", m);
+    //    conn.reply(m.chat, "جاري التنزبل<", m);
 
         await conn.sendMessage(
           m.chat,
@@ -105,26 +105,26 @@ var handler = async (m, { args, conn, usedPrefix, command }) => {
           m,
         );
 
-        await conn.sendMessage(
-          m.chat,
+     //   await conn.sendMessage(
+       //   m.chat,
           {
-            document: { url: data.video },
-            mimetype: "video/mp4",
-            fileName: `dokumen.mp4`,
-            caption: `ini kak videonya @${sender} versi dokumen, agar jernih`,
-            mentions: [m.sender],
-          },
-          { quoted: m },
-        );
+      //      document: { url: data.video },
+         //   mimetype: "video/mp4",
+         //   fileName: `dokumen.mp4`,
+       //     caption: `ini kak videonya @${sender} versi dokumen, agar jernih`,
+         //   mentions: [m.sender],
+      //    },
+        //  { quoted: m },
+     //   );
 
-        const mp3FileName = `suara.mp3`;
-        await convertVideoToMp3(data.video, mp3FileName);
+  //      const mp3FileName = `suara.mp3`;
+    //    await convertVideoToMp3(data.video, mp3FileName);
 
-        await conn.sendFile(
-          m.chat,
-          mp3FileName,
-          mp3FileName,
-          `ini kak suaranya @${sender} versi MP3`,
+   //     await conn.sendFile(
+   //       m.chat,
+   //       mp3FileName,
+     //     mp3FileName,
+     //     `ini kak suaranya @${sender} versi MP3`,
           m,
         );
 
