@@ -65,6 +65,9 @@
     "node-gtts": "^2.0.2",
     "node-id3": "^0.2.6",
     "node-webpmux": "^3.1.1",
+"instagram-url-direct":"*",
+"@xct007/frieren-scraper":"*",
+
     "perf_hooks": "^0.0.1",
     "pino": "^7.8.0",
     "pino-pretty": "^7.5.1",
