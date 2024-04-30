@@ -21,7 +21,7 @@ let readMore = more.repeat(850)
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
 var document = doc[Math.floor(Math.random() * doc.length)] 
-let str = ` HĚĹĽØ✌ 
+let str = `> HĚĹĽØ✌ 
 > *_WËĹÇÔÔMÊ_*, 
 > *_${taguser}_*
 ╰═══╡☆☆☆✯╞═══╯
