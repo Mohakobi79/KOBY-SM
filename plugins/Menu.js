@@ -22,26 +22,26 @@ let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
 var document = doc[Math.floor(Math.random() * doc.length)] 
 let str = ` HĚĹĽØ✌ 
-< *_WËĹÇÔÔMÊ_*, 
-< *_${taguser}_*
+> *_WËĹÇÔÔMÊ_*, 
+> *_${taguser}_*
 ╰═══╡☆☆☆✯╞═══╯
-< *< _📤charging●●●○○📥_ >*
+> *< _📤charging●●●○○📥_ >*
 ┃
-< ඬ *_📥ig_*
-< ඬ *_📥tiktok_*
-< ඬ *_📥fb_*
-< ඬ *_📥ytmp4_*
-< ඬ *_📥apk_*
-< ඬ *_📥dapk2_*
-< ඬ *_📥play_*
-< ඬ *_📥imagen_*
-< ඬ 
-< 
+> ඬ *_📥ig_*
+> ඬ *_📥tiktok_*
+> ඬ *_📥fb_*
+> ඬ *_📥ytmp4_*
+> ඬ *_📥apk_*
+> ඬ *_📥dapk2_*
+> ඬ *_📥play_*
+> ඬ *_📥imagen_*
+> ඬ 
+
 ╰═══╡☆☆☆✯╞═══╯
-< *< _🔎Searche●●●○○🔍_ >*
+> *< _🔎Searche●●●○○🔍_ >*
 ┃
-< ♧ *_🔍google_*
-< ♧ *_🔍yts_*
+> ♧ *_🔍google_*
+> ♧ *_🔍yts_*
 ╰═══╡☆☆☆✯╞═══╯ `.trim()
 if (m.isGroup) {
 //await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
