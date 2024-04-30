@@ -41,7 +41,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
     }
 };
 
-handler.command = ['bard'];
+handler.command = ['b1'];
 handler.help = ['bb', 'bb2'];
 handler.tags = ['ai'];
 
