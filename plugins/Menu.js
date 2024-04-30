@@ -16,7 +16,7 @@ let { money, joincount } = global.db.data.users[m.sender]
 let { exp, limit, level, role } = global.db.data.users[m.sender]
 let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
 let more = String.fromCharCode(8206)
-await m.reply(`*_⏳loading⏳_*`)
+await m.reply(`> *_👻loading👻_*`)
 let readMore = more.repeat(850) 
 let taguser = '@' + m.sender.split("@s.whatsapp.net")[0]
 var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
