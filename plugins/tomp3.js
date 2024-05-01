@@ -1,19 +1,19 @@
-import { toAudio } from '../lib/converter.js'
+import {toAudio} from '../lib/converter.js';
 
-let handler = async (m, { conn, usedPrefix, command }) => {
-    let q = m.quoted ? m.quoted : m
-  
+const handler = async (m, {conn, usedPrefix, command}) => {
+  const q = m.quoted ? m.quoted : m;
+  const mime = (m.quoted ? m.quoted : m.msg).mimetype || '';
 await conn.sendMessage(m.chat, { react: { text: '🎤', key: m.key }}) ;
+  if (!/video|audio/.test(mime)) throw `reply video/voice note you want to convert to audio/mp3 with caption *${usedPrefix + command}*`;
+  const media = await q.download?.();
+  if (!media) throw 'Can\'t download media';
+  const audio = await toAudio(media, 'mp4');
+  if (!audio.data) throw 'Can\'t convert media to audio';
+  conn.sendFile(m.chat, audio.data, 'audio.mp3', '', m, null, {mimetype: 'audio/mp4'});
+};
+handler.help = ['tomp3'].map((v) => v + ' <reply>');
+handler.tags = ['audio'];
 
-await m.reply(wait);
-    let media = await q.download?.()
-    if (!media) throw '❎ Failed to download media'
-    let audio = await toAudio(media, 'mp4')
-    if (!audio.data) throw '❎ Error converting'
-    conn.sendFile(m.chat, audio.data, 'audio.mp3', '', m, null, { mimetype: 'audio/mp4' })
-}
-handler.help = ['tomp3']
-handler.tags = ['download']
-handler.command = /^to(mp3|a(udio)?)$/i
+handler.command = /^to(mp3||a(udio)?)$/i;
 
-export default handler
+export default handler;
