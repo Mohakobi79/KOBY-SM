@@ -206,7 +206,7 @@ const handler = async (m, { conn, usedPrefix: _P, isOwner, isPremium }) => {
 };
 
 handler.help = ["menuaall"];
-handler.command = ["menuall","menu"];
+handler.command = ["mn3","menu3"];
 
 export default handler;
 
