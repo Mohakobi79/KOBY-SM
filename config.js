@@ -26,11 +26,7 @@ global.wm = '👻KOBY-BOT👻';
 global.titulowm = '👻KOBY-BOT👻';
 global.titulowm2 = `👻KOBY-BOT👻`
 global.igfg = '♤koba♤';
-global.wait = '《██▒▒▒▒▒▒▒▒▒▒▒》10%
- 《████▒▒▒▒▒▒▒▒》30%
- 《███████▒▒▒▒▒▒》50%
- 《██████████▒▒▒》70%  
-              *جارييي⏳  تحميل📥 الطلب*✅';
+global.wait = '*جارييي⏳  تحميل📥 الطلب* >';
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg');
 global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png');
