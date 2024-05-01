@@ -10,8 +10,8 @@ const streamPipeline = promisify(pipeline);
  
 let handler = async (m, { conn, command, text, usedPrefix }) => {
 await conn.sendMessage(m.chat, { react: { text: '🎧', key: m.key }}) ;
-if (!text) throw `*🎧خاص بتنزيل📥 المقاطع الصوتية💡*`;
-  await m.reply(`*_👻loading👻_*`)
+if (!text) throw `> *🎧خاص بتنزيل📥 المقاطع الصوتية💡*`;
+  await m.reply(`> *_👻loading👻_*`)
 //await m.react(rwait);
 
 try {
@@ -28,13 +28,13 @@ if (!result) throw 'Video Not Found, Try Another Title';
 const { title, thumbnail, timestamp, views, ago, url } = result;
 
 // Create a message caption with video information
-const captvid = `👻✼ ••๑⋯ ❀ Y O U T U B E ❀ ⋯⋅๑•• ✼👻
-❏ *العنوان:* ${title}❇
-❐ *المدة:* ${timestamp}⏳
-❑ *المشاهدات:* ${views}🧿
-❒ *تاريخ النشر:* ${ago}⏱
-❒ *الرابط:* ${url} 🔗
-*⊱─KOBY━━⊱༻●༺⊰BOT━─⊰*`;
+const captvid = `> 👻✼ ••๑⋯ ❀ Y O U T U B E ❀ ⋯⋅๑•• ✼👻
+> ❏ *العنوان:* ${title}❇
+> ❐ *المدة:* ${timestamp}⏳
+> ❑ *المشاهدات:* ${views}🧿
+> ❒ *تاريخ النشر:* ${ago}⏱
+> ❒ *الرابط:* ${url} 🔗
+> *⊱─KOBY━━⊱༻●༺⊰BOT━─⊰*`;
 
 // Send the video information along with the thumbnail to the Discord channel
 conn.sendMessage(m.chat, { image: { url: thumbnail }, caption: captvid, footer: author }, { quoted: m });
