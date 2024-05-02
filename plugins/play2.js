@@ -91,7 +91,7 @@ default: return char;
 
         await conn.sendMessage(m.chat, { text: formattedText, contextInfo: { externalAdReply: { title: yt_play[0].title, body: nomeDelBot, thumbnailUrl: yt_play[0].thumbnail, mediaType: 1, showAdAttribution: false, renderLargerThumbnail: true } } }, { quoted: m });
 
-        if (command == 'play') {        
+        if (command == 'play2') {        
             try {
                 let q = '128kbps'
                 let v = yt_play[0].url
