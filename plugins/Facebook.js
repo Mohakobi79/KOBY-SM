@@ -1,66 +1,39 @@
-// support me on https://trakteer.id/xnuvers007
-// 👍🏻
+import fg from 'api-dylux';
 
-import fetch from 'node-fetch';
+const handler = async (m, { conn, args, usedPrefix, command }) => {
+  if (!args[0]) {
+    throw `✳️ Please send the link of a Facebook video\n\n📌 EXAMPLE :\n*${usedPrefix + command}* https://www.facebook.com/Ankursajiyaan/videos/981948876160874/?mibextid=rS40aB7S9Ucbxw6v`;
+  }
 
-async function getFinalUrl(url) {
-    const response = await fetch(url, { method: 'GET', redirect: 'follow' });
-    if (response.headers.get('location')) {
-        return await getFinalUrl(response.headers.get('location'));
-    }
-    return url || response.url;
-}
+  const urlRegex = /^(?:https?:\/\/)?(?:www\.)?(?:facebook\.com|fb\.watch)\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/i;
+  if (!urlRegex.test(args[0])) {
+    throw '⚠️ PLEASE GIVE A VALID URL.';
+  }
 
-var handler = async (m, { args, conn, usedPrefix, command }) => {
-    if (!args[0]) {
-        throw `Input URL\nEx: ${usedPrefix + command} https://www.facebook.com/groups/175204112986693/permalink/1621191825054574/?mibextid=Nif5oz\n\n*Peringatan:* Dilarang menggunakan link fb.watch, karena tidak dapat diakses langsung. Harap salin link tersebut, buka browser, dan tempelkan di sana. Salin link yang diakses dan gunakan di sini.\n\nTutor: https://i.ibb.co/tPwcCLj/image-1.png`;
-    }
+  m.react(rwait);
 
-    try {
-        if (args[0].includes('fb.watch')) {
-            throw '*Dilarang menggunakan link fb.watch. Harap salin link tersebut, buka browser, dan tempelkan di sana. Salin link yang diakses dan gunakan di sini.*\n\nTutor: https://i.ibb.co/tPwcCLj/image-1.png';
-        }
+  try {
+    const result = await fg.fbdl(args[0]);
+    const tex = `
+⊱ ─── {* KOBY FBDL*} ─── ⊰
+↳ *VIDEO TITLE:* ${result.title}
+⊱ ────── {⋆♬⋆} ────── ⊰`;
 
-        const res = await fetch(args[0]);
-        const finalUrl = (await getFinalUrl(args[0])) || res.url;
+    const response = await fetch(result.videoUrl);
+    const arrayBuffer = await response.arrayBuffer();
+    const videoBuffer = Buffer.from(arrayBuffer);
 
-        await conn.reply(m.chat, `Redirected URL: ${finalUrl}\n\n${global.wait}`, m);
-
-        const server = `https://vihangayt.me/download/alldownload?url=${finalUrl}`;
-
-        const hasil = await fetch(server);
-        const data = await hasil.json();
-
-        if (data.status) {
-            await conn.sendFile(m.chat, data.data.thumbnail, 'thumbnail.jpg', `Title: ${data.data.title}\nURL: ${data.data.url}`);
-
-            if (Array.isArray(data.data.medias)) {
-                for (const media of data.data.medias) {
-                    const { url, quality, formattedSize, videoAvailable, audioAvailable, chunked, cached } = media;
-
-                    const sizeInfo = formattedSize ? `\nSize: ${formattedSize}` : '';
-                    const videoInfo = videoAvailable !== undefined ? `\nAda Video: ${videoAvailable}` : '';
-                    const audioInfo = audioAvailable !== undefined ? `\nAda Audio: ${audioAvailable}` : '';
-                    const chunkedInfo = chunked !== undefined ? `\nTerpotong-potong: ${chunked}` : '';
-                    const cachedInfo = cached !== undefined ? `\nCache: ${cached}` : '';
-
-                    await conn.sendFile(m.chat, url, `${quality}.mp4`, `Quality: ${quality}${sizeInfo}${videoInfo}${audioInfo}${chunkedInfo}${cachedInfo}\n\n${global.wm}\nDonasi: ${global.nomorown}`);
-                }
-            } else {
-                console.warn('Warning: Media data is not iterable or is undefined.');
-            }
-        } else {
-            throw 'Error fetching Facebook media. Please try again later.';
-        }
-    } catch (error) {
-        console.error('Error:', error);
-        conn.reply(m.chat, `An error occurred while processing the request. \n\n${error}`, m);
-    }
+    conn.sendFile(m.chat, videoBuffer, 'fb.mp4', tex, m);
+    m.react(done);
+  } catch (error) {
+    console.log(error);
+    m.reply(' ');
+  }
 };
 
-// Konfigurasi bantuan dan tag
-handler.help = ['fbdownload <url>'];
+handler.help = ['facebook <url>'];
 handler.tags = ['downloader'];
-handler.command = /^(fbdownload2|fb2(dl)?)$/i;
+handler.command = /^((facebook3|fb3)(downloder|dl)?)$/i;
+handler.diamond = true;
 
 export default handler;
