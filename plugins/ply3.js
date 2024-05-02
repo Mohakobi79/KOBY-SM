@@ -49,7 +49,7 @@ var handler = async (m, { conn, command, text, usedPrefix }) => {
         mediaUrl: url,
         title: wm,
         body: wm,
-        sourceUrl: ,
+        sourceUrl: url,
         thumbnail: await (await conn.getFile(thumbnail)).data
       }
     }
