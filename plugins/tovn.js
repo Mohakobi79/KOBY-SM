@@ -2,8 +2,16 @@ import { toPTT } from '../lib/converter.js'
 
 let handler = async (m, { conn, usedPrefix, command }) => {
     let q = m.quoted ? m.quoted : m
-    let mime = (m.quoted ? m.quoted : m.msg).mimetype || ''
+  //  let mime = (m.quoted ? m.quoted : m.msg).mimetype || ''
     if (!/video|audio/.test(mime)) throw `✳️ Reply to the audio you want to convert to voice memo with :\n *${usedPrefix + command}*`
+let loadd = [
+ '《██▒▒▒▒▒▒▒▒▒▒▒》10%',
+ '《████▒▒▒▒▒▒▒▒▒》30%',
+ '《███████▒▒▒▒▒▒》50%',
+ '《██████████▒▒▒》70%',
+ '《█████████████》100%',
+ '> *_☯️ تم التحويل ✅ بنجاح ..._*'
+ ]
     let media = await q.download?.()
     if (!media) throw '❎ Failed to download media'
     let audio = await toPTT(media, 'mp4')
