@@ -51,6 +51,7 @@
     "fs": "^0.0.1-security",
     "os":"*",
     "fg-ig": "^0.0.2",
+"utile":"*",
     "google-it": "^1.6.3",
     "hispamemes": "^1.0.7",
     "human-readable": "^0.2.1",
