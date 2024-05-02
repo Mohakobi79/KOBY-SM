@@ -8,7 +8,7 @@ let handler = async (m, { conn, usedPrefix, args, command, text }) => {
   try {
     res = await fetch(`https://www.guruapi.tech/api/igdlv1?url=${text}`);
   } catch (error) {
-    throw `An error occurred: ${error.message}`;
+    throw `حدث خطأ في هذه 👉🏻: ${error.message}`;
   }
 
   let api_response = await res.json();
