@@ -2,8 +2,8 @@ import { toPTT } from '../lib/converter.js'
 
 let handler = async (m, { conn, usedPrefix, command }) => {
     let q = m.quoted ? m.quoted : m
-  //  let mime = (m.quoted ? m.quoted : m.msg).mimetype || ''
-    if (!/video|audio/.test(mime)) throw `✳️ Reply to the audio you want to convert to voice memo with :\n *${usedPrefix + command}*`
+   let mime = (m.quoted ? m.quoted : m.msg).mimetype || ''
+    //if (!/video|audio/.test(mime)) throw `✳️ Reply to the audio you want to convert to voice memo with :\n *${usedPrefix + command}*`
 let loadd = [
  '《██▒▒▒▒▒▒▒▒▒▒▒》10%',
  '《████▒▒▒▒▒▒▒▒▒》30%',
