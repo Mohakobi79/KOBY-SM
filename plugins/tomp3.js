@@ -17,7 +17,7 @@ await conn.sendMessage(m.chat, {text: loadd[i], edit: key })}
     let chat = global.db.data.chats[m.chat]
     let q = m.quoted ? m.quoted : m
     let mime = (m.quoted ? m.quoted : m.msg).mimetype || ''
-    if (!/video|audio/.test(mime)) throw `Reply Video/Vn Nya`
+    if (!/video|audio/.test(mime)) throw `> قم بإشارة إلى المقطع الذي تود تحويله`
     let media = await q.download?.()
     if (!media) throw 'Can\'t download media'
     let audio = await toAudio(media, 'mp4')
