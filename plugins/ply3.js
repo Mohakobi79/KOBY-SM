@@ -69,7 +69,7 @@ var handler = async (m, { conn, command, text, usedPrefix }) => {
 
 handler.help = ['play'].map((v) => v + ' <judul lagu>');
 handler.tags = ['downloader'];
-handler.command = /^(ply3)$/i;
+handler.command = /^(p)$/i;
 
 
 export default handler;
