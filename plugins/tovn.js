@@ -13,7 +13,7 @@ let loadd = [
  '> *_☯️ تم التحويل ✅ بنجاح ..._*'
  ]
 for (let i = 0; i < loadd.length; i++) {
-await conn.sendMessage(m.chat, {text: loadd[i], edit: key })}
+await conn.sendMessage(m.chat, {text: loadd[i], edit:  })}
     let media = await q.download?.()
     if (!media) throw '❎ Failed to download media'
     let audio = await toPTT(media, 'mp4')
