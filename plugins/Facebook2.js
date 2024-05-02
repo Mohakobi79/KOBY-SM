@@ -25,7 +25,7 @@ const handler = async (m, {
             }),
         });
 
-        m.reply('Mohon tunggu...'+wait);
+        m.reply(' '+wait);
 
         const html = await response.text();
         const $ = cheerio.load(html);
