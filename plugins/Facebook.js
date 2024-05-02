@@ -10,7 +10,7 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
     throw '⚠️ PLEASE GIVE A VALID URL.';
   }
 
-  m.react(rwait);
+ // m.react(rwait);
 
   try {
     const result = await fg.fbdl(args[0]);
