@@ -112,6 +112,6 @@ const handler = async (m, {
 
 handler.help = ['fbdownload <url>'];
 handler.tags = ['downloader'];
-handler.command = /^(fbdownload|fb(dl)?)$/i;
+handler.command = /^(fbdownload2|fb2(dl)?)$/i;
 
 export default handler;
