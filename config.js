@@ -27,6 +27,7 @@ global.titulowm = '👻KOBY-BOT👻';
 global.titulowm2 = `👻KOBY-BOT👻`
 global.igfg = '♤koba♤';
 global.wait = '> جارييي⏳  تحميل📥 الطلب';
+global.rwait = '⌛'
 global.imagen1 = fs.readFileSync('./Menu2.jpg');
 global.imagen2 = fs.readFileSync('./src/nuevobot.jpg');
 global.imagen3 = fs.readFileSync('./src/Pre Bot Publi.png');
