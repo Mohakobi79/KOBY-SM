@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, usedPrefix, args, command, text }) => {
-  if (!text) throw `< _خاص☯️ بالتحميل 📥 من الأنسغرام_`;
+  if (!text) throw `> _خاص☯️ بالتحميل 📥 من الأنسغرام_`;
   m.reply(wait);
 
   let res;
