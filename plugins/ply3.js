@@ -7,7 +7,7 @@ import os from 'os';
 const streamPipeline = promisify(pipeline);
 
 var handler = async (m, { conn, command, text, usedPrefix }) => {
-  if (!text) throw `< Téléchargé music`;
+  if (!text) throw `> Téléchargé music`;
 
   let search = await yts(text);
   let vid = search.videos[0];
@@ -47,7 +47,7 @@ var handler = async (m, { conn, command, text, usedPrefix }) => {
         showAdAttribution: true,
         mediaType: 2,
         mediaUrl: url,
-        title: title,
+        title: wm,
         body: wm,
         sourceUrl: url,
         thumbnail: await (await conn.getFile(thumbnail)).data
@@ -69,7 +69,7 @@ var handler = async (m, { conn, command, text, usedPrefix }) => {
 
 handler.help = ['play'].map((v) => v + ' <judul lagu>');
 handler.tags = ['downloader'];
-handler.command = /^(play3)$/i;
+handler.command = /^(ply3)$/i;
 
 
 export default handler;
