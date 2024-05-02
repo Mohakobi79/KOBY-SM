@@ -54,7 +54,7 @@ for (let i = 0; i < img.length; i++) {
             const txt1 = `_*< Instagram downloader />*_\n\n▢ *URL:* _${shortUrl1}_`.trim();
             await conn.sendFile(m.chat, videoig, 'error.mp4', txt1, cap, m);
           } catch {
-            throw ` `;
+            throw `> TÉLÉCHARGER⏳ BONNE ✅`;
           }
         }
       }
