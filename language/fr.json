@@ -1,1 +1,2413 @@
-
+{
+    "__creditos": {
+        "__Contribuidor": "https://github.com/jeffersonalionco",
+        "__Criador": "https://github.com/BrunoSobrino"
+    },
+    "plugins": {
+        "antiarab": {
+            "texto1": "< ANTI-ARABES />\n\n*[ ℹ️ ] Dans ce groupe, les numéros commençant par +212 ne sont pas autorisés. Par conséquent, il sera exclu du groupe.*",
+            "texto2": "< ANTI-ARABES />\n\n*[ ℹ️ ] Dans ce groupe, les numéros commençant par +265 ne sont pas autorisés. Par conséquent, il sera exclu du groupe.*",
+            "texto3": "< ANTI-ARABES />\n\n*[ ℹ️ ] Dans ce groupe, les numéros commençant par +92 ne sont pas autorisés. Par conséquent, il sera exclu du groupe."
+        },
+        "_antilink": {
+            "texto1": "< ANTI-LIEN />*\n\n*[ ℹ️ ] L'anti-lien est activé, mais le participant ayant envoyé le lien est un administrateur.",
+            "texto2": "_< ANTI-LIEN />_\n\n[ ℹ️ ] Le participant @user a envoyé un lien vers un groupe WhatsApp, il sera donc supprimé.",
+            "texto3": "_< ANTI-LIEN />_\n\n[ ℹ️ ] Pour que l'anti-lien fonctionne correctement, le bot doit être administrateur du groupe.",
+            "texto4": "_< ANTI-LIEN />_\n\n[ ℹ️ ] Cette fonctionnalité est désactivée car la fonctionnalité* restrict est activée."
+        },
+        "antilink2": {
+            "texto1": "< ANTI-LIEN 2 />\n\n*[ ℹ️ ] Le participant @user a envoyé un lien vers un groupe WhatsApp, il sera donc supprimé.*",
+            "texto2": "< ANTI-LIEN 2 />\n\n*[ ℹ️ ] Pour que l'anti-lien fonctionne correctement, le bot doit être administrateur du groupe.*",
+            "texto3": "< ANTI-LIEN 2 />\n\n*[ ℹ️ ] Cette fonctionnalité est désactivée car la fonctionnalité* restrict est activée."
+        },
+        "antiprivado": {
+            "texto1": "< ANTI-PRIVÉ />\n\n*[ ℹ️ ] La fonction anti-privé est activée, vous serez donc bloqué."
+        },
+        "antitoxic": {
+            "texto1": "< ANTI-TOXIQUE />_\n\n[ ℹ️ ] ",
+            "texto1_1": " envoyer le mot ",
+            "texto1_2": " est interdit dans ce groupe.\n\n▢ Avertissement : ",
+            "texto2": "< ANTI-TOXIQUE />\n\n*[ ℹ️ ] Le participant ",
+            "texto2_1": " a dépassé 5 avertissements, vous serez donc expulsé du groupe.* "
+        },
+        "antitrabas": {
+            "texto1": "< ANTI-CARACTERES />\n\n*[ ℹ️ ] L'administrateur ",
+            "texto1_1": " a envoyé un message contenant de nombreux caractères.* ",
+            "texto2": "[ ! ] Un message contenant de nombreux caractères a été détecté [ ! ]\n",
+            "texto2_1": " Je ne suis pas administrateur, je ne peux rien faire :/ ",
+            "texto3": " Marquer la conversation comme lue ✓ ",
+            "texto3_1": " Le numéro : ",
+            "texto3_2": " Alias ",
+            "texto3_3": "[ ! ] Vous venez d'envoyer un texte contenant de nombreux caractères, ce qui peut provoquer des dysfonctionnements sur les appareils ",
+            "texto4": "[ ! ] Pour effectuer des actions de suppression, mon propriétaire doit activer le mode restreint ! "
+        },
+        "antiviewonce": {
+            "texto1": "- Dans ce groupe, vous n'êtes pas autorisé à masquer quoi que ce soit."
+        },
+        "autosticker": {
+            "texto1": "< FONCTIONS - AUTOCOLLANT AUTOMATIQUE />\n\n*[ ℹ️ ] La durée de la vidéo ne peut pas dépasser 7 secondes.\n\n[ 💡 ] Pour désactiver la fonction* autosticker , envoyez la commande suivante: _/"
+        },
+        "_detectevents": {
+            "texto1": "Récemment, un membre a été promu administrateur.\n\n",
+            "texto1_1": "◦ Groupe :",
+            "texto1_2": "◦ Nouvel admin :",
+            "texto1_3": "◦ Exécuté par :",
+            "texto2": "Récemment, un administrateur a été rétrogradé au rang de membre.\n\n",
+            "texto2_1": "◦ Groupe :",
+            "texto2_2": "◦ A été supprimé :",
+            "texto2_3": "◦ Exécuté par :",
+            "texto3": "Récemment, un nouveau membre a été ajouté au groupe.\n\n",
+            "texto3_1": "◦ Groupe :",
+            "texto3_2": "◦ A été ajouté : ",
+            "texto3_3": "◦ Exécuté par : ",
+            "texto3_4": "◦ A été ajouté : ",
+            "texto4": "Récemment, un membre a été supprimé du groupe.\n\n",
+            "texto4_1": "◦ Groupe : ",
+            "texto4_2": "◦ A été supprimé : ",
+            "texto4_3": "◦ Exécuté par :",
+            "texto4_4": "◦ A été supprimé : ",
+            "texto5": "Récemment, un membre a ",
+            "texto5_1": "du groupe.\n\n",
+            "texto5_2": "`◦ Groupe : ",
+            "texto5_3": "◦ A été supprimé : ",
+            "texto5_4": "◦ Exécuté par : ",
+            "texto5_5": "◦ A quitté : ",
+            "texto6": "Récemment, les paramètres du groupe ont été modifiés.\n\n",
+            "texto6_1": "◦ Groupe : ",
+            "texto6_2": "◦ Le groupe a été : ",
+            "texto6_3": "◦ Exécuté par : ",
+            "texto7": "Récemment, le nom du groupe a été modifié.\n\n",
+            "texto7_1": "◦ Nouveau nom : ",
+            "texto7_2": "◦ Exécuté par : "
+        },
+        "_premium": {
+            "texto1": "Votre période en tant qu'utilisateur premium a expiré, vous n'êtes plus un utilisateur premium*"
+        },
+        "adult_hentaipdf": {
+            "texto1": "[❗𝐈𝐍𝐅𝐎❗] LES COMMANDES +18 SONT DÉSACTIVÉES DANS CE GROUPE, SI VOUS ÊTES ADMINISTRATEUR ET SOUHAITEZ LES ACTIVER, UTILISEZ LA COMMANDE #enable modohorny",
+            "texto2": "[❗] INSÉREZ LE NOM D'UNE CATÉGORIE DE HENTAI, PAR EXEMPLE :",
+            "texto2_1": "miku",
+            "texto3": "[❗] ERREUR, VEUILLEZ ESSAYER À NOUVEAU OU ESSAYER AVEC UNE AUTRE CATÉGORIE"
+        },
+        "adult_hentaisearch": {
+            "texto1": "[❗𝐈𝐍𝐅𝐎❗] LES COMMANDES +18 SONT DÉSACTIVÉES DANS CE GROUPE, SI VOUS ÊTES ADMINISTRATEUR ET SOUHAITEZ LES ACTIVER, UTILISEZ LA COMMANDE #enable modohorny",
+            "texto2": "[❗] INSÉREZ LE NOM D'UN HENTAI À RECHERCHER",
+            "texto3": "[❗] AUCUN RÉSULTAT TROUVÉ"
+        },
+        "adult_pack_vid": {
+            "texto1": "[❗𝐈𝐍𝐅𝐎❗] LES COMMANDES +18 SONT DÉSACTIVÉES DANS CE GROUPE, SI VOUS ÊTES ADMINISTRATEUR ET SOUHAITEZ LES ACTIVER, UTILISEZ LA COMMANDE #enable modohorny",
+            "texto2": "PROFITEZ DE LA VIDÉO "
+        },
+        "adult_xnxxdl": {
+            "texto1": "[❗𝐈𝐍𝐅𝐎❗] LES COMMANDES +18 SONT DÉSACTIVÉES DANS CE GROUPE, SI VOUS ÊTES ADMINISTRATEUR ET SOUHAITEZ LES ACTIVER, UTILISEZ LA COMMANDE #enable modohorny",
+            "texto2": "[❗𝐈𝐍𝐅𝐎❗] INSÉREZ UN LIEN VALIDE DE XNXX, PAR EXEMPLE :",
+            "texto3": "[❗] LA VIDÉO EST EN COURS DE TRAITEMENT, VEUILLEZ ATTENDRE PENDANT QU'ELLE EST ENVOYÉE..\n\n- LE TEMPS D'ENVOI DÉPEND DU POIDS ET DE LA DURÉE DE LA VIDÉO",
+            "texto4": "[❗] AUCUN LIEN TROUVÉ POUR CE NUMÉRO, VEUILLEZ INSÉRER UN NUMÉRO ENTRE 1 ET LE ",
+            "texto5": "[❗] POUR UTILISER CETTE COMMANDE DE CETTE MANIÈRE ",
+            "texto5_1": "<nombre>), VEUILLEZ EFFECTUER UNE RECHERCHE DE VIDÉOS AVEC LA COMMANDE",
+            "texto6": "[❗] POUR UTILISER CETTE COMMANDE DE CETTE MANIÈRE ",
+            "texto6_1": "<nombre>), VEUILLEZ EFFECTUER UNE RECHERCHE DE VIDÉOS AVEC LA COMMANDE",
+            "texto7": "[❗𝐈𝐍𝐅𝐎❗] ERREUR, VEUILLEZ ESSAYER À NOUVEAU \n\n- VÉRIFIEZ SI LE LIEN EST SIMILAIRE À 𝙰:"
+        },
+        "adult_xnxxsearch": {
+            "texto1": "[❗] Les commandes +18 sont désactivées dans ce groupe, si vous êtes administrateur et souhaitez les activer, utilisez",
+            "texto2": "[❗𝐈𝐍𝐅𝐎❗] INSÉREZ L'ÉLÉMENT QUE VOUS SOUHAITEZ RECHERCHER ",
+            "texto3": "🔍 RÉSULTATS DE LA RECHERCHE :"
+        },
+        "adult_xvideosdl": {
+            "texto1": "[❗𝐈𝐍𝐅𝐎❗] LES COMMANDES +18 SONT DÉSACTIVÉES DANS CE GROUPE. SI VOUS ÊTES ADMINISTRATEUR ET SOUHAITEZ LES ACTIVER, UTILISEZ",
+            "texto2": "[❗𝐈𝐍𝐅𝐎❗] INSÉREZ UN LIEN VALIDE DE XVÍDEOS, PAR EXEMPLE :",
+            "texto3": "[❗] LA VIDÉO EST EN COURS DE TRAITEMENT, VEUILLEZ ATTENDRE PENDANT QU'ELLE EST ENVOYÉE..\n\n- LE TEMPS D'ENVOI DÉPEND DU POIDS ET DE LA DURÉE DE LA VIDÉO",
+            "texto4": "[❗𝐈𝐍𝐅𝐎❗] ERREUR, VEUILLEZ ESSAYER À NOUVEAU \n*- VÉRIFIEZ SI LE LIEN EST SIMILAIRE À :"
+        },
+        "afk__afk": {
+            "texto1": [
+                "[❗] AUCUN TAG [❗]",
+                "L'UTILISATEUR QUI A UTILISÉ L'ÉTIQUETTE EST INACTIF (AFK)",
+                "MOTIF D'INACTIVITÉ (AFK) : ",
+                "MOTIF D'INACTIVITÉ (AFK) : L'UTILISATEUR N'A PAS SPÉCIFIÉ UN MOTIF LORS DE SON ACTIVATION",
+                "TEMPS ÉCOULÉ D'INACTIVITÉ (AFK) :"
+            ],
+            "texto2": [
+                "*[❗INFORMAÇÃO❗] SOUHAITEZ-VOUS DÉSACTIVER L'INACTIVITÉ (AFK)",
+                "DÉSACTIVER L'INACTIVITÉ (AFK) POUR CETTE RAISON :",
+                "—◉ TEMPS D'INACTIVITÉ (AFK) :"
+            ]
+        },
+        "anonymous_chat": {
+            "texto1": "*[❗INFORMATIONS❗]* VOUS N'ÊTES PAS DANS UN CHAT ANONYME\n\nVOULEZ-VOUS DÉMARRER UN CHAT ANONYME ?\nÉCRIVEZ",
+            "texto2": "*[ ✔ ]* A QUITTÉ LE CHAT ANONYME AVEC SUCCÈS",
+            "texto3": "*[❗INFORMATIONS❗]* L'AUTRE UTILISATEUR A QUITTÉ LE CHAT ANONYME\n\nVOULEZ-VOUS QUITTER LE CHAT ANONYME ?\nÉCRIVEZ",
+            "texto4": "*[❗INFORMATIONS❗]* TOUS LES UTILISATEURS SONT DANS UN CHAT ANONYME, EN ATTENDANT QU'UN AUTRE UTILISATEUR SE JOIGNE POUR DÉMARRER UN CHAT ANONYME\n\nVOULEZ-VOUS QUITTER LE CHAT ANONYME ?\nÉCRIVEZ",
+            "texto5": "*[ ✔ ]* REJOINT LE CHAT ANONYME AVEC SUCCÈS, DEMANDE ENVOYÉE À L'AUTRE UTILISATEUR",
+            "texto6": "*[ ✔ ]* REJOINT LE CHAT ANONYME AVEC SUCCÈS, DEMANDE ENVOYÉE À L'AUTRE UTILISATEUR\n\nUN AUTRE CHAT EST CRÉÉ",
+            "texto7": "*[❗INFORMATIONS❗]* ATTENDRE L'AUTRE UTILISATEUR POUR DÉMARRER UN CHAT ANONYME\n\nVOULEZ-VOUS QUITTER LE CHAT ANONYME ?\nÉCRIVEZ"
+        },
+        "audio_efectos": {
+            "texto1": "*[❗INFORMATIONS❗] LA RÉPONSE À L'AUDIO OU À LA NOTE VOCALE ET NON À LA VOIX ELLE SERA MODIFIÉE, UTILISEZ LA COMMANDE*"
+        },
+        "buscador_animeinfo": {
+            "texto1": "*[❗INFORMATIONS❗]* _INSÉREZ LE NOM D'UN ANIME À RECHERCHER_",
+            "texto2": [
+                "*🎀 • Titre",
+                "*🎋 • Format :*",
+                "*📈 • Statut :*",
+                "*🍥 • Nombre total d'épisodes :*",
+                "*🎈 • Durée :*",
+                "*✨ • Basé sur :*",
+                "*💫 • Première :*",
+                "*🎗 • Terminé :*",
+                "*🎐 • Popularité :*",
+                "*🎏 • Favoris :*",
+                "*🎇 • Classification :*",
+                "*🏅 • Classement :*",
+                "*♦ • Bande-annonce :*",
+                "*🌐 • URL :*",
+                "*🎆 • Contexte :*",
+                "*❄ • Résumé :*"
+            ],
+            "texto3": "*[❗]* _ERREUR, VEUILLEZ ESSAYER À NOUVEAU_"
+        },
+        "buscador_githubsearch": {
+            "texto1": [
+                "*🔗 URL :*",
+                "*📅 Créé le :*",
+                "*🔄 Mis à jour le :*",
+                "*📥 Clone : $ git clone*",
+                "*Description :*"
+            ]
+        },
+        "buscador_google": {
+            "texto1": "[❗𝐈𝐍𝐅𝐎❗] INSÉREZ LE TEXTE OU LE SUJET QUE VOUS SOUHAITEZ RECHERCHER",
+            "texto2": "RÉSULTATS DE :"
+        },
+        "buscador_lyrics": {
+            "texto1": "[❗𝐈𝐍𝐅𝐎❗] EXEMPLE D'UTILISATION CORRECTE DE LA COMMANDE",
+            "texto2": [
+                "🎤 TITRE :",
+                "👤 ARTISTE :",
+                "📃🎵 PAROLES :",
+                "[❗𝐈𝐍𝐅𝐎❗] ERREUR, VEUILLEZ ESSAYER À NOUVEAU"
+            ]
+        },
+        "buscador_peliculas": {
+            "texto1": "[❗] INSÉREZ LE NOM OU LE LIEN DU FILM QUE VOUS SOUHAITEZ RECHERCHER",
+            "texto2": "[❗] AUCUNE INFORMATION PERTINENTE AUX FILMS TROUVÉE",
+            "texto3": [
+                "🎬 • Nom :",
+                "🍿 • URL :",
+                "💫 • Bloqueur de publicités recommandé :",
+                "Block This",
+                "⛨ • Lien :"
+            ]
+        },
+        "buscador_playstore": {
+            "texto1": "[❗] INSÉREZ LE NOM DE L'APPLICATION QUE VOUS SOUHAITEZ RECHERCHER",
+            "texto2": "[❗] INSÉREZ LE NOM DE L'APPLICATION QUE VOUS SOUHAITEZ RECHERCHER",
+            "texto3": [
+                "*🔍 Résultat :*",
+                "*✍️ Développeur :*",
+                "*💸 Prix :*",
+                "*📈 Classification :*",
+                "*⛓️ Lien :*"
+            ]
+        },
+        "buscador_stickersearch": {
+            "texto1": "[❗] INSÉREZ LE NOM DU PACK QUE VOUS SOUHAITEZ RECHERCHER",
+            "texto2": [
+                "🪴 • Résultat :",
+                "🌵 • Nom :",
+                "🍂 • URL :"
+            ],
+            "texto3": "[❗] ERREUR, VEUILLEZ ESSAYER À NOUVEAU"
+        },
+        "buscador_stickersearch2": {
+            "texto1": "[❗] INSÉREZ LE NOM DU PACK QUE VOUS SOUHAITEZ RECHERCHER",
+            "texto2": [
+                "🌅 • Résultat :",
+                "🥗 • Nom :",
+                "🐢 • Auteur :",
+                "🍂 • URL :"
+            ],
+            "texto3": "[❗] ERREUR, VEUILLEZ ESSAYER À NOUVEAU"
+        },
+        "buscador_wikipedia": {
+            "texto1": [
+                "[❗️𝐈𝐍𝐅𝐎❗️] VOUS UTILISEZ LA COMMANDE INCORRECTEMENT !!\nUTILISATION CORRECTE :\n",
+                "Mot-clé à rechercher\n\nEXEMPLE :\n",
+                ""
+            ],
+            "texto2": "VOICI LES INFORMATIONS EXTRAITES :",
+            "texto3": "[❗️𝐈𝐍𝐅𝐎❗️] AUCUNE INFORMATION N'A ÉTÉ TROUVÉE, VEUILLEZ VOUS ASSURER D'AVOIR TAPÉ UN SEUL MOT ET DE L'AVOIR CORRECTEMENT ÉCRIT"
+        },
+        "buscador_yts": {
+            "texto1": "Que voulez-vous que je recherche sur YouTube ?",
+            "texto2": [
+                "Lien :",
+                "Durée :",
+                "Posté le :",
+                "Vues :"
+            ]
+        },
+        "cmd_add": {
+            "texto1": "[❗️INFORMATION❗️] RÉPONDEZ AVEC LE STICKER OU L'IMAGE AU COMMANDE OU TEXTE À ASSOCIER",
+            "texto2": "[❗️INFORMATION❗️] SEULS LES COMMANDES OU TEXTES PEUVENT ÊTRE ASSOCIÉS AUX STICKERS ET AUX IMAGES",
+            "texto3": [
+                "[❗️INFORMATION❗️] ERREUR, TEXTE MANQUANT *\n\n*UTILISATION CORRECTE DE LA COMMANDE :",
+                "<texte> <répondre au sticker ou à l'image>",
+                "EXEMPLE D'UTILISATION CORRECTE DE LA COMMANDE :",
+                "<répondre au sticker ou à l'image>"
+            ],
+            "texto4": "[❗️INFORMATION❗️] SEUL LE PROPRIÉTAIRE PEUT EFFECTUER LA MODIFICATION",
+            "texto5": "[✔️] LE TEXTE/COMMANDE ASSOCIÉ AU STICKER/IMAGE A ÉTÉ APPLIQUÉ AVEC SUCCÈS À LA BASE DE DONNÉES DE CORRECTIONS"
+        },
+        "cmd_del": {
+            "texto1": "[❗INFORMATION❗] LE STICKER OU L'IMAGE AUQUEL VOUS AVEZ RÉPONDU SERA SUPPRIMÉ DES COMMANDES ASSOCIÉES AUX STICKERS OU AUX IMAGES, POUR OBTENIR LE CODE ASSOCIÉ, UTILISEZ LA COMMANDE /CMDINFO",
+            "texto2": "[❗INFORMATION❗] LE STICKER OU L'IMAGE A ÉTÉ SUPPRIMÉ AVEC SUCCÈS DE LA SUPPRESSION",
+            "texto3": "[✔️] LE TEXTE/COMMANDE ASSOCIÉ AU STICKER/IMAGE A ÉTÉ SUPPRIMÉ AVEC SUCCÈS DE LA BASE DE DONNÉES DE CORRECTIONS"
+        },
+        "cmd_list": {
+            "texto1": "< LISTE DES COMMANDES / TEXTES ASSOCIÉS />"
+        },
+        "config_funciones": {
+            "texto1": [
+                "< FONCTIONS DU BOT />",
+                "▢ *Option :* ✨",
+                "▢ *Commande :*",
+                "▢ *Description :* Active ou désactive les messages de bienvenue dans le groupe."
+            ],
+            "texto2": [
+                "▢ *Option :* 🌎",
+                "▢ *Commande :*",
+                "▢ *Description :* Le bot devient public et/ou privé.",
+                "▢ *Note :* Cette commande ne peut être utilisée que par le(s) propriétaire(s) du bot."
+            ],
+            "texto3": [
+                "▢ *Option :* 🥵",
+                "▢ *Commande :*",
+                "▢ *Description :* Active ou désactive les commandes +18 dans le groupe."
+            ],
+            "texto4": [
+                "▢ *Option :* 🔗",
+                "▢ *Commande :*",
+                "▢ *Description :* Active ou désactive le blocage des liens WhatsApp.",
+                "▢ *Note :* La fonction restreinte doit être activée."
+            ],
+            "texto5": [
+                "▢ *Option :* 🔗",
+                "▢ *Commande :*",
+                "▢ *Description :* Active ou désactive le blocage des liens commençant par HTTPS.",
+                "▢ *Note :* La fonction restreinte doit être activée."
+            ],
+            "texto6": [
+                "▢ *Option :* 🔎",
+                "▢ *Commande :*",
+                "▢ *Description :* Active ou désactive les notifications de changements dans le groupe."
+            ],
+            "texto7": [
+                "▢ *Option :* 🔎",
+                "▢ *Commande :*",
+                "▢ *Description :* Détecte les modifications dans le groupe et assure une meilleure gestion."
+            ],
+            "texto8": [
+                "▢ *Option :* ❗ |",
+                "▢ *Commande :*",
+                "▢ *Description :* Active ou désactive les restrictions du Bot, comme supprimer ou ajouter des personnes à un groupe.",
+                "▢ *Note :* Cette commande ne peut être utilisée que par le(s) propriétaire(s) du bot."
+            ],
+            "texto9": [
+                "▢ *Option :* ☑️",
+                "▢ *Commande :*",
+                "▢ *Description :* Marque automatiquement les messages et les statuts comme lus.",
+                "▢ *Note :* Cette commande ne peut être utilisée que par le(s) propriétaire(s) du bot."
+            ],
+            "texto10": [
+                "▢ *Option :* 🔊",
+                "▢ *Commande :*",
+                "▢ *Description :* Active ou désactive les commandes audio sans préfixes dans le groupe."
+            ],
+            "texto11": [
+                "▢ *Option :* 👾",
+                "▢ *Commande :*",
+                "▢ *Description :* Toutes les images ou vidéos envoyées dans le groupe sont converties en autocollants."
+            ],
+            "texto12": [
+                "▢ *Option :* 💬",
+                "▢ *Commande :*",
+                "▢ *Description :* Le Bot ne répondra qu'aux commandes s'il s'agit d'un chat privé.",
+                "▢ *Note :* Cette commande ne peut être utilisée que par le(s) propriétaire(s) du bot."
+            ],
+            "texto13": [
+                "▢ *Option :* 🏢",
+                "▢ *Commande :*",
+                "▢ *Description :* Le Bot ne répondra qu'aux commandes s'il s'agit d'un groupe.",
+                "▢ *Note :* Cette commande ne peut être utilisée que par le(s) propriétaire(s) du bot."
+            ],
+            "texto14": [
+                "▢ *Option :* ❌",
+                "▢ *Commande :*",
+                "▢ *Description :* Les images envoyées pour une seule visualisation sont renvoyées normalement par le Bot."
+            ],
+            "texto15": [
+                "▢ *Option :* 📵",
+                "▢ *Commande :*",
+                "▢ *Description :* Le Bot bloquera les personnes qui appellent le Bot.",
+                "▢ *Note :* Cette commande ne peut être utilisée que par le(s) propriétaire(s) du bot."
+            ],
+            "texto16": [
+                "▢ *Option :* 🤬",
+                "▢ *Commande :*",
+                "▢ *Description :* Détecte les gros mots et avertit le participant du groupe avant d'être supprimé.",
+                "▢ *Note :* La fonction restreinte doit être activée."
+            ],
+            "texto17": [
+                "▢ *Option :* 🕸️",
+                "▢ *Commande :* ",
+                "▢ *Description :* Le Bot détecte les longs textes qui pourraient être des virus et causer des ralentissements dans le chat et élimine l'utilisateur.",
+                "▢ *Note :* La fonction restreinte doit être activée."
+            ],
+            "texto18": [
+                "▢ *Option :* 👎",
+                "▢ *Commande :*",
+                "▢ *Description :* Si un numéro arabe rejoint le groupe, le Bot le supprime automatiquement.",
+                "▢ *Note :* Les fonctions de bienvenue et restreinte doivent être activées."
+            ],
+            "texto19": [
+                "▢ *Option :* 👎",
+                "▢ *Commande :*",
+                "▢ *Description :* Si un numéro arabe écrit dans le groupe, le Bot le supprime automatiquement.",
+                "▢ *Note :* La fonction restreinte doit être activée."
+            ],
+            "texto20": [
+                "▢ *Option :* 👑",
+                "▢ *Commande :*",
+                "▢ *Description :* Le bot ne répondra qu'aux messages envoyés par les admins. du groupe."
+            ],
+            "texto21": [
+                "▢ *Option :* 😃",
+                "▢ *Commande :*",
+                "▢ *Description :* Le bot commencera à répondre aux messages en utilisant l'IA de SimSimi."
+            ],
+            "texto22": [
+                "▢ *Option :* 🛡️",
+                "▢ *Commande :*",
+                "▢ *Description :* Le bot détecte quand un utilisateur supprime un message et le renvoie."
+            ],
+            "texto23": [
+                "▢ *Option :* 🔊",
+                "▢ *Commande :*",
+                "▢ *Description :* Les audios du menu audio du Bot sont désactivés pour tous les chats privés.",
+                "▢ *Note :* Cette commande ne peut être utilisée que par le(s) propriétaire(s) du bot."
+            ],
+            "texto24": [
+                "▢ *Option :* 🤖",
+                "▢ *Commande :*",
+                "▢ *Description :* Le mode 'Intelligence Artificielle' avec ChatGPT est activé dans tous les chats privés.",
+                "▢ *Note :* Cette commande ne peut être utilisée que par le(s) propriétaire(s) du bot."
+            ],
+            "texto25": [
+                "▢ *Option :* ⏳",
+                "▢ *Commande :*",
+                "▢ *Description :* Le Bot détecte quand un utilisateur spamme une commande et le bannit pendant 5 secondes en le prévenant.",
+                "▢ *Note :* Cette commande ne peut être utilisée que par le(s) propriétaire(s) du bot."
+            ],
+            "texto26": [
+                "▢ *Option :* 🤖",
+                "▢ *Commande :*",
+                "▢ *Description :* Active ou désactive l'utilisation de la commande pour les sous-bots.",
+                "▢ *Note :* Cette commande ne peut être utilisée que par le(s) propriétaire(s) du bot."
+            ],
+            "texto27": [
+                "▢ *Option :* 💬",
+                "▢ *Commande :*",
+                "▢ *Description :* Le Bot bloquera les personnes qui écrivent en privé au Bot.",
+                "▢ *Note :* Cette commande ne peut être utilisée que par le(s) propriétaire(s) du bot."
+            ],
+            "texto28": [
+                "< FONCTIONS DU BOT />",
+                "[ ℹ️ ] L'option",
+                "a été appliquée avec succès pour ceci"
+            ]
+        },
+        "convertidor_toanime": {
+            "texto1": "[❗] RÉPONDEZ OU ENVOYEZ UNE IMAGE",
+            "texto2": "[❗] CONVERTIT UNE IMAGE EN ANIME, SÉLECTIONNEZ UNE IMAGE ET ENVOYEZ LE RÉSULTAT",
+            "texto3": "[❗] ERREUR, VÉRIFIEZ SI LE VISAGE D'UNE PERSONNE EST VISIBLE SUR L'IMAGE"
+        },
+        "convertidor_togifaud": {
+            "texto1": "[❗𝐈𝐍𝐅𝐎❗] RÉPONDEZ À UNE VIDÉO QUE VOUS SOUHAITEZ CONVERTIR EN GIF AVEC AUDIO",
+            "texto2": [
+                "[❗] LE TYPE DE FICHIER",
+                "N'EST PAS ACCEPTÉ, RÉPONDEZ À UNE VIDÉO QUE VOUS SOUHAITEZ CONVERTIR AVEC AUDIO"
+            ],
+            "texto3": "VOICI VOTRE GIF AVEC AUDIO, IL SERA LECTURÉ AVEC AUDIO LORSQUE VOUS L'OUVRIREZ"
+        },
+        "convertidor_toimg": {
+            "texto1": "[❗𝐈𝐍𝐅𝐎❗] RÉPONDEZ À L'IMAGE QUE VOUS SOUHAITEZ CONVERTIR EN IMAGE AVEC AUDIO"
+        },
+        "convertidor_tomp3": {
+            "texto1": "[❗️INFORMATION❗️] RÉPONDEZ À LA VIDÉO OU À L'AUDIO QUE VOUS SOUHAITEZ CONVERTIR EN AUDIO/MP3",
+            "texto2": "[❗️INFORMATION❗️] DÉSOLÉ, UNE ERREUR S'EST PRODUITE LORS DU TÉLÉCHARGEMENT DE VOTRE VIDÉO, VEUILLEZ RÉESSAYER",
+            "texto3": "[❗️INFORMATION❗️] DÉSOLÉ, UNE ERREUR S'EST PRODUITE LORS DE LA CONVERSION DE VOTRE VIDÉO EN AUDIO/MP3, VEUILLEZ RÉESSAYER"
+        },
+        "convertidor_toptt": {
+            "texto1": "[❗️INFORMATION❗️] RÉPONDEZ À LA VIDÉO OU À L'AUDIO QUE VOUS SOUHAITEZ CONVERTIR EN AUDIO/NOTE VOCALE",
+            "texto2": "[❗️INFORMATION❗️] DÉSOLÉ, UNE ERREUR S'EST PRODUITE LORS DE L'ENREGISTREMENT DE VOTRE VIDÉO, VEUILLEZ RÉESSAYER",
+            "texto3": "[❗️INFORMATION❗️] DÉSOLÉ, UNE ERREUR S'EST PRODUITE LORS DE LA CONVERSION DE VOTRE VIDÉO EN AUDIO/NOTE VOCALE, VEUILLEZ RÉESSAYER",
+            "texto4": "[❗️INFORMATION❗️] DÉSOLÉ, UNE ERREUR S'EST PRODUITE LORS DE LA CONVERSION DE VOTRE AUDIO EN AUDIO/NOTE VOCALE, VEUILLEZ RÉESSAYER",
+            "texto5": "[❗️INFORMATION❗️] DÉSOLÉ, UNE ERREUR S'EST PRODUITE LORS DE LA CONVERSION DE VOTRE AUDIO EN AUDIO/NOTE VOCALE, VEUILLEZ RÉESSAYER"
+        },
+        "convertidor_tourl": {
+            "texto1": "[❗️INFORMATION❗️] RÉPONDEZ À UNE IMAGE OU UNE VIDÉO POUR LAQUELLE VOUS SOUHAITEZ OBTENIR LE LIEN DE TÉLÉCHARGEMENT",
+            "texto2": "APRÈS LE TRAITEMENT :"
+        },
+        "convertidor_tovideo": {
+            "texto1": "[❗️INFORMATION❗️] RÉPONDEZ À UNE IMAGE OU UN GIF QUE VOUS SOUHAITEZ CONVERTIR EN VIDÉO AVEC EFFET DE COMMANDE",
+            "texto2": "[❗️INFORMATION❗️] RÉPONDEZ À UN STICKER QUE VOUS SOUHAITEZ CONVERTIR EN VIDÉO AVEC EFFET DE COMMANDE"
+        },
+        "convertidor_tts": {
+            "texto1": [
+                "[❗️INFORMATION❗️] INSÉREZ LE TEXTE QUE VOUS SOUHAITEZ CONVERTIR EN AUDIO AVEC EFFET DE COMMANDE CI-DESSOUS :",
+                "pt Bonjour le Monde"
+            ]
+        },
+        "convertidor_tts2": {
+            "texto1": "[❗️] Vous n'avez pas inséré d'effet, veuillez insérer un effet vocal.*\n\n*—◉ Choisissez l'un des effets suivants :",
+            "texto2": "votre_texte_ici",
+            "texto3": [
+                "[❗️] L'effet fourni n'existe pas dans la liste, utilisez",
+                "pour voir la liste des effets disponibles."
+            ],
+            "texto4": [
+                "[❗️] Insérez le texte que vous souhaitez convertir en audio.*\n\n*—◉ Exemple :",
+                "Bonjour, ceci est un exemple d'utilisation de la commande."
+            ],
+            "texto5": "[❗️] Erreur, aucune réponse de l'API.",
+            "texto6": "[❗️] Erreur, aucune réponse de l'API.",
+            "texto7": "[❗️] URL non trouvée dans la réponse.",
+            "texto8": "[❗️] Erreur, aucune réponse de l'API."
+        },
+        "descargas_facebook": {
+            "texto1": [
+                "< TÉLÉCHARGEMENTS - FACEBOOK />",
+                "[ ℹ️ ] Insérez un lien Facebook.",
+                "[ 💡 ] Exemple :"
+            ],
+            "texto2": [
+                "< TÉLÉCHARGEMENTS - FACEBOOK />",
+                "[ ℹ️ ] Insérez un lien Facebook.",
+                "[ 💡 ] Exemple :"
+            ],
+            "texto3": "< TÉLÉCHARGEMENTS - FACEBOOK />*_\n\n*[ ℹ️ ] La vidéo est en cours d'envoi. Veuillez patienter...",
+            "texto4": "< TÉLÉCHARGEMENTS - FACEBOOK />",
+            "texto5": "< TÉLÉCHARGEMENTS - FACEBOOK />*_\n\n*[ ℹ️ ] Une erreur s'est produite. Veuillez réessayer plus tard."
+        },
+        "descargas_gdrive": {
+            "texto1": "_*< TÉLÉCHARGEMENTS - GDRIVE />*_\n\n*[ ℹ️ ] Insérez un lien Google Drive.*\n\n*[ 💡 ] Exemple : ",
+            "texto2": "_*< TÉLÉCHARGEMENTS - GDRIVE />*_\n\n*[ ℹ️ ] Le fichier est en cours d'envoi. Veuillez patienter...*\n\n*[ ℹ️ ] S'il n'est pas envoyé, cela peut être parce qu'il dépasse la limite de taille.*",
+            "texto3": "_*< TÉLÉCHARGEMENTS - GDRIVE />*_\n\n*[ ℹ️ ] Une erreur s'est produite. Veuillez réessayer plus tard.*"
+        },
+        "descargas_gitclone": {
+            "texto1": "_*< TÉLÉCHARGEMENTS - GITCLONE />*_\n\n*[ ℹ️ ] Insérez un lien GitHub.*\n\n*[ 💡 ] Exemple :",
+            "texto2": "_*< TÉLÉCHARGEMENTS - GITCLONE />*_\n\n*[ ℹ️ ] Le lien que vous avez fourni est incorrect.*",
+            "texto3": "_*< TÉLÉCHARGEMENTS - GITCLONE />*_\n\n*[ ℹ️ ] Le fichier est en cours d'envoi. Veuillez patienter...*\n\n*[ ℹ️ ] S'il n'est pas envoyé, cela peut être parce qu'il dépasse la limite de taille.*"
+        },
+        "descargas_instagram": {
+            "texto1": "_*< TÉLÉCHARGEMENTS - INSTAGRAM />*_\n\n*[ ℹ️ ] Insérez un lien Instagram.*\n\n*[ 💡 ] Exemple :",
+            "texto2": "_*< TÉLÉCHARGEMENTS - INSTAGRAM />*_\n\n▢ *URL :*",
+            "texto3": "_*< TÉLÉCHARGEMENTS - INSTAGRAM />*_\n\n*[ ℹ️ ] Une erreur s'est produite. Veuillez réessayer plus tard.*"
+        },
+        "descargas_mediafire": {
+            "texto1": [
+                "_*< TÉLÉCHARGEMENTS - MEDIAFIRE />*_",
+                "▢ *Nom :* ",
+                "▢ *Taille :* ",
+                "▢ *Extension :*",
+                "*[ ℹ️ ] Le fichier est en cours d'envoi. Veuillez patienter...*"
+            ],
+            "texto2": [
+                "*< TÉLÉCHARGEMENTS - MEDIAFIRE />*",
+                "▢ *Nom :*",
+                "▢ *Taille :*",
+                "▢ *Extension :*",
+                "*[ ℹ️ ] Le fichier est en cours d'envoi. Veuillez patienter...*"
+            ],
+            "texto3": "_*< TÉLÉCHARGEMENTS - MEDIAFIRE />*_\n\n*[ ℹ️ ] Une erreur s'est produite. Veuillez réessayer plus tard.*",
+            "texto4": "_*< TÉLÉCHARGEMENTS - MEDIAFIRE />*_\n\n*[ ℹ️ ] Insérez un lien MediaFire.*\n\n*[ 💡 ] Exemple :"
+        },
+        "descargas_play_v2": {
+            "texto1": [
+                "_*< TÉLÉCHARGEMENTS - PLAY v2 />*_\n\n*[ ℹ️ ] Le titre de la vidéo YouTube est manquant.*\n\n*[ 💡 ] Exemple :",
+                "Good Feeling - Flo Rida_\n\n*[ 💡 ] Exemple 2 :"
+            ],
+            "texto2": "_*< TÉLÉCHARGEMENTS - PLAY V2 />*_\n\n*[ ℹ️ ] Une erreur s'est produite. Veuillez réessayer plus tard.*",
+            "texto3": "_*< TÉLÉCHARGEMENTS - PLAY V2 />*_\n\n*[ ℹ️ ] Une erreur s'est produite. Veuillez réessayer plus tard.*",
+            "texto4": [
+                "_*< TÉLÉCHARGEMENTS - PLAY V2 />*_\n\n▢ *Titre :* ",
+                "▢ *Publié :*",
+                "▢ *Chaîne :*",
+                "▢ *URL de la vidéo :*"
+            ],
+            "texto5": "_*< TÉLÉCHARGEMENTS - PLAY V2 />*_\n\n*[ ℹ️ ] Une erreur s'est produite. Veuillez réessayer plus tard.*",
+            "texto6": "_*< TÉLÉCHARGEMENTS - PLAY V2 />*_\n\n*[ ℹ️ ] Une erreur s'est produite. Veuillez réessayer plus tard.*"
+        },
+        "descargas_play": {
+            "texto1": [
+                "_*< TÉLÉCHARGEMENTS - PLAY />*_\n\n*[ ℹ️ ] Le titre ou le lien de la vidéo YouTube est manquant.*\n\n*[ 💡 ] Exemple :",
+                "Good Feeling - Flo Rida_"
+            ],
+            "texto2": [
+                "_*< TÉLÉCHARGEMENTS - PLAY />*_\n\n▢ *Titre :*",
+                "▢ *Publié :*",
+                "▢ *Durée :*",
+                "▢ *Vues :*",
+                "▢ *Auteur :*",
+                "▢ *ID :*",
+                "▢ *Type :*",
+                "▢ *Lien :*",
+                "▢ *Chaîne :*",
+                "*[ ℹ️ ] Le fichier est en cours d'envoi, veuillez patienter...*"
+            ],
+            "texto3": "*[ ℹ️ ] Téléchargez votre audio à :*",
+            "texto4": "_*< TÉLÉCHARGEMENTS - PLAY />*_\n\n*[ ℹ️ ] Une erreur s'est produite. Veuillez réessayer plus tard.*",
+            "texto5": "_*< TÉLÉCHARGEMENTS - PLAY />*_\n\n*[ ℹ️ ] Téléchargez votre vidéo à :*",
+            "texto6": "_*< TÉLÉCHARGEMENTS - PLAY />*_\n\n*[ ℹ️ ] Une erreur s'est produite. Veuillez réessayer plus tard.*"
+        },
+        "descargas_spotify": {
+            "texto1": "_*< TÉLÉCHARGEMENTS - SPOTIFY />*_\n\n*[ ℹ️ ] Le titre de la chanson Spotify est manquant.*\n\n*[ 💡 ] Exemple :",
+            "texto2": [
+                "*< TÉLÉCHARGEMENTS - SPOTIFY />*",
+                "▢ *Titre :*",
+                "▢ *Artiste :*",
+                "▢ *Album :*",
+                "▢ *Publié :*",
+                "*[ ℹ️ ] L'audio est en cours d'envoi, veuillez patienter...*"
+            ],
+            "texto3": "_*< TÉLÉCHARGEMENTS - SPOTIFY />*_\n\n[ ℹ️ ] Une erreur s'est produite. Veuillez réessayer plus tard.*"
+        },
+        "descargas_spotifypro": {
+            "texto1": "*[❗] Insérez le lien d'une piste, d'une playlist ou d'un album Spotify ou simplement le nom d'une chanson à rechercher.*",
+            "texto2": "*[❗] Insérez le lien d'une piste, d'une playlist ou d'un album Spotify.*",
+            "texto3": [
+                "*• 💽 Télécharger Spotify •*",
+                "*Album :* ",
+                "◦  *Artiste :*",
+                "◦  *Publié :*",
+                "◦  *Nombre total de pistes :*",
+                "Les audios sont en cours d'envoi, veuillez patienter un moment.."
+            ],
+            "texto4": [
+                "*• 💽 Télécharger Spotify •*",
+                "◦  *Titre :*",
+                "◦  *Artiste :*",
+                "◦  *Durée :*",
+                "◦  *Album :*",
+                "◦  *Publié :*",
+                "L'audio est en cours d'envoi, veuillez patienter un moment.."
+            ],
+            "texto5": [
+                "*• 💽 Télécharger Spotify •*",
+                "◦  *Playlist :*",
+                "◦  *Nombre total de pistes :*",
+                "Les audios de la playlist sont en cours d'envoi, veuillez patienter un moment.."
+            ],
+            "texto6": [
+                "*• 💽 Télécharger Spotify •*",
+                "◦  *Titre :*",
+                "◦  *Artiste :*",
+                "◦  *Durée :*",
+                "◦  *Album :*",
+                "◦  *Publié :*",
+                "L'audio est en cours d'envoi, veuillez patienter un moment.."
+            ],
+            "texto7": "*[❗] Erreur, aucun résultat trouvé.*"
+        },
+        "descargas_tiktok": {
+            "texto1": "_*< TÉLÉCHARGEMENTS - TIKTOK />*_\n\n*[ ℹ️ ] Insérez un lien TikTok.*\n\n*[ 💡 ] Exemple :",
+            "texto2": "_*< TÉLÉCHARGEMENTS - TIKTOK />*_\n\n*[ ℹ️ ] Insérez un lien TikTok.*\n\n*[ 💡 ] Exemple :",
+            "texto3": "_*< TÉLÉCHARGEMENTS - TIKTOK />*_\n\n*[ ℹ️ ] La vidéo est en cours d'envoi. Attendez...*",
+            "texto4": [
+                "_*< TÉLÉCHARGEMENTS - TIKTOK />*_\n\n*[ 💡 ] Répondez à cette vidéo avec la commande*",
+                "*pour la convertir en audio.*"
+            ],
+            "texto5": [
+                "_*< TÉLÉCHARGEMENTS - TIKTOK />*_\n\n*[ 💡 ] Répondez à cette vidéo avec la commande*",
+                "*pour la convertir en audio.*"
+            ],
+            "texto6": [
+                "_*< TÉLÉCHARGEMENTS - TIKTOK />*_\n\n*[ 💡 ] Répondez à cette vidéo avec la commande*",
+                "*pour la convertir en audio.*"
+            ],
+            "texto7": [
+                "_*< TÉLÉCHARGEMENTS - TIKTOK />*_\n\n*[ 💡 ] Répondez à cette vidéo avec la commande*",
+                "*pour la convertir en audio.*"
+            ],
+            "texto8": [
+                "_*< TÉLÉCHARGEMENTS - TIKTOK />*_\n\n*[ 💡 ] Répondez à cette vidéo avec la commande*",
+                "*pour la convertir en audio.*"
+            ],
+            "texto9": "_*< TÉLÉCHARGEMENTS - TIKTOK />*_\n\n*[ ℹ️ ] Une erreur s'est produite. Veuillez réessayer plus tard.*",
+            "texto10": "_*< TÉLÉCHARGEMENTS - TIKTOK />*_\n\n*[ ℹ️ ] Insérez un lien TikTok.*\n\n*[ 💡 ] Exemple :"
+        },
+        "downloader_igstory": {
+            "texto1": "*[❗️INFORMATIONS❗️] Insérez le nom d'utilisateur Instagram*\n\n*EXEMPLE :*",
+            "texto2": "*[❗️] UTILISATEUR INVALIDE OU AUCUNE HISTOIRE*"
+        },
+        "downloader_imagen": {
+            "texto1": "[❗️INFORMATION❗️] EXEMPLE D'UTILISATION DE LA COMMANDE",
+            "texto2": [
+                "🔎 RÉSULTAT DE :",
+                "🔗 LIEN",
+                "🌎 MOTEUR DE RECHERCHE : Google"
+            ]
+        },
+        "downloader_modapk": {
+            "texto1": "[❗️] Entrez le nom de l'APK que vous souhaitez rechercher.",
+            "texto2": [
+                "📲 Téléchargeur Aptoide 📲\n\n📌 Nom :",
+                "📦 Paquet :",
+                "🕒 Dernière mise à jour :",
+                "📥 Taille :"
+            ],
+            "texto3": "[⛔️] Le fichier est trop lourd et ne sera pas envoyé.",
+            "texto4": "[❗️] Erreur, aucun résultat trouvé pour votre recherche."
+        },
+        "downloader_pinterest": {
+            "texto1": "[❗️] Indiquez l'URL du contenu que vous souhaitez télécharger.",
+            "texto2": "Résultats de la recherche"
+        },
+        "downloader_playdoc": {
+            "texto1": "[❗️] Indiquez le nom ou l'URL du document Google Drive, S'il vous plaît, entrez un lien valide ou l'ID d'un dossier/fichier.\n\n*—◉ Exemple :",
+            "texto2": [
+                "◉——⌈🔊 DOCUMENT YOUTUBE 🔊⌋——◉",
+                "❏ 📌 Titre :",
+                "❏ 📆 Publié :",
+                "❏ ⌚ Durée :",
+                "❏ 👀 Vues :",
+                "❏ 👤 Auteur :",
+                "❏ ⏯️ Chaîne :",
+                "❏ 🆔 ID :",
+                "❏ 🪬 Type :",
+                "❏ 🔗 Lien :",
+                "❏ Envoi en cours, veuillez patienter..."
+            ],
+            "texto3": "[❗️] ERREUR IMPOSSIBLE DE TÉLÉCHARGER L'AUDIO*",
+            "texto4": [
+                "▢ TITRE :",
+                "▢ LIEN DE TÉLÉCHARGEMENT :"
+            ],
+            "texto5": "[❗️] ERREUR IMPOSSIBLE DE TÉLÉCHARGER LA VIDÉO",
+            "texto6": "[❗️] Indiquez, s'il vous plaît, une vidéo valide à convertir."
+        },
+        "downloader_playlist": {
+            "texto1": "[❗️] Le nom de la chanson est manquant, veuillez insérer la commande suivie du nom/titre d'une chanson\n\n*—◉ Exemple :",
+            "texto2": [
+                "[❗️] Vous pouvez télécharger la vidéo souhaitée de la manière suivante :",
+                "—◉ Exemples :",
+                "🫐 Lien :",
+                "🕒 Durée :",
+                "📥 Publié :",
+                "👁 Vues :"
+            ],
+            "texto3": "[❗️] ERREUR, VEUILLEZ FOURNIR UNE VIDÉO OU UN NOM DE CHANSON VALIDES*"
+        },
+        "downloader_pptiktok": {
+            "texto1": "[❗️] Veuillez entrer le nom d'utilisateur TikTok que vous souhaitez utiliser pour le téléchargement",
+            "texto2": "[✔️] Voici la photo de profil de"
+        },
+        "downloader_ringtone": {
+            "texto1": "[❗️] Entrez le texte que vous souhaitez utiliser comme sonnerie, par exemple :"
+        },
+        "downloader_soundcloud": {
+            "texto1": "[❗️] Entrez le nom de la chanson ou de l'album que vous souhaitez rechercher",
+            "texto2": [
+                "❒═══❬ 𝐒𝐎𝐔𝐍𝐃𝐂𝐋𝐎𝐔𝐃 ❭═══╾❒\n┬\n├‣✨ TITRE :",
+                "├‣💚 URL DIRECT :",
+                "- En attente de la musique..."
+            ],
+            "texto3": "[❗️] ERREUR, AUCUNE CHANSON N'A ENCORE ÉTÉ RECHERCHÉE, VEUILLEZ VÉRIFIER SI VOUS AVEZ PU TROUVER LA CHANSON ET RÉESSAYER PLUS TARD"
+        },
+        "downloader_stickerpack": {
+            "texto1": "[❗️] Entrez le nom du pack de stickers que vous souhaitez télécharger",
+            "texto2": "[❗️] ERREUR, VEUILLEZ VÉRIFIER LE NOM DU PACK DE STICKERS ET ESSAYER À NOUVEAU"
+        },
+        "downloader_tiktok_img": {
+            "texto1": "[❗️] Entrez un lien TikTok pour télécharger des images, par exemple : \"https://vm.tiktok.com/ZM2cqBRVS/\".",
+            "texto2": "[❗️] Impossible d'obtenir de réponse de la page, veuillez réessayer plus tard.",
+            "texto3": "[❗️] Aucune image n'a été trouvée sur le lien fourni.",
+            "texto4": "[❗️] Impossible d'obtenir de réponse de la page, veuillez réessayer plus tard."
+        },
+        "downloader_tiktokstalk": {
+            "texto1": "[❗️] Entrez le nom d'utilisateur TikTok que vous souhaitez visualiser.",
+            "texto2": [
+                "UTILISATEUR :",
+                "NOM :",
+                "ABONNÉS :",
+                "ABONNEMENTS :",
+                "LIKES :",
+                "VIDÉOS :",
+                "DESCRIPTION :"
+            ],
+            "texto3": "[❗️] Erreur, impossible de trouver l'utilisateur Instagram indiqué."
+        },
+        "downloader_wallpaper": {
+            "texto1": "[❗️] Indiquez la commande d'utilisation du téléchargeur de fonds d'écran.",
+            "texto2": "Résultat de"
+        },
+        "downloader_x_twitter": {
+            "texto1": "[❗] Entrez un lien X (Twitter), exemple : ",
+            "texto2": "'Voici votre image'",
+            "texto3": "[❗] Erreur, veuillez réessayer plus tard.",
+            "texto4": "Une erreur s'est produite lors de l'obtention de l'ID Twitter. Veuillez vérifier si l'URL Twitter est correcte !",
+            "texto5": "Une erreur s'est produite lors de l'envoi de la demande."
+        },
+        "downloader_yta_2": {
+            "texto1": "[❗] Entrez la commande mais le lien d'une vidéo YouTube",
+            "texto2": "⏳Votre audio est en cours de traitement...⏳\n\n◉ Si votre audio n'est pas envoyé, essayez avec la commande #playdoc ou #play.2 ou #ytmp4doc ◉",
+            "texto3": [
+                "◉—⌈📥 TÉLÉCHARGEMENT YOUTUBE 📥⌋—◉",
+                "❏ TITRE :",
+                "❏ POIDS :"
+            ],
+            "texto4": "[❗] ERREUR IMPOSSIBLE DE TÉLÉCHARGER L'AUDIO"
+        },
+        "downloader_yta": {
+            "texto1": "[❗] Aucun lien trouvé pour ce numéro, veuillez entrer un nombre entre 1 et le",
+            "texto2": [
+                "[❗] Pour utiliser la commande de cette manière ",
+                "<nombre>), veuillez effectuer la recherche de vidéos avec la commande"
+            ],
+            "texto3": [
+                "[❗] Pour utiliser la commande de cette manière ",
+                "<nombre>), veuillez effectuer la recherche de vidéos avec la commande"
+            ],
+            "texto4": "⏳Votre audio est en cours de traitement...⏳\n\n◉ Si votre audio n'est pas envoyé, essayez avec la commande #playdoc ou #play.2 ou #ytmp4doc ◉*",
+            "texto5": [
+                "▢ Titre :",
+                "▢ Poids de l'audio :",
+                "[ ✔ ] Audio téléchargé et envoyé avec succès.\n\n*—◉ Il a été envoyé en tant que document car l'audio pèse",
+                " MB et dépasse la limite fixée par WhatsApp.\n◉ Titre :",
+                "[ ✔ ] Audio téléchargé et envoyé avec succès."
+            ],
+            "texto6": "[ ❌ ] L'audio n'a pas pu être téléchargé ou envoyé, veuillez réessayer.",
+            "texto7": "[❗] Erreur, impossible de télécharger l'audio.",
+            "texto8": "[❗] Utilisation incorrecte de la commande, veuillez entrer un lien YouTube."
+        },
+        "downloader_ytmeta": {
+            "texto1": "[❗] Entrez un lien YouTube.",
+            "texto2": "🤴🏻 Téléchargé par BrunoSobrino & TheMystic-Bot-MD 🤖"
+        },
+        "downloader_ytv_2": {
+            "texto1": "[❗𝐈𝐍𝐅𝐎❗] Entrez la commande plus le lien de la vidéo YouTube*",
+            "texto2": "⏳Traitement de votre vidéo...⏳\n\n◉ Si votre vidéo n'est pas envoyée, essayez avec la commande #playdoc ou #play.2 ou #ytmp4doc ◉",
+            "texto3": [
+                "◉—⌈📥 TÉLÉCHARGEMENT YOUTUBE 📥⌋—◉",
+                "❏ Titre :",
+                "❏ Poids : "
+            ],
+            "texto4": "[❗] ERREUR IMPOSSIBLE DE TÉLÉCHARGER LA VIDÉO"
+        },
+        "downloader_ytv": {
+            "texto1": "[❗] Utilisation incorrecte de la commande, veuillez entrer un lien YouTube.",
+            "texto2": "[❗] Aucun lien trouvé pour ce numéro, veuillez entrer un nombre entre 1 et le",
+            "texto3": [
+                "[❗] Pour utiliser la commande de cette manière ",
+                "<nombre>), veuillez effectuer la recherche de vidéos avec la commande"
+            ],
+            "texto4": [
+                "[❗] Pour utiliser la commande de cette manière",
+                "<nombre>), veuillez effectuer la recherche de vidéos avec la commande"
+            ],
+            "texto5": "⏳Traitement de votre vidéo...⏳\n\n◉ Si votre vidéo n'est pas envoyée, essayez avec la commande #playdoc ou #play.2 ou #ytmp4doc ◉*",
+            "texto6": [
+                "▢ Titre :",
+                "▢ Poids de la vidéo :",
+                "[ ✔ ] Vidéo téléchargée et envoyée avec succès.\n\n*—◉ Elle a été envoyée sous forme de document car la vidéo pèse",
+                " MB et dépasse la limite fixée par WhatsApp.\n◉ Titre :"
+            ],
+            "texto7": [
+                "*▢ Titre :*",
+                "*▢ Poids de la vidéo :*",
+                "[ ✔ ] Vidéo téléchargée avec succès."
+            ],
+            "texto8": "[ ❌ ] La vidéo n'a pas pu être téléchargée ou envoyée, veuillez réessayer.",
+            "texto9": "[❗] Erreur, impossible de télécharger la vidéo."
+        },
+        "downloader_ytvideodl": {
+            "texto1": "[❗] Entrez la commande plus le lien de la vidéo YouTube*",
+            "texto2": "[❗] Entrez un lien de vidéo YouTube valide",
+            "texto3": "[❗] Le fichier est pris en charge uniquement jusqu'à 999 Mo"
+        },
+        "fix_esperando_mensaje": {
+            "texto1": "[❗] Utilisez cette commande directement sur le numéro principal du Bot",
+            "texto2": "[❗] Aucun fichier contenant l'ID du chat n'a été trouvé",
+            "texto3": [
+                "[❗] Ont été supprimés",
+                "fichiers de session"
+            ],
+            "texto4": "Erreur lors de la lecture du dossier ou des fichiers de session :",
+            "texto5": "[❗] Une erreur s'est produite lors de la suppression des fichiers de session",
+            "texto6": "👋 Salut! Tu me vois maintenant?\n\n*[❗] Si le Bot ne répond pas à vos commandes, veuillez faire un petit spam*\n\n*—◉ Exemple:"
+        },
+        "fix_owner_esperando_mensajes": {
+            "texto1": "[❗] Utilisez cette commande directement sur le numéro principal du Bot.",
+            "texto2": "[❗] Démarrage du processus de suppression de tous les fichiers de session, sauf le fichier creds.json...",
+            "texto3": "[❗] Le dossier MysticSession n'existe pas ou est vide.",
+            "texto4": "[❗] Aucun fichier à supprimer n'a été trouvé dans le dossier MysticSession.",
+            "texto5": [
+                "[❗] Ont été supprimés",
+                "fichiers de session, sauf le fichier creds.json."
+            ],
+            "texto6": "[❗] Une erreur s'est produite lors de la suppression des fichiers de session.",
+            "texto7": "👋 Salut! Tu me vois maintenant?\n\n[❗] Si le Bot ne répond pas à vos commandes, veuillez faire un petit spam*\n\n*—◉ Exemple:"
+        },
+        "frase_frases": {
+            "texto1": "Conseil du jour",
+            "texto2": "Phrase romantique",
+            "texto3": [
+                "Tu es la lumière qui éclaire ma vie dans l'obscurité.",
+                "Avec toi, chaque jour est une nouvelle aventure pleine d'amour.",
+                "Tes yeux sont le reflet du ciel où je veux me perdre.",
+                "Chaque battement de mon cœur porte ton nom.",
+                "Dans tes bras, j'ai trouvé le foyer que j'ai toujours cherché.",
+                "Tu es le rêve dont je ne veux jamais me réveiller.",
+                "Le véritable amour c'est être ensemble dans les bons et les mauvais moments.",
+                "Il n'y a pas de distances lorsque deux cœurs sont unis.",
+                "Tes baisers sont la mélodie qui accélère mon cœur.",
+                "Aimer, c'est voir en toi ce que personne d'autre ne peut voir.",
+                "À chaque battement, je t'emmène avec moi partout.",
+                "L'amour que je ressens pour toi est ma force et mon inspiration.",
+                "Tes mots doux sont ma nourriture émotionnelle quotidienne.",
+                "Tu es le cadeau le plus précieux que la vie m'ait donné.",
+                "Le temps s'arrête lorsque je suis à tes côtés.",
+                "Dans ton rire, je trouve le bonheur que je cherchais.",
+                "Chaque jour à tes côtés est une histoire d'amour sans fin.",
+                "Notre amour est comme un conte de fées devenu réalité.",
+                "Tes câlins sont mon refuge dans ce monde chaotique.",
+                "Tu es la raison pour laquelle je crois au destin.",
+                "Aimer, c'est découvrir tous les jours quelque chose de nouveau à admirer en toi.",
+                "Ton amour est la toile blanche où je peins mon bonheur.",
+                "Avec toi, l'avenir est un chemin rempli de promesses et de rêves.",
+                "Tu es le phare qui guide mon cœur dans l'obscurité.",
+                "La magie de l'amour est dans chaque geste que nous partageons.",
+                "Dans tes bras, le monde entier disparaît et il ne reste que toi et moi.",
+                "L'amour est le langage dans lequel nos cœurs se parlent.",
+                "Tu es la pièce qui manquait pour compléter mon âme.",
+                "Aimer, c'est trouver en toi tout ce dont je n'ai jamais su avoir besoin."
+            ],
+            "texto4": [
+                "Accepte que les changements font partie naturelle de la vie et apprends à t'y adapter.",
+                "N'arrête jamais d'apprendre ; la connaissance est un outil puissant.",
+                "Prends soin de ta santé physique et mentale, elles sont essentielles pour une vie épanouie.",
+                "Profite des petites choses, car ce sont elles qui donnent un sens à la vie.",
+                "Apprends à pardonner, aux autres comme à toi-même, pour libérer ton cœur.",
+                "Apprécie le temps passé avec tes proches, c'est le cadeau le plus précieux que tu puisses donner et recevoir.",
+                "Sois gentil et compatissant envers les autres, chaque acte de bonté peut faire une différence dans leur vie.",
+                "Apprends à dire 'non' quand c'est nécessaire et établis des limites saines.",
+                "Trouve du temps pour faire ce que tu aimes, car cela nourrit ton âme et te fait te sentir vivant.",
+                "Ne te compare pas aux autres, chaque personne a son propre chemin et rythme dans la vie.",
+                "Écoute ta partenaire avec empathie et compréhension, la communication est la base d'une relation solide.",
+                "N'aie pas peur d'exprimer tes sentiments, l'honnêteté est essentielle dans l'amour.",
+                "Apprends à céder et à compromettre, l'amour demande sacrifice et effort mutuel.",
+                "Surprends ta partenaire de temps en temps, garde la flamme de la romance vive.",
+                "Respecte l'individualité de ta partenaire et permets-lui de grandir en tant que personne.",
+                "L'amour-propre est aussi important que d'aimer quelqu'un d'autre ; prends soin de toi et apprécie-toi.",
+                "Rappelle-toi qu'une relation saine est basée sur la confiance mutuelle et le respect.",
+                "Choisis quelqu'un qui te complète et te rend meilleur.",
+                "Le vrai amour ne te fait pas sentir plus petit, il te fait te sentir plus grand.",
+                "Aimer est un verbe, c'est un choix quotidien qui se cultive avec des actions et des mots.",
+                "Trouve un travail qui te passionne et tu ne sentiras jamais que tu travailles.",
+                "Sois proactif et prends l'initiative dans ton travail, cela sera apprécié par tes supérieurs.",
+                "Apprends de tes erreurs et échecs, ce sont des occasions de grandir et de s'améliorer.",
+                "Garde une attitude positive et cherche des solutions face aux défis au travail.",
+                "Cultive de bonnes relations avec tes collègues, le travail d'équipe est essentiel pour le succès.",
+                "Établis des objectifs clairs et réalistes et travaille avec détermination pour les atteindre.",
+                "N'aie pas peur de demander de l'aide ou de chercher des conseils, il y a toujours quelque chose de nouveau à apprendre.",
+                "Reconnais et valorise tes réalisations, célèbre tes succès, aussi petits soient-ils.",
+                "Cherche un équilibre entre ta vie professionnelle et personnelle, les deux aspects sont importants.",
+                "Le travail est une partie importante de ta vie, mais ce n'est pas tout ce qui te définit.",
+                "Crois en toi et en ta capacité à atteindre ce que tu te proposes.",
+                "Visualise tes objectifs et tes rêves, imagine comment tu te sentiras en les atteignant.",
+                "Trouve l'inspiration chez ceux qui ont surmonté des obstacles similaires aux tiens.",
+                "Accepte les échecs comme faisant partie du processus, ce sont des occasions d'apprendre et de grandir.",
+                "Entoure-toi de personnes positives qui te poussent vers l'avant.",
+                "Garde un esprit ouvert et sois prêt à apprendre de nouvelles choses.",
+                "Rappelle-toi pourquoi tu as commencé quand tu te sens démotivé ; reconnecte-toi avec ton objectif.",
+                "Divise tes objectifs en petites étapes, cela rendra le chemin plus accessible et moins écrasant.",
+                "N'aie pas peur de poursuivre tes rêves, la vie est trop courte pour vivre avec des regrets.",
+                "Aie confiance que, avec effort et persévérance, tu peux atteindre tout ce que tu te proposes."
+            ]
+        },
+        "frase_piropos": {
+            "texto1": [
+                "J'aimerais être du papier pour pouvoir envelopper ce bonbon.",
+                "Tu es comme le wifi sans mot de passe, tout le monde te recherche.",
+                "Si seulement j'étais un bus pour parcourir les courbes de ton cœur.",
+                "Je veux voler sans ailes et sortir de cet univers, entrer dans le tien et t'aimer en silence.",
+                "J'aimerais être du beurre pour fondre sur ta galette.",
+                "Si la beauté était un péché, tu serais déjà en enfer.",
+                "J'aimerais être un chat pour passer 7 vies à tes côtés.",
+                "Volé est mal, mais un baiser de ta bouche, je volerais.",
+                "Comme le ciel est beau quand il est clair, mais plus beau est l'amour quand je t'ai à mes côtés.",
+                "Belle, marche à l'ombre, le soleil fait fondre le chocolat.",
+                "Si j'étais un e-mail, tu serais mon mot de passe.",
+                "J'aimerais que tu sois une montagne pour te donner des coups de hache.",
+                "J'ai perdu mon numéro de téléphone. Tu me donnes le tien ?",
+                "Comment tu t'appelles pour te demander en cadeau au Père Noël ?",
+                "Dans le ciel, il y a beaucoup d'étoiles, mais la plus brillante est sur Terre et c'est toi.",
+                "Le soleil vient de se lever ou c'est le sourire que tu m'as donné aujourd'hui ?",
+                "Ce n'est pas le rhum ou la bière, c'est toi qui est monté à ma tête.",
+                "Si nous parlons de mathématiques, tu es la somme de tous mes désirs.",
+                "Tu ressembles à Google car tu as tout ce que je cherche.",
+                "Mon café préféré, c'est celui de tes yeux.",
+                "Je veux être Photoshop pour retoucher tout ton corps.",
+                "J'aimerais que tu sois des céréales, pour te cueillir chaque matin.",
+                "Si seulement j'étais la faim, pour te donner trois fois par jour."
+            ]
+        },
+        "fun_calculador": {
+            "texto1": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ C'est un peu bas... Tu es Joto, pas Gay ! 😄*"
+            ],
+            "texto2": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ Encore plus gay que ce que nous pensions ! 💃*"
+            ],
+            "texto3": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ Il semble que tu sois Gay. ☠*"
+            ],
+            "texto4": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ Peut-être que tu as besoin de regarder plus de films romantiques ! 🎬*"
+            ],
+            "texto5": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ C'est un amour extrême pour les filles ! 👩‍❤️‍👩*"
+            ],
+            "texto6": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ Continue à faire fleurir l'amour ! 🌸*"
+            ],
+            "texto7": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ Peut-être que tu as besoin de plus de hobbies ! 🎨*"
+            ],
+            "texto8": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ C'est une résistance admirable ! 💪*"
+            ],
+            "texto9": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ Continue le bon travail (solitaire) ! 🙌*"
+            ],
+            "texto10": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ Bonne chance pour ta prochaine conquête ! 💔*"
+            ],
+            "texto11": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ Tu brûles ! 🚒*"
+            ],
+            "texto12": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ Garde ce charme ardent ! 🔥*"
+            ],
+            "texto13": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ Tu n'es pas seul dans ce club ! 😅*"
+            ],
+            "texto14": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ Tu as un talent très spécial ! 🙈*"
+            ],
+            "texto15": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ Garde cette attitude courageuse ! 🤙*"
+            ],
+            "texto16": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ Il n'y a rien de mal à aimer le fromage ! 🧀*"
+            ],
+            "texto17": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ Un véritable rat de luxe ! 🏰*"
+            ],
+            "texto18": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ Mange du fromage avec responsabilité ! 🧀*"
+            ],
+            "texto19": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ Le marché est en hausse ! 💼*"
+            ],
+            "texto20": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ Un véritable professionnel ! 💰*"
+            ],
+            "texto21": [
+                "*Les calculs ont montré que",
+                "est",
+                "*-❥ Il est toujours temps de faire des affaires ! 💼*"
+            ],
+            "texto22": "*[❗] Commande invalide.*",
+            "texto23": [
+                "L'univers a parlé.",
+                "Les scientifiques confirment.",
+                "Surprise ! 🎉"
+            ],
+            "texto24": "*CALCULATRICE*",
+            "texto25": "*🔄 Calcul de Pourcentage ! 🔄*",
+            "texto26": "*[❗] Vous devez mentionner quelqu'un pour le calcul.*"
+        },
+        "fun_doxeo_falso": {
+            "texto1": [
+                "*[ ✔ ] Personne doxxée avec succès.*\n\n*—◉ Doxxing réalisé en :*",
+                "secondes.\n*—◉ Résultats obtenus du doxxing :"
+            ],
+            "texto2": [
+                "*Nom :*",
+                "*IP :*",
+                "*N :*",
+                "*W :*",
+                "*NUMÉRO SS :*",
+                "*CAMÉRA DE TÉLÉPHONE :*",
+                "*IPV6 :*",
+                "*UPNP :*",
+                "*DMZ :*",
+                "*MAC :*",
+                "*FAI :*",
+                "*DNS :*",
+                "*ALT DNS :*",
+                "*SUFFIXE DNS :*",
+                "*WAN :*",
+                "*TYPE DE WAN :*",
+                "*PASSERELLE :*",
+                "*MASQUE DE SOUS-RÉSEAU :*",
+                "*PORTS OUVERTS UDP :*",
+                "*PORTS OUVERTS TCP :*",
+                "*VENDUE ROUTEUR :*",
+                "*DISPOSITIF VENDU :*",
+                "*TYPE DE CONNEXION :*",
+                "*ICMPHOPS :*",
+                "*HTTP :*",
+                "*Http :*",
+                "*Http :*",
+                "*Upd :*",
+                "*Tcp :*",
+                "*Tcp :*",
+                "*Tcp :*",
+                "*MAC EXTERNE :*",
+                "*SAUTS DE MODEM :*"
+            ],
+            "texto3": "*☠ DÉMARRAGE DU DOXXING !! ☠*"
+        },
+        "fun_formarpareja": {
+            "texto1": [
+                "CONFIRMATION DE MARIAGE 💍 AVEC",
+                "TROUVEZ UN ÂME SŒUR 💓*"
+            ]
+        },
+        "fun_love": {
+            "texto1": [
+                "C'est un amour ardent et passionné ! Allez-y et dites-le maintenant !",
+                "Il semble qu'il y ait une étincelle entre vous deux. Donnez une chance !",
+                "Il peut y avoir quelque chose de spécial ici. Donnez une opportunité !",
+                "Hmm, l'amour est dans l'air. Peut-être est-il temps d'un café ensemble !",
+                "Les étoiles indiquent qu'il y a un potentiel romantique. Faites un mouvement !",
+                "Une histoire d'amour incroyable peut attendre d'être écrite par vous.",
+                "Ne sous-estimez pas le pouvoir du temps et de la patience en amour. De grandes choses peuvent arriver.",
+                "Rappelez-vous que l'amour est un voyage, et chaque étape est précieuse, peu importe la distance.",
+                "Les connexions fortes peuvent se transformer en de belles relations. Continuez à explorer !",
+                "Le vrai amour demande souvent du temps et des efforts. Ne renoncez pas !"
+            ],
+            "texto2": [
+                "Parfois, l'amitié est le début de quelque chose de beau, mais elle ne se transforme pas toujours en amour.",
+                "L'amour n'est pas tout, l'amitié est également géniale ! Gardez votre amitié spéciale.",
+                "Rappelez-vous que les meilleures relations commencent par une bonne amitié. Ne sous-estimez pas votre lien !",
+                "Parfois, l'amour peut grandir avec le temps. Continuez à renforcer votre connexion !",
+                "La vie est une surprise, qui sait ce que l'avenir réserve ! Ne perdez pas espoir.",
+                "Bien que l'amour ne fleurisse pas comme vous l'espériez, votre connexion reste précieuse.",
+                "Les cœurs peuvent prendre du temps pour se synchroniser, mais cela ne diminue en rien votre spécialité ensemble.",
+                "Malgré les défis de l'amour, votre amitié est un cadeau qui mérite d'être célébré.",
+                "Le temps peut révéler des choses étonnantes. Continuons à explorer ensemble !",
+                "La vie est pleine de rebondissements inattendus. Restez ouvert aux possibilités !"
+            ],
+            "texto3": [
+                "ont un lien profond et un amour",
+                "ont une connexion spéciale, bien que dans l'amour votre pourcentage soit"
+            ],
+            "texto4": [
+                "*❥ Dans l'univers de l'amour",
+                "et",
+                "du",
+                "de 100%*"
+            ],
+            "texto5": "*💞 Calcul de Pourcentage ! 💞*"
+        },
+        "fun_pregunta": {
+            "texto1": [
+                "*⁉️ QUESTIONS ⁉️*",
+                "*QUESTION :*",
+                "*RÉPONSE :*",
+                "Oui",
+                "Peut-être oui",
+                "Possiblement",
+                "Probablement pas",
+                "Non",
+                "Impossible"
+            ]
+        },
+        "fun_reto": {
+            "texto1": [
+                "Passez le paquet d'une fourmi",
+                "Dites à vos amis que vous déménagez aux États-Unis et envoyez-moi une capture d'écran de ce qu'ils vous disent",
+                "Criez par la fenêtre que vous voulez têter et envoyez-moi la vidéo",
+                "Écrivez le nom de votre béguin",
+                "Vous devez mettre le nom de mon créateur dans votre statut WhatsApp, sans donner de contexte",
+                "Envoyez-moi une photo de vous",
+                "Vous devez dessiner le nom d'un membre du groupe sur une partie de votre corps, puis prendre une photo et l'envoyer",
+                "Prenez une photo en embrassant une télévision",
+                "Envoyez-moi une photo de sous-vêtements",
+                "Écrivez dans votre statut WhatsApp que vous aimez manger de la terre",
+                "Vous devez mettre la photo d'un participant du groupe de sexe opposé au vôtre sur votre profil WhatsApp pendant 3 jours 📸📸",
+                "Vous devez envoyer un message audio chantant la chanson : Un canard qui va chantant joyeusement cua cua 🦆",
+                "Envoyez un message à votre ex et dites-lui que vous l'aimez encore",
+                "Envoyez un message audio disant que vous aimez The Shadow Brokers - Bot",
+                "Dites à votre béguin que vous l'aimez et envoyez une capture d'écran au groupe",
+                "Envoyez un message audio en train de chanter",
+                "Envoyez une photo de vous sans cacher votre visage ni rien",
+                "Envoyez une vidéo de danse",
+                "Invitez des personnes que vous ne connaissez pas à prendre un selfie avec vous, puis envoyez-le au groupe",
+                "Choisissez quelques numéros au hasard dans vos contacts et envoyez-leur un message texte disant 'Je suis enceinte'",
+                "Prenez n'importe quelle boisson à proximité, puis mélangez-la avec du poivre et buvez !",
+                "Prenez un numéro au hasard dans vos contacts, appelez-le et dites 'je t'aime'",
+                "Achetez la nourriture la moins chère à la cantine (ou achetez une bouteille d'eau) et dites entre les sanglots à vos camarades de classe : 'C'est... la nourriture la plus chère que j'ai jamais achetée)'",
+                "Achetez une bouteille de coca cola et arrosez-en les fleurs devant la foule.",
+                "Arrêtez près du réfrigérateur, fermez les yeux, choisissez des aliments au hasard dedans, même quand vous mangez, vos yeux doivent être fermés.",
+                "Arrêtez au milieu du terrain de basket et criez : 'JE T'AIME MON PRINCE / MA PRINCESSE'",
+                "Présentez vos respects à quelqu'un de la classe et dites ensuite : 'Je suis à votre service, Majesté'",
+                "Marchez en applaudissant et en chantant la chanson 'Joyeux Anniversaire' de la classe dans le couloir.",
+                "Mettez-vous à genoux sur un genou et dites 'Veux-tu m'épouser ?' à la première personne qui entre dans la salle.",
+                "Faites un accessoire absurde avec du tissu, peu importe ce que c'est, continuez à demander des poses devant la caméra, continuez à monter.",
+                "Dites 'VOUS ÊTES BEAU / TRÈS BEAU, NE MENTEZ PAS' à la fille que vous trouvez la plus belle de la classe.",
+                "Dites à quelqu'un dans la classe : 'On m'a d'abord dit que c'était ton jumeau, on s'est séparés et ensuite j'ai subi une chirurgie plastique. Et c'est la chose la plus sérieuse que j'ai jamais dite'.",
+                "Jetez le cahier de quelqu'un à la poubelle, devant ses yeux, en disant 'Ce livre personne ne peut le comprendre'",
+                "Arrachez les poils de votre jambe 3 fois !",
+                "Parlez à vos parents, dites-leur que vous leur manquez avec des emojis tristes.",
+                "Essayez de rechercher sur Google des choses effrayantes ou ridicules comme la tripanophobie, etc.",
+                "Asseyez-vous détendu au milieu du terrain de basket en prétendant que c'est une plage pour bronzer.",
+                "Remplissez votre bouche d'eau et vous devez la tenir pendant deux tours, si vous riez et renversez ou buvez, alors vous devez la remplir à nouveau et ajouter un tour supplémentaire.",
+                "Saluez la première personne qui entre dans cette salle et dites 'Bienvenue à Qui Veut Gagner des Millions!'",
+                "Envoyez un SMS à vos parents 'Salut frère ! Je viens d'acheter la dernière édition du magazine Playboy!'",
+                "Envoyez-leur un SMS : 'Maman, papa, je sais que je suis un enfant adopté de l'orphelinat. Ne le cachez plus'.",
+                "Envoyez trois numéros aléatoires dans vos contacts et écrivez 'Je viens de devenir mannequin pour le magazine Playboy'",
+                "Mangez une cuillère à soupe de sauce soja sucrée et de sauce soja !",
+                "Mangez quelque chose mais ne utilisez pas vos mains.",
+                "Soyez contrarié avec vos amis qui ne viennent pas malgré un rendez-vous pour jouer à 'Action ou Vérité' ensemble",
+                "Cassez un œuf avec votre tête !",
+                "Mangez des aliments qui ont été mélangés et auront un goût étrange, mais assurez-vous qu'ils ne sont pas nuisibles à la santé à long ou à court terme.",
+                "Dansez comme les Girls 'Generation pour les garçons devant la classe, ou dansez comme le Super Junior pour les filles.",
+                "Hisser le mât du drapeau sans le drapeau.",
+                "Parler de la personne que vous aimez, de vos amis les plus proches, du sexe opposé que vous ne connaissez pas du tout et ainsi de suite.",
+                "Copiez les coiffures de tous vos amis.",
+                "Chantez la chanson HAI TAYO devant beaucoup de gens en dansant",
+                "Chantez le chœur de la dernière chanson qui a été jouée",
+                "Envoyez un message vocal à votre ex / béguin / petit ami, dites salut (nom), je veux appeler, juste un moment. Tu me manques 🥺👉🏼👈🏼",
+                "Dites à des gens aléatoires : 'On m'a d'abord dit que c'était ton jumeau, on s'est séparés et ensuite j'ai subi une chirurgie plastique. Et ça'",
+                "Faites une rime pour le premier joueur !",
+                "Racontez votre propre version de choses embarrassantes",
+                "Changez votre nom pour 'Gay' pendant 24 heures",
+                "Mentionnez votre type de petite amie !",
+                "Dites 'Je suis amoureux de toi, veux-tu être ma petite amie ou non ?' à la dernière personne de sexe opposé avec qui vous avez parlé sur WhatsApp, attendez la réponse",
+                "Parlez à votre ex sur WhatsApp et dites-lui 'je t'aime, s'il te plaît, reviens'. Envoyez une capture d'écran comme preuve du défi relevé !"
+            ]
+        },
+        "fun_ruletas": {
+            "texto1": "[❗INFORMATION❗] Ce jeu est très interactif et amusant pour tous les membres du groupe si vous êtes accro au jeu, activez : #on jeux",
+            "texto2": [
+                "『⏰』Attends :",
+                "pour jouer à nouveau"
+            ],
+            "texto3": "😺 BONNE CHANCE 🐞🍀\n*Obtiens :*",
+            "texto4": "😿 TU N'AS PAS DE MALCHANCE, TU VIENS DE PERDRE :",
+            "texto5": "😹 TU AS UNE CHANCE MAUVAISE QUE J'ARRÊTE LE POUVOIR MAINTENANT ET TU N'ES PAS ADMINS RÉELLEMENT 😹😹😹",
+            "texto6": "😼 TU AS DE LA BONNE CHANCE 😉, Maintenant tu es accro, celui qui arrête les accros est fan de kuno 😂",
+            "texto7": "WOUH LA CHANCE EST DE VOTRE CÔTÉ, ALLEZ JOUER AU CASINO 🎰\n*GAGNE :*",
+            "texto8": "👑 GUA TU AS UNE CHANCE DE BONNE CHANCE GAGNE LA CHANCE DE TE GAGNER POUR : 1 Heure ⏰"
+        },
+        "fun_simi": {
+            "texto1": "*[❗] INSÉREZ UN TEXTE POUR PARLER AVEC SIMSIMI OU LE BOT*\n\n*EXEMPLE :",
+            "texto2": "*[❗] ERREUR, RÉESSAYEZ*",
+            "texto3": [
+                "Bonjour",
+                "Bonjour"
+            ]
+        },
+        "fun_top": {
+            "texto1": "Exemple d'utilisation :\n.top *texte*"
+        },
+        "fun_verdad": {
+            "texto3": [
+                "As-tu déjà eu un coup de cœur pour quelqu'un? Pendant combien de temps?",
+                "Si possible, ou si vous le souhaitez, dans un groupe de discussion / hors groupe de discussion, avec qui vous vous lieriez d'amitié? (Peut être différent / du même genre)",
+                "Quelle est ta plus grande peur?",
+                "As-tu déjà eu un coup de cœur pour quelqu'un et as-tu senti que cette personne ressentait aussi quelque chose pour toi?",
+                "Quel est le nom de l'ex-petit ami de votre amie que vous avez secrètement aimé une fois?",
+                "As-tu déjà volé de l'argent à ta mère ou à ton père? Quelle en est la raison?",
+                "Qu'est-ce qui te rend heureux quand tu es triste?",
+                "As-tu déjà vécu un amour non partagé? Si oui, avec qui? Comment te sens-tu, mec?",
+                "As-tu déjà eu une aventure avec quelqu'un?",
+                "Chose la plus redoutée",
+                "Qui est la personne la plus influente dans votre vie?",
+                "De quoi es-tu fier cette année?",
+                "Qui est la personne qui peut te rendre malade?",
+                "Qui est la personne qui t'a déjà excité?",
+                "(pour les musulmans) As-tu déjà manqué de prier toute la journée?",
+                "Qui se rapproche le plus de ton type de partenaire idéal ici?",
+                "Avec qui aimes-tu jouer?",
+                "As-tu déjà rejeté quelqu'un? Pourquoi?",
+                "Mentionnez l'incident qui vous a blessé et dont vous vous souvenez toujours",
+                "Quelles réalisations avez-vous accomplies cette année?",
+                "Quel est votre pire habitude à l'école?",
+                "Quel programme de télévision détestez-vous le plus? Donnez la raison.",
+                "Quelle est la robe la plus laide (à votre avis) que vous avez jamais portée et quand l'avez-vous portée?",
+                "Quelle est la pire rumeur que vous ayez jamais propagée sur votre ami?",
+                "Qu'est-ce qui est le plus gênant pour vous?",
+                "Quelle est la première chose que vous voyez lorsque vous regardez quelqu'un (du sexe opposé)?",
+                "Que pensez-vous quand vous vous regardez dans le miroir?",
+                "Quelle est la chose la plus stupide que vous ayez jamais faite dans votre vie?",
+                "Quel est le pire rêve que vous ayez jamais eu?",
+                "Quel est le rêve le plus fou que vous puissiez vous souvenir jusqu'à présent?",
+                "Quel est votre pire trait, selon vous?",
+                "Quel trait voudriez-vous changer chez vous?",
+                "Quel trait voudriez-vous changer chez votre ami?",
+                "Que feriez-vous si votre petit ami vous disait que vous avez un nez ou des doigts laids?",
+                "À quoi pensez-vous avant de vous endormir? Par exemple: fantasmer sur un partenaire, etc.",
+                "Qu'est-ce qui, selon vous, se distingue le plus chez vous?",
+                "Quelle partie du corps de votre ami aimez-vous le plus et aimeriez-vous avoir?",
+                "Quelle partie de votre corps détestez-vous le plus?",
+                "Parmi toutes les classes de l'école, dans laquelle voudriez-vous entrer et laquelle voudriez-vous éviter?",
+                "Décrivez votre ami le plus proche!",
+                "Décrivez-vous en un mot!",
+                "Quels films et chansons vous ont fait pleurer?",
+                "Quelle est quelque chose que vous avez gardée secrète jusqu'à présent et que personne n'a découverte?",
+                "Quelle est la chose la plus romantique qu'une personne (du sexe opposé) vous ait jamais faite ou donnée?",
+                "Quelle est l'expérience la plus désagréable que vous ayez jamais eue?",
+                "Si vous deviez renaître et devenir l'un de vos amis, lequel choisiriez-vous d'être?",
+                "Si vous aviez des super pouvoirs, que voudriez-vous faire?",
+                "Si l'apocalypse survenait bientôt, que feriez-vous?",
+                "Si on vous demandait de subir une chirurgie plastique basée sur le visage d'un camarade de classe, de qui imiteriez-vous?",
+                "Avez-vous déjà volé quelque chose?",
+                "Avez-vous peur de mourir? Pourquoi?",
+                "Quand avez-vous pleuré pour la dernière fois et pourquoi?",
+                "Quelles sont vos compétences spéciales?",
+                "Comment pouvez-vous aimer la personne que vous aimez?",
+                "Quelle bonne qualité de votre ami le plus proche pensez-vous qu'il ou elle ne connaît pas?",
+                "Avec quel type de personne aimeriez-vous vous marier un jour?",
+                "À votre avis, quel est le travail le plus attrayant pour l'ami qui est à côté de vous? Et pourquoi?",
+                "Avec qui aimeriez-vous échanger pendant une journée? (amis les plus proches que vous connaissez tous les deux) et pourquoi",
+                "Avez-vous déjà secrètement espéré que la relation de quelqu'un avec votre petite amie se termine? Qui?",
+                "Préférez-vous les AMIS ou les AMIES? Pourquoi?",
+                "Quelle citation vous revient le plus à l'esprit et vous aimez?",
+                "Quels secrets n'avez-vous jamais racontés à vos amis jusqu'à présent?",
+                "Qui sont vos vrais modèles?",
+                "Lequel de vos amis pensez-vous être mature?",
+                "Lequel de vos amis pensez-vous avoir le moins de cheveux?",
+                "Lequel de vos amis est le plus photogénique?",
+                "Qui est votre meilleur ex? Et pourquoi avez-vous rompu?",
+                "Quel est le nom de l'artiste avec qui vous avez parlé en secret?",
+                "Quel était le nom du professeur que vous aimiez?",
+                "Quel est le nom de l'ex-petite amie de votre ami que vous avez secrètement aimée?",
+                "Quel est le nom de la personne (du sexe opposé) que vous pensez qu'il serait amusant de fréquenter?",
+                "Quel est le nom de la personne que vous détestez, mais pensez que cette personne vous aime (pas nécessairement du sexe opposé)?",
+                "Quel est le nom de la personne que vous avez secrètement pointée?",
+                "Qui est la personne (du sexe opposé) qui vous vient le plus à l'esprit?",
+                "Qui est la personne la plus agaçante parmi vos amis? Quelle en est la raison?",
+                "Qui de vos amis pensez-vous avoir besoin d'une réforme?",
+                "Qui se rapproche le plus de ton type de partenaire idéal ici?",
+                "Père ou mère",
+                "Quelle partie de votre corps n'aimez-vous pas?",
+                "Avez-vous déjà triché?",
+                "Avez-vous déjà été embrassé?",
+                "Que feriez-vous d'abord si vous vous réveilliez du sexe opposé?",
+                "Avez-vous déjà laissé quelqu'un prendre le blâme pour quelque chose que vous avez fait?",
+                "Quelle est la chose la plus embarrassante que vous ayez jamais faite?",
+                "Quelle est la raison la plus ridicule pour laquelle vous avez rompu avec quelqu'un?",
+                "Quel est votre pire habitude?",
+                "Quelle est, selon vous, votre meilleure caractéristique? Et quelle est la pire?",
+                "Quelle est la chose la plus courageuse que vous ayez jamais faite?",
+                "Quand avez-vous mouillé le lit pour la dernière fois?",
+                "À quoi rêvez-vous le plus en dormant?",
+                "Si vous deviez gagner de l'argent illégalement, comment le feriez-vous?",
+                "Quelles choses d'enfant faites-vous encore?",
+                "Si vous étiez aveugle, qui serait votre chien-guide?",
+                "Qu'est-ce qui vous impressionne le plus?",
+                "Si vous ne pouviez utiliser que 3 mots pour le reste de la nuit à partir de maintenant, quels seraient-ils?",
+                "Si vous étiez un dictateur, quelle loi promulgueriez-vous en premier?",
+                "Si vous viviez à l'époque nazie, qui seriez-vous?",
+                "Quelle a été l'expérience la plus embarrassante à l'école / en période d'études / éducation / l'année dernière?",
+                "Quelle est la plus grande erreur de votre vie?",
+                "Qu'est-ce que vous ne feriez jamais, même si vous saviez qu'il ne vous restait que 12 heures à vivre?",
+                "Quels crimes avez-vous commis?",
+                "Racontez un secret de votre enfance.",
+                "Quelle est votre plus grande représentation (secret)?",
+                "Que voudriez-vous faire avec moi... (x personne), si après vous pouviez lui effacer la mémoire...?",
+                "Quelle est la pire chose que vous ayez jamais faite à quelqu'un?",
+                "De qui aimez-vous le plus?",
+                "As-tu déjà été amoureux de quelqu'un ici présent?",
+                "Si vous étiez un vampire, qui mordriez-vous maintenant?",
+                "Avez-vous déjà déféqué en public?",
+                "Quelle est votre fantaisie la plus sombre?",
+                "Quelle est la meilleure chose que vous ayez jamais eue avec une autre personne?",
+                "Quel est votre plus grand vice?",
+                "Qu'est-ce qui vous excite le plus dans votre corps et ce qui est le plus laid?",
+                "Qui aimeriez-vous voir nu?",
+                "Qui dans ce groupe pourrait vous faire tomber amoureux?",
+                "Avez-vous déjà eu un rêve érotique impliquant quelqu'un de ce groupe?",
+                "Si vous deviez tatouer une zone génitale, que serait-ce?",
+                "Qu'est-ce qui est le plus important dans une relation: le sexe ou l'amour?",
+                "Pensez-vous que le sexe est génial, bon, correct, amusant parfois, ou vraiment cela vous importe peu?",
+                "Qu'est-ce qui vous fait vraiment aimer?",
+                "À quelle fréquence avez-vous des relations sexuelles par semaine / mois et à quelle fréquence aimeriez-vous en avoir?",
+                "Combien de partenaires sexuels avez-vous déjà eu?",
+                "Quelle partie du corps vous excite le plus?",
+                "Comment, où et avec qui avez-vous eu votre première fois?",
+                "Quelle est l'importance pour vous des préliminaires prolongés?",
+                "Que devrait faire un homme ou une femme pour vous séduire?",
+                "Avez-vous déjà eu des relations sexuelles avec un bon ami?",
+                "Avez-vous déjà eu des relations sexuelles avec quelqu'un de ce groupe, sauf avec votre partenaire?",
+                "Quel animal vous correspond le mieux et pourquoi?",
+                "Quel est votre pire rendez-vous?",
+                "Qui aimeriez-vous embrasser maintenant?",
+                "Quelle est votre fantaisie la plus sombre secrète?",
+                "Préféreriez-vous tatouer vos fesses ou percer votre langue?",
+                "Êtes-vous toujours fidèle?",
+                "Avez-vous un béguin d'adolescent?",
+                "Pour qui as-tu eu un coup de cœur?",
+                "Avec quelle célébrité voudriez-vous sortir?",
+                "Quel a été le moment le plus embarrassant de votre vie?",
+                "Quelle bouche du groupe aimes-tu le plus?",
+                "Quel joueur a la main la plus belle?",
+                "Où avez-vous eu votre premier baiser?",
+                "Qui dans le groupe aimeriez-vous embrasser le plus?",
+                "Qui dans le groupe est peut-être le plus amusant?",
+                "Quelle est la plus grande erreur de votre vie?",
+                "Avez-vous déjà vécu une situation embarrassante lors d'un rendez-vous?",
+                "Avez-vous déjà été en contact avec des drogues?",
+                "Qui aimeriez-vous embrasser maintenant?",
+                "Quand avez-vous été ivre pour la dernière fois?",
+                "Avez-vous déjà triché à un examen scolaire?",
+                "Avez-vous déjà volé quelque chose dans le passé?",
+                "Ronflez-vous la nuit?",
+                "Quelle est votre chanson préférée?",
+                "Avec quels joueurs négocieriez-vous pendant une semaine et pourquoi?",
+                "Si vous déménagiez sur une île déserte, qui emmèneriez-vous d'ici?",
+                "De quoi avez-vous le plus peur?",
+                "Où vous rasez-vous?",
+                "Avez-vous un surnom?",
+                "Regardez-vous dans le miroir avant de vous laver?",
+                "Qui vous a causé la pire douleur?",
+                "Combien de fois avez-vous déjà été embrassé?",
+                "Quelle est la chose la plus embarrassante qui vous soit arrivée?",
+                "Combien de gars / filles avez-vous déjà embrassés?",
+                "Pour qui êtes-vous amoureux?",
+                "Quelle star aimez-vous?",
+                "Avez-vous commencé quelque chose avec XY (insérer le nom)?",
+                "Avez-vous déjà volé quelque chose?"
+            ]
+        },
+        "game__cancion": {
+            "texto1": "Le jeu est terminé",
+            "texto2": "❌ Incorrect !",
+            "texto3": "DEVINEZ LE TITRE DE LA CHANSON"
+        },
+        "game__suitpvp": {
+            "texto1": "PIERRE, PAPIER, CISEAUX, LE JEU COMMENCE*",
+            "texto2": "🎮 JEUX - PVP - JEUX 🎮\n\n—◉ LE JEU A COMMENCÉ, LES OPTIONS SONT ENVOYÉES AUX CHATS PRIVÉS",
+            "texto3": "◉ SÉLECTIONNEZ UNE OPTION ET ENVOYEZ-LA, RÉPONDEZ-MOI\n*◉ ATTENDEZ L'OPTION ENVOYÉE",
+            "texto4": [
+                "VEUILLEZ SÉLECTIONNER UNE DES OPTIONS SUIVANTES",
+                "pierre",
+                "papier",
+                "ciseaux",
+                "*GAGNANT +",
+                "XP\nPERDANT",
+                "XP\n*répondez au message avec l'option souhaitée*",
+                "*exemple : papier*"
+            ],
+            "texto5": [
+                "VEUILLEZ SÉLECTIONNER UNE DES OPTIONS SUIVANTES",
+                "pierre",
+                "papier",
+                "ciseaux",
+                "GAGNANT +",
+                "XP\nPERDANT",
+                "XP\n*répondez au message avec l'option souhaitée*",
+                "*exemple : papier*"
+            ],
+            "texto6": "[❗] AUCUN JOUEUR N'A PRIS L'INITIATIVE DE FAIRE MATCH NUL, LE PVP EST ANNULÉ",
+            "texto7": "AUCUNE OPTION SÉLECTIONNÉE, FIN DU PVP*"
+        },
+        "game__ttt": {
+            "texto1": [
+                "Le jeu est terminé",
+                "Invalide",
+                "Position invalide",
+                "Position invalide"
+            ],
+            "texto2": "MORPION",
+            "texto3": "CÉLÉBRATION 🥳, VOUS AVEZ GAGNÉ +4999 XP",
+            "texto4": "LE JOUEUR A FINI À ÉGALITÉ 😐",
+            "texto5": "TOUR DE"
+        },
+        "game_acertijo_resp": {
+            "texto1": "Cet énigme est terminée !",
+            "texto2": "*Réponse correcte !*",
+            "texto3": "Presque là !",
+            "texto4": "Réponse incorrecte"
+        },
+        "game_acertijo": {
+            "texto1": "Il y a encore des énigmes non résolues dans ce chat",
+            "texto2": [
+                "*• Temps :*",
+                "*• Bonus :*"
+            ],
+            "texto3": "Le temps est écoulé !\n*Réponse :*",
+            "texto4": [
+                {
+                    "question": "Que dit un pingouin à un autre pingouin ?",
+                    "response": "Je t'aime comme aucun autre"
+                },
+                {
+                    "question": "Que dit un aveugle à un autre aveugle ?",
+                    "response": "On se voit plus tard"
+                },
+                {
+                    "question": "En quoi une épingle ressemble-t-elle à un policier ?",
+                    "response": "Ils retiennent tous les deux"
+                },
+                {
+                    "question": "Qu'est-ce qui gèle quand il est chauffé ?",
+                    "response": "L'ordinateur"
+                },
+                {
+                    "question": "Quel fruit a beaucoup d'yeux mais ne peut pas voir ?",
+                    "response": "L'ananas"
+                },
+                {
+                    "question": "Dans quelle langue les tortues communiquent-elles ?",
+                    "response": "En tortugais"
+                },
+                {
+                    "question": "Comment un policier de Séville appelle-t-il son arme ?",
+                    "response": "Ma arme"
+                },
+                {
+                    "question": "Qu'est-ce qui est tout pour quelqu'un et rien pour les autres ?",
+                    "response": "L'esprit"
+                },
+                {
+                    "question": "Quel est le comble pour un aspirateur ?",
+                    "response": "Être allergique à la poussière"
+                },
+                {
+                    "question": "Qu'est-ce qui disparaît lorsque vous en parlez ?",
+                    "response": "Le silence"
+                },
+                {
+                    "question": "De quoi avons-nous besoin pour écrire en dormant ?",
+                    "response": "Être éveillé"
+                },
+                {
+                    "question": "Quel objet peut avoir un visage sans avoir de corps ?",
+                    "response": "Une pièce de monnaie"
+                },
+                {
+                    "question": "Alimente la maison, Cabinet avec glace",
+                    "response": "Le réfrigérateur"
+                },
+                {
+                    "question": "Qu'est-ce que les femmes ont entre leurs jambes ?",
+                    "response": "Les genoux"
+                },
+                {
+                    "question": "Il entre dur et sec et sort mou et mouillé. Qu'est-ce que c'est ?",
+                    "response": "Un chewing-gum"
+                },
+                {
+                    "question": "Je suis dans tout et je suis dans rien. Qui suis-je ?",
+                    "response": "La lettre d"
+                },
+                {
+                    "question": "Continuellement rouge, mais arrête au vert. Qu'est-ce que c'est ?",
+                    "response": "Une pastèque"
+                },
+                {
+                    "question": "Qu'est-ce qui est noir quand vous l'achetez, rouge quand vous l'utilisez et gris quand vous le jetez ?",
+                    "response": "Le charbon"
+                },
+                {
+                    "question": "Qu'est-ce qui est toujours devant vous mais que vous ne pouvez pas voir ?",
+                    "response": "L'avenir"
+                },
+                {
+                    "question": "Quel mois a 28 jours ?",
+                    "response": "Tous"
+                },
+                {
+                    "question": "Comment quelqu'un peut-il rester éveillé pendant dix jours sans dormir ?",
+                    "response": "En dormant la nuit"
+                },
+                {
+                    "question": "Comment rempliriez-vous un tonneau pour qu'il pèse le moins possible ?",
+                    "response": "Avec des trous"
+                },
+                {
+                    "question": "Si pendant une course, vous dépassez celui qui est en deuxième place, à quelle position êtes-vous ?",
+                    "response": "Deuxième"
+                },
+                {
+                    "question": "Où jeudi est-il avant mercredi ?",
+                    "response": "Dans le dictionnaire"
+                },
+                {
+                    "question": "Qu'est-ce qui monte et descend mais reste toujours au même endroit ?",
+                    "response": "Les escaliers"
+                },
+                {
+                    "question": "Comment appelle-t-on un ascenseur en Chine ?",
+                    "response": "En appuyant sur le bouton"
+                },
+                {
+                    "question": "Qu'est-ce qu'un éléphant fait au lever du soleil ?",
+                    "response": "Il projette une ombre"
+                },
+                {
+                    "question": "Pourquoi un Tyrannosaure Rex ne peut-il pas applaudir ?",
+                    "response": "Parce qu'il est éteint"
+                },
+                {
+                    "question": "Quel animal est toujours plein ?",
+                    "response": "La baleine"
+                },
+                {
+                    "question": "Qu'est-ce que nous faisons tous dès que nous nous réveillons ?",
+                    "response": "Nous ouvrons les yeux"
+                },
+                {
+                    "question": "Quel est le nombre qui, si vous le divisez par deux, devient zéro ?",
+                    "response": "Huit"
+                },
+                {
+                    "question": "Que devez-vous faire pour allumer une bougie ?",
+                    "response": "Qu'elle soit éteinte"
+                },
+                {
+                    "question": "Quel est le pays où tout se termine ?",
+                    "response": "La Finlande"
+                },
+                {
+                    "question": "La réponse à cette question est #######",
+                    "response": "#######"
+                },
+                {
+                    "question": "Quelle est la fin de tout ?",
+                    "response": "La lettre o"
+                },
+                {
+                    "question": "Où trouvez-vous un mur avec un autre mur ?",
+                    "response": "Dans le coin"
+                },
+                {
+                    "question": "Qu'a beaucoup de mots mais ne parle jamais ?",
+                    "response": "Un livre"
+                },
+                {
+                    "question": "Qu'est-ce qui est à vous mais que les autres utilisent plus que vous ?",
+                    "response": "Votre nom"
+                },
+                {
+                    "question": "À quel moment une personne devient-elle un fruit ?",
+                    "response": "Quand elle attend"
+                },
+                {
+                    "question": "Les parents de José ont trois fils : Luis, Raúl et..., comment s'appelle le troisième ?",
+                    "response": "José"
+                },
+                {
+                    "question": "Quel mot du dictionnaire est mal écrit ?",
+                    "response": "Mal écrit"
+                },
+                {
+                    "question": "Humide à l'intérieur, avec des cheveux à l'extérieur. Commence par C. De quoi s'agit-il ?",
+                    "response": "Une noix de coco"
+                },
+                {
+                    "question": "David et Fabián jouent aux échecs. Ils ont joué 5 parties, mais ils ont tous les deux gagné 3. Comment est-ce possible ?",
+                    "response": "Parce qu'ils jouent avec plus de personnes"
+                },
+                {
+                    "question": "Combien de 9 y a-t-il entre 1 et 100 ?",
+                    "response": "Vingt"
+                },
+                {
+                    "question": "Ce sont deux ventilateurs qui fonctionnent toute la journée, mais quand vous dormez, ils s'arrêtent et restent immobiles",
+                    "response": "Les cils"
+                },
+                {
+                    "question": "L'or semble, l'argent ne l'est pas, et qui ne devine pas est un fou",
+                    "response": "Une banane"
+                },
+                {
+                    "question": "Cercle bien rond qui, si vous le frappez, fait un bond de surprise",
+                    "response": "Un tambour"
+                },
+                {
+                    "question": "Un cheval blanc entre dans la mer Noire. Comment en sort-il ?",
+                    "response": "Il sort mouillé"
+                },
+                {
+                    "question": "Si un train électrique va du nord au sud, de quel côté va la vapeur ?",
+                    "response": "C'est électrique, il n'émet pas de vapeur"
+                },
+                {
+                    "question": "Il a 4 lettres, commence par C et se termine par O et est à l'arrière",
+                    "response": "Le coude"
+                },
+                {
+                    "question": "Un avion s'écrase et tout le monde meurt, exactement à la frontière entre l'Espagne et le Portugal. Dans quel hôpital doivent être emmenés les survivants ?",
+                    "response": "Il n'y a pas de survivants"
+                },
+                {
+                    "question": "Ce banc est occupé par un père et un fils, le père s'appelle Juan et le fils te l'a déjà dit",
+                    "response": "Esteban"
+                },
+                {
+                    "question": "Certains mois ont 31 jours, d'autres seulement 30. Combien ont 28 jours ?",
+                    "response": "Tous"
+                },
+                {
+                    "question": "Vous ne pouvez pas le voir, mais vous ne pouvez pas vivre sans. Qu'est-ce que c'est ?",
+                    "response": "L'air"
+                }
+            ]
+        },
+        "game_akinator_ans": {
+            "texto1": "*0 - Oui*\n*1 - Non*\n*2 - Je ne sais pas*\n*3 - Probablement oui*\n*4 - Probablement non*\n*5 - Revenir à la question précédente*",
+            "texto2": "*[❗] RÉPONDEZ AVEC LES NOMBRES 1, 2, 3, 4 ou 5*",
+            "texto3": "*[❗] ET IL N'Y A PAS DE QUESTIONS ANTÉRIEURES À CELLE-CI, C'EST LA PREMIÈRE QUESTION*",
+            "texto4": "*[❗] LA RÉPONSE DE AKINATOR A EXPIRÉ, LE JEU EST TERMINÉ*",
+            "texto5": "🎮 *AKINATOR* 🎮\n\n*LA QUESTION D'AKINATOR EST",
+            "texto6": [
+                "🎮 *AKINATOR* 🎮\n*RÉPONDEZ :",
+                "*QUESTION :",
+                "*QUESTION :"
+            ],
+            "texto7": "*[❗] ERREUR, ERREUR D'INTERROGATION*"
+        },
+        "game_akinator": {
+            "texto1": "*[❗] ACTUELLEMENT, IL N'Y A PAS DE SESSIONS DANS UNE SESSION (PARTIE) D'AKINATOR*",
+            "texto2": "*[❗] SI VOUS ÊTES DANS UNE CONVERSATION LOCALE (PARTIE) D'AKINATOR, QUITTEZ LA SESSION*",
+            "texto3": "*[❗] VOUS ÊTES TOUJOURS DANS UNE SESSION (PARTIE) D'AKINATOR*",
+            "texto4": "*[❗] ERREUR, INTERVALLE DE MOTS PLUS GRAND*",
+            "texto5": [
+                "🎮 *AKINATOR* 🎮\n\n*QUESTION :",
+                "*QUESTION :",
+                "*0 - Oui*\n",
+                "*1 - Non*\n",
+                "*2 - Je ne sais pas*\n",
+                "*3 - Probablement oui*\n",
+                "*4 - Probablement non*\n\n",
+                "*UTILISEZ LA COMMANDE",
+                " end POUR QUITTER LA SESSION (PARTIE) D'AKINATOR*"
+            ],
+            "texto6": "*[❗] ERREUR, INTERVALLE DE MOTS PLUS GRAND*"
+        },
+        "game_cancion": {
+            "texto1": "Il y a encore des chansons sans réponse dans ce chat.",
+            "texto2": [
+                "DEVINEZ LE TITRE DE LA CHANSON",
+                "Temps",
+                "secondes",
+                "Écrivez",
+                "Pour obtenir un indice",
+                "Prix :",
+                "RÉPONDEZ À CE MESSAGE AVEC LES RÉPONSES!"
+            ],
+            "texto3": "Le temps est écoulé !\nLa réponse est"
+        },
+        "game_delttt": {
+            "texto1": "*[❗] IL N'Y A PAS DE PARTIE DE MORPION EN COURS*",
+            "texto2": "DÉMARRER UNE SALLE DE JEU",
+            "texto3": "nouvelle partie",
+            "texto4": "*[ ✔ ] SI VOUS SUPPRIMEZ LA SALLE DE JEU DU MORPION EN COURS*"
+        },
+        "game_ppt": {
+            "texto1": "*🕓 Vous devez attendre",
+            "texto2": "secondes avant de pouvoir jouer à nouveau*",
+            "texto3": "*Pierre 🗿, Papier 📄 ou Ciseaux ✂️*\n\n*—◉ Options disponibles :*\n*◉",
+            "texto4": [
+                "*🔰 Égalité !*\n\n*👉🏻 Vous :",
+                "*👉🏻 Le Bot :",
+                "*🎁 Récompense +500 XP*"
+            ],
+            "texto5": [
+                "*🥳 Vous avez gagné ! 🎉*\n\n*👉🏻 Vous :",
+                "*👉🏻 Le Bot :",
+                "*🎁 Récompense +1000 XP*"
+            ],
+            "texto6": [
+                "*☠️ Vous avez perdu ! ❌*\n\n*👉🏻 Vous :",
+                "*👉🏻 Le Bot :",
+                "*❌ Récompense -300 XP*"
+            ],
+            "texto7": [
+                "*🥳 Vous avez gagné ! 🎉*\n\n*👉🏻 Vous :",
+                "*👉🏻 Le Bot :",
+                "*🎁 Récompense +1000 XP*"
+            ],
+            "texto8": [
+                "*☠️ Vous avez perdu ! ❌*\n\n*👉🏻 Vous :",
+                "*👉🏻 Le Bot :",
+                "*❌ Récompense -300 XP*"
+            ],
+            "texto9": [
+                "*🥳 Vous avez gagné ! 🎉*\n\n*👉🏻 Vous :",
+                "*👉🏻 Le Bot :",
+                "*🎁 Récompense +1000 XP*"
+            ],
+            "texto10": [
+                "*☠️ Vous avez perdu ! ❌*\n\n*👉🏻 Vous :",
+                "*👉🏻 Le Bot :",
+                "*❌ Récompense -300 XP*"
+            ],
+            "texto11": [
+                "*🥳 Vous avez gagné ! 🎉*\n\n*👉🏻 Vous :",
+                "*👉🏻 Le Bot :",
+                "*🎁 Récompense +1000 XP*"
+            ],
+            "texto12": [
+                "*☠️ Vous avez perdu ! ❌*\n\n*👉🏻 Vous :",
+                "*👉🏻 Le Bot :",
+                "*❌ Récompense -300 XP*"
+            ],
+            "texto13": [
+                "*🥳 Vous avez gagné ! 🎉*\n\n*👉🏻 Vous : ",
+                "*👉🏻 Le Bot : ",
+                "*🎁 Récompense +1000 XP*"
+            ],
+            "texto14": [
+                "*☠️ Vous avez perdu ! ❌*\n\n*👉🏻 Vous :",
+                "*👉🏻 Le Bot :",
+                "*❌ Récompense -300 XP*"
+            ]
+        },
+        "game_slot": {
+            "texto1": "*[❗] ENTREZ LE MONTANT QUE VOUS VOULEZ PARIER*",
+            "texto2": "*📌 EXEMPLE :*",
+            "texto3": [
+                "*⏳ ATTENDEZ",
+                "POUR PARIER À NOUVEAU"
+            ],
+            "texto4": "*[❗] LE MINIMUM À PARIER EST DE 100 XP*",
+            "texto5": "*[❗] VOTRE XP N'EST PAS SUFFISANT POUR PARIER CE MONTANT, JOUEZ À D'AUTRES JEUX OU INTERAGISSEZ AVEC LE BOT POUR GAGNER PLUS D'XP*",
+            "texto6": "*VOUS AVEZ GAGNÉ ! 🎁",
+            "texto7": "*🔮 PRESQUE LÀ !, CONTINUEZ D'ESSAYER*\n*+10 XP DEMAIN*",
+            "texto8": "*❌ VOUS AVEZ PERDU*"
+        },
+        "game_sopa_de_letras": {
+            "texto1": "ENREGISTRÉ DANS LE JEU* ✅",
+            "texto2": [
+                "MOTS CROISÉS",
+                "Temps",
+                "secondes",
+                "Écrivez",
+                "Pour obtenir un indice",
+                "Prix :",
+                "RÉPONDEZ À CE MESSAGE AVEC LES RÉPONSES!"
+            ],
+            "texto3": "Le temps est écoulé !\nLa réponse est"
+        },
+        "game_suitpvp": {
+            "texto1": "*[❗] TERMINEZ VOTRE PARTIE AVANT D'EN COMMENCER UNE AUTRE*",
+            "texto2": "*VOULEZ-VOUS DÉFIER ? CLIQUEZ SUR UN PERSONNAGE*\n\n*—◉ EXEMPLE :*",
+            "texto3": [
+                "🎮 JEUX - PVP - JEUX 🎮\n\n—◉",
+                "DÉFIE",
+                "À UN PVP DE PIERRE, PAPIER OU CISEAUX\n◉ ÉCRIVEZ 'accepter' POUR ACCEPTER\n◉ ÉCRIVEZ 'refuser' POUR REFUSER\nen répondant au message"
+            ],
+            "texto4": "*[❗] LA PERSONNE QUE VOUS VOULEZ DÉFIER JOUE DÉJÀ UNE AUTRE PARTIE, ATTENDEZ QU'ELLE TERMINE DE JOUER*",
+            "texto5": "[ ⏳ ] TEMPS D'ATTENTE ÉCOULÉ, LE PVP EST ANNULÉ EN RAISON DE L'ABSENCE DE RÉPONSE"
+        },
+        "game_ttt": {
+            "texto1": [
+                "*[❗] UN NOM EST REQUIS POUR UNE SALLE DE JEU*\n\n*—◉ DÉBUT*",
+                "nouvelle salle*"
+            ],
+            "texto2": "*[🕹️] DÉMARRAGE DU JEU, UN JOUEUR A REJOINT LA PARTIE*",
+            "texto3": "EN JEU",
+            "texto4": "TOUR DE",
+            "texto5": [
+                "*🕹️ MORPION 🎮*\n\n*◉ ATTENDEZ QUE TOUS LES JOUEURS REJOIGNENT LA PARTIE*\n*◉ POUR COMMENCER OU QUITTER LA PARTIE, UTILISEZ LA COMMANDE*",
+                "◉ POUR REJOINDRE UNE PARTIE, ÉCRIVEZ :"
+            ],
+            "texto6": "*[❗] UN JOUEUR A REJOINT LA SALLE ET ATTEND QUE TOUS LES AUTRES REJOIGNENT*"
+        },
+        "gc_add": {
+            "texto1": "*[ ⚠️ ] LE PROPRIÉTAIRE DE LA CONVERSATION A DEMANDÉ VOTRE CONTACT (activez les contacts restreints / désactivez les contacts restreints) ET A UTILISÉ CETTE COMMANDE*",
+            "texto2": "*[❗] UN MEMBRE DU GROUPE A AJOUTÉ VOTRE NUMÉRO DE TÉLÉPHONE POUR VOUS AJOUTER AU GROUPE*",
+            "texto3": [
+                "*[❗] INFORMATION : IMPOSSIBLE D'AJOUTER",
+                "À VOTRE COMPTE CAR UN PROBLÈME EST SURVENU. VEUILLEZ NOTER QUE LA PERSONNE A QUITTÉ LE GROUPE OU A ANNULÉ SA CONFIDENTIALITÉ DE GROUPE DANS SES PARAMÈTRES DE CONFIDENTIALITÉ DE GROUPE. L'INVITATION A ÉTÉ ENVOYÉE AU GROUPE DANS SES PARAMÈTRES DE CONFIDENTIALITÉ DE GROUPE OU LA PERSONNE A CONFIRMÉ SA CONFIDENTIALITÉ DE GROUPE. LES ADMINISTRATEURS ENVERRONT L'INVITATION AU GROUPE DANS SES PARAMÈTRES DE CONFIDENTIALITÉ DE GROUPE. JE VOUS INVITE À L'INVITATION AU GROUPE DANS SES PARAMÈTRES DE CONFIDENTIALITÉ DE GROUPE. LES ADMINISTRATEURS ENVERRO..."
+            ],
+            "texto4": "Salut !! Bonjour, je me présente, je suis The Mystic - Bot et je suis un Bot pour WhatsApp. Quelqu'un du groupe a utilisé la commande pour vous ajouter au groupe, mais je n'ai pas pu vous ajouter, donc je vous envoie l'invitation pour que vous nous rejoigniez. Nous vous attendons !!",
+            "texto5": "*[❗] INFORMATION : IMPOSSIBLE D'AJOUTER VOTRE NUMÉRO CAR UN PROBLÈME EST SURVENU. VEUILLEZ NOTER QUE LA PERSONNE A QUITTÉ LE GROUPE OU A ANNULÉ SA CONFIDENTIALITÉ DE GROUPE DANS SES PARAMÈTRES DE CONFIDENTIALITÉ DE GROUPE. L'INVITATION A ÉTÉ ENVOYÉE AU GROUPE DANS SES PARAMÈTRES DE CONFIDENTIALITÉ DE GROUPE OU LA PERSONNE A CONFIRMÉ SA CONFIDENTIALITÉ DE GROUPE. LES ADMINISTRATEURS ENVERRON..."
+        },
+        "gc_admins": {
+            "texto1": [
+                "*━「* APPEL AUX ADMINISTRATEURS *」━*",
+                "*ADMINISTRATEURS :*",
+                "*[ ⚠️] L'UTILISATEUR GÈRE SON COMPTE SEUL SAUF EN CAS D'URGENCE !!*",
+                "*MESSAGE :*"
+            ]
+        },
+        "gc_config_time": {
+            "texto1": [
+                "*• Exemple :*",
+                "📌 *_Exemple d'utilisation :_*",
+                "*_🌿 Pour que le groupe soit fermé pendant une heure._*"
+            ],
+            "texto2": "*Le groupe a été fermé, seuls les administrateurs peuvent désormais envoyer des messages !*",
+            "texto3": "*Le groupe a été ouvert, maintenant tous les membres peuvent envoyer des messages !*"
+        },
+        "gc_config": {
+            "texto1": [
+                "*[❗] FORMAT INCORRECT !!*",
+                "*┏━━━❲ ✨EXEMPLE✨ ❳━━━┓*",
+                "*[ ✔ ] GROUPE CONFIGURÉ CORRECTEMENT*"
+            ]
+        },
+        "gc_delete": {
+            "texto1": "*[❗] RÉPONDEZ AU MESSAGE QUE VOUS SOUHAITEZ SUPPRIMER*"
+        },
+        "gc_demote": {
+            "texto1": [
+                "*[❗] UTILISATION APPROPRIÉE*\n\n*┯┷*\n*┠≽",
+                "-> répondez à un message*\n*┷┯*"
+            ],
+            "texto2": "*[ ⚠️ ] LE NUMÉRO SAISI EST INCORRECT, VEUILLEZ SAISIR LE BON NUMÉRO*",
+            "texto3": "*[ ✅ ] ORDRES REÇUS*"
+        },
+        "gc_destraba": {
+            "texto1": "⏰DEVERROUILLAGE 2.0⏰* \nli.DEBLOQUEZip.to \n2019 🦍💨"
+        },
+        "gc_fantasmas": {
+            "texto1": "*[❗] LE GROUPE EST ACTIF, IL N'Y A PAS DE FANTÔMES :D*",
+            "texto2": [
+                "*[ ⚠️ RÉVISION DES INACTIFS ⚠️]*\n\n*GROUPE :*",
+                "*MEMBRES DU GROUPE :*",
+                "*[ 👻 LISTE DES FANTÔMES 👻 ]*",
+                "*REMARQUE : IL S'AGIT DU POURCENTAGE D'INACTIVITÉ, LE BOT COMMENCE LE COMPTEUR DE MESSAGES APRÈS AVOIR DÉTECTÉ QU'IL EST ACTIVÉ SUR UN NUMÉRO*"
+            ]
+        },
+        "gc_infogroup": {
+            "texto1": [
+                "*「 INFORMATIONS SUR LE GROUPE 」*",
+                "*IDENTIFICATION DU GROUPE :*",
+                "*NOM :*",
+                "*DESCRIPTION :*",
+                "*NOMBRE TOTAL DE PARTICIPANTS :*",
+                "Participants",
+                "*CRÉATEUR DU GROUPE :*",
+                "*ADMINISTRATEURS DU GROUPE :*",
+                "*OPTIONS AUTOMATIQUES :*",
+                "—◉ 𝚆𝙴𝙻𝙲𝙾𝙼𝙴 :",
+                "—◉ 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽 :",
+                "—◉ 𝙳𝙴𝚂𝙲𝚁𝙸𝙿𝚃𝙸𝙾𝙽 2 :",
+                "—◉ 𝙰𝙽𝚃𝙸𝙻𝙸𝙽𝙺 :",
+                "—◉ 𝙰𝙽𝚃𝙸𝙻𝙸𝙽𝙺 2 :",
+                "—◉ 𝙼𝙾𝙳𝙾 𝙷𝙾𝚁𝙽𝚈 :",
+                "—◉ 𝙰𝚄𝚃𝙾𝚂𝚃𝙸𝙲𝙺𝙴𝚁 :",
+                "—◉ 𝙰𝚄𝙳𝙸𝙾𝚂 :",
+                "—◉ 𝙰𝙽𝚃𝙸𝚅𝙸𝙴𝚆𝙾𝙽𝙲𝙴 :",
+                "—◉ 𝙰𝙽𝚃𝙸𝙳𝙴𝙻𝙴𝚃𝙴 :",
+                "—◉ 𝙰𝙽𝚃𝙸𝚃𝙾𝚇𝙸𝙲 :",
+                "—◉ 𝙰𝙽𝚃𝙸𝚃𝙾𝚁𝙰𝙱𝙰 :",
+                "—◉ 𝙼𝙾𝙳𝙾𝙰𝙳𝙼𝙸𝙽 :",
+                "AUCUNE DESCRIPTION"
+            ]
+        },
+        "gc_kick2": {
+            "texto1": [
+                "*[ ⚠️ ] LE MEMBRE CIBLE A ÉTÉ RETIRÉ",
+                " DU GROUPE PAR UN ADMINISTRATEUR*"
+            ],
+            "texto2": "*[❗] LE MEMBRE CIBLE A ÉTÉ RETIRÉ AVEC SUCCÈS DU GROUPE. VEUILLEZ SUPPRIMER TOUTES LES MENTIONS DU MEMBRE CIBLE POUR ÉVITER LES ERREURS DE GESTION DU GROUPE.*\n\n*—◉ EXEMPLE :*"
+        },
+        "gc_link": {
+            "texto1": [
+                "LIEN DU GROUPE"
+            ]
+        },
+        "gc_listanum_kicknum": {
+            "texto1": "*[❗] INFORMATION SUR LE PROFIL DE CERTAINS PAYS POUR RECHERCHER DES NUMÉROS DANS CE GROUPE QUI NE SONT PAS DANS CE GROUPE, EXEMPLE :",
+            "texto2": "*[❗] INFORMATION SUR LE PROFIL DE CERTAINS PAYS POUR RECHERCHER DES NUMÉROS DANS CE GROUPE QUI NE SONT PAS DANS CE GROUPE, EXEMPLE :",
+            "texto3": "*[❗] IL N'Y A PERSONNE DANS LE GROUPE DANS UNE LISTE DE PROFILS, VEUILLEZ VÉRIFIER LE NUMÉRO DE TÉLÉPHONE QUE VOUS AVEZ DEMANDÉ DE SUPPRIMER*",
+            "texto4": [
+                "*LISTE DES NUMÉROS AVEC PROFIL DE PARTICIPANT*",
+                "QUI SONT DANS CE GROUPE :"
+            ],
+            "texto5": [
+                "*[❗INFORMATION❗] LE PROFIL DU BOT N'EST PAS ADMIS, IL NE PEUT PAS SUPPRIMER LA DERNIÈRE PERSONNE*"
+            ],
+            "texto6": "*[❗INFORMATION❗] LE BOT N'EST PAS ADMINISTRATEUR, IL NE PEUT PAS EXÉCUTER LES PERMISSIONS*",
+            "texto7": [
+                "*[❗] INFORMATION SUPPRESSION DE NUMÉROS AVEC PROFIL DE PARTICIPANT",
+                "TOUS LES 10 SECONDES SERA ENVOYÉ À UN UTILISATEUR*"
+            ],
+            "texto8": "VOUS AVEZ ÉTÉ SUPPRIMÉ OU AVEZ QUITTÉ LE GROUPE*",
+            "texto9": "*[❗] ERREUR*"
+        },
+        "gc_listwarn": {
+            "texto1": "⚠️ UTILISATEURS AVERTIS",
+            "texto2": [
+                "*Total :",
+                "Utilisateurs*"
+            ]
+        },
+        "gc_promote": {
+            "texto1": [
+                "*[❗] UTILISATION CORRECTE*",
+                "-> répondre à un message*\n*┷┯*"
+            ],
+            "texto2": "*[⚠️] LE NUMÉRO INSÉRÉ EST INCORRECT, VEUILLEZ INSÉRER LE BON NUMÉRO*",
+            "texto3": "*[✅] ORDRES REÇUS*"
+        },
+        "gc_revoke": {
+            "texto1": "🔹️ *_LE LIEN DU GROUPE A ÉTÉ RÉACTIVÉ AVEC SUCCÈS._*\n♾ • Nouveau lien :"
+        },
+        "gc_setbye": {
+            "texto1": "*[❗] LE MEMBRE DE DÉPART A ÉTÉ CONFIGURÉ AVEC SUCCÈS POUR LE GROUPE*",
+            "texto2": "*[❗] LE MEMBRE DE DÉPART REJOINDRE QUE VOUS VOULEZ AJOUTER, UTILISER :*",
+            "texto3": "(mention)*"
+        },
+        "gc_setdesc": {
+            "texto1": "*✅ La description du groupe a été modifiée avec succès*"
+        },
+        "gc_setname": {
+            "texto1": "*[❗INFORMATION❗] LE NOM QUE VOUS VOULEZ METTRE DOIT ÊTRE LE MÊME QUE VOTRE NUMÉRO, IL NE PEUT PAS ÊTRE UTILISÉ*",
+            "texto2": "*[❗INFORMATION❗] DÉSOLÉ POUR L'ERREUR, LE NOM NE PEUT PAS DÉPASSER 25 CARACTÈRES*"
+        },
+        "gc_setwelcome": {
+            "texto1": "*[❗] LE MESSAGE DE BIENVENUE DU GROUPE A ÉTÉ DÉFINI AVEC SUCCÈS*",
+            "texto2": [
+                "*[❗] LE LIEN DE BIENVENUE QUE VOUS SOUHAITEZ AJOUTER, UTILISER :*",
+                "*- @group (nom du groupe)*\n*- @desc (description du groupe)*"
+            ]
+        },
+        "gc_tagall": {
+            "texto1": [
+                "*MENTION DU GROUPE :*",
+                "*⺀INVOCATION DE - 𝙶𝚁𝚄𝙿𝙴⺀*\n\n❏",
+                "❏ *ÉTATS :*"
+            ]
+        },
+        "gc_unwarn": {
+            "texto1": "*[❗] LA DERNIÈRE OU TOUTE LA MISE EN GARDE A ÉTÉ SUPPRIMÉE POUR UN MEMBRE DU GROUPE*\\n\\n*—◉ DANS MEMBRE :*",
+            "texto2": "*[❗] L'UTILISATEUR N'A AUCUNE AVERTISSEMENT*",
+            "texto3": "SE RAPPELER UN AVERTISSEMENT\\n*AVERTISSEMENTS*"
+        },
+        "gc_warn": {
+            "texto1": "*[❗] LA DERNIÈRE OU TOUTE LA MISE EN GARDE A ÉTÉ SUPPRIMÉE OU RESPECTÉE POUR AVERTIR QUELQU'UN*\\n\\n*—◉ DANS MEMBRE :*",
+            "texto2": [
+                "A REÇU UN AVERTISSEMENT DANS LE GROUPE !\nMotif :",
+                "*AVERTISSEMENTS*"
+            ],
+            "texto3": [
+                "*[❗] LE PROTAGONISTE DE LA RUMEUR N'A PAS LA COMPÉTENCE POUR ACTIVER LES RESTRICTIONS",
+                "CONTACTER SI NÉCESSAIRE*"
+            ],
+            "texto4": [
+                "NOUS AVONS PLUSIEURS AVERTISSEMENTS PLUSIEURS FOIS !!",
+                "*VOUS AVEZ DÉPASSÉ LES *3* AVERTISSEMENTS, VOUS SEREZ MAINTENANT SUPPRIMÉ/BANNI 👽"
+            ]
+        },
+        "grupos_eliminar": {
+            "texto1": [
+                "_*< GROUPES - SUPPRIMER />*_\n\n*[ ℹ️ ] Le propriétaire du bot a activé la fonction de restriction",
+                "donc, la commande demandée n'a pas été exécutée.*"
+            ],
+            "texto2": "_*< GROUPES - SUPPRIMER />*_\n\n*[ ℹ️ ] Mentionnez ou répondez à un message du participant que vous souhaitez supprimer.*\n\n*[ 💡 ] Exemple :*",
+            "texto3": "_*< GROUPES - SUPPRIMER />*_\n\n*[ ℹ️ ] Mentionnez ou répondez à un message du participant que vous souhaitez supprimer.",
+            "texto4": "_*< GROUPES - SUPPRIMER />*_\n\n*[ ℹ️ ] Le bot ne peut pas se supprimer lui-même.*",
+            "texto5": [
+                "_*< GROUPES - SUPPRIMER />*_\n\n*[ ℹ️ ] Le participant",
+                "a été supprimé.*"
+            ],
+            "texto6": [
+                "_*< GROUPES - SUPPRIMER />*_\n\n*[ ℹ️ ]",
+                "est le propriétaire du groupe, donc il ne peut pas être supprimé.*"
+            ],
+            "texto7": [
+                "_*< GROUPES - SUPPRIMER />*_\n\n*[ ℹ️ ]",
+                "a déjà été supprimé ou a quitté le groupe.*"
+            ],
+            "texto8": "_*< GROUPES - SUPPRIMER />*_\n\n*[ ℹ️ ] Une erreur s'est produite. Veuillez réessayer plus tard.*"
+        },
+        "herramientas_acortar": {
+            "texto1": "*[❗𝐈𝐍𝐅𝐎❗] Le lien ou l'URL que vous avez inséré est invalide ou n'est pas accessible*",
+            "texto2": "*[❗] Erreur, veuillez vérifier si le texte inséré est un texte et est un texte d'une URL valide*",
+            "texto3": [
+                "*ATTENTION À LA COUPE !!*\n\n*LIEN PRÉCÉDENT :*",
+                "*LIEN ACTUEL :*"
+            ]
+        },
+        "herramientas_ajustar_tamano": {
+            "texto1": "⚠️️ Répondez à une image ou à une vidéo.",
+            "texto2": "⚠️️ Entrez la nouvelle taille de l'image/vidéo.",
+            "texto3": "🔢 uniquement des nombres",
+            "texto4": "⚠️️ Format non pris en charge",
+            "texto5": "Voici"
+        },
+        "herramientas_calc": {
+            "texto1": "*[❗𝐈𝐍𝐅𝐎❗] Entrez l'opération mathématique que vous souhaitez calculer*",
+            "texto2": "Eh bien ! Tu triches",
+            "texto3": "*[❗𝐈𝐍𝐅𝐎❗] Format non pris en charge, seuls les chiffres et les symboles suivants sont acceptés : +, -, *, /, ×, ÷, π, e, (, )*"
+        },
+        "herramientas_chatgpt_del": {
+            "texto1": "*[❗] Vous avez été exclu de l'historique des messages entrants et des conversations (IA)*\n\n*—◉ N'oubliez pas que vous pouvez utiliser la commande /tengain dans le canal pour pouvoir utiliser la commande*",
+            "texto2": "*[❗] Erreur, veuillez réessayer*"
+        },
+        "herramientas_chatgpt": {
+            "texto1": [
+                "*[❗] Vous êtes dans une conversation ou vous devez utiliser la fonction de chatbot*\n\n*—◉ Exemples de demandes et d'ordres*\n*◉ Réflexion sur la série Merlina 2022 de Netflix*\n*◉ Code en JS pour un jeu de cartes*"
+            ],
+            "texto2": "Vous agirez en tant que Bot WhatsApp créé par BrunoSobrino, vous serez The Mystic - Bot.",
+            "texto3": "Vous agirez en tant que Bot WhatsApp créé par BrunoSobrino, vous serez The Mystic - Bot.",
+            "texto4": "*[❗] Erreur, veuillez réessayer*"
+        },
+        "herramientas_chatgptvoz": {
+            "texto1": [
+                "*[❗] Vous êtes dans une conversation ou vous devez utiliser la fonction de chatbot*\n\n*—◉ Exemples de demandes et d'ordres*\n*◉ Réflexion sur la série Merlina 2022 de Netflix*\n*◉ Code en JS pour un jeu de cartes*"
+            ],
+            "texto2": "Vous agirez en tant que Bot WhatsApp créé par BrunoSobrino, vous serez The Mystic - Bot.",
+            "texto3": "*[❗] Erreur, veuillez réessayer*"
+        },
+        "herramientas_clima": {
+            "texto1": "*[❗] Entrez le nom de votre pays ou ville*",
+            "texto2": [
+                "「 📍 」Localisation :",
+                "「 🗺️ 」Pays :",
+                "「 🌤️ 」Condition météo : ",
+                "「 🌡️ 」Température :",
+                "「 💠 」Température minimale :",
+                "「 📛 」Température maximale :",
+                "「 💦 」Humidité :",
+                "「 🌬️ 」 Vent :"
+            ],
+            "texto3": "*[❗] Aucun résultat correspondant, vérifiez si vous avez correctement saisi votre pays ou votre ville*"
+        },
+        "herramientas_dalle": {
+            "texto1": [
+                "*[❗] Entrez un texte pour créer une image et utilisez-la pour vous amuser et nous utiliser pour une fonction Dall-E.*\n\n*—◉ Exemples de demandes*\n*◉",
+                "chatons pleurant*\n*◉",
+                "baiser de Hatsune Miku*"
+            ],
+            "texto2": "*[❗] Création de l'image, veuillez patienter.*",
+            "texto3": [
+                "'[❗] Erreur dans l'API DALL-E numéro 1.'",
+                "[❗] Erreur dans l'API DALL-E numéro 2.",
+                "[❗] Erreur dans l'API DALL-E numéro 3.",
+                "[❗] Erreur, aucune API fonctionnelle.",
+                "*[❗] Erreur, aucun résultat obtenu.*"
+            ]
+        },
+        "herramientas_dropmail": {
+            "texto1": [
+                "*Exemple :*\n",
+                "créer\n\n*Sélectionnez un type existant*\n"
+            ],
+            "texto2": [
+                "*EMAIL :*\n'",
+                "\n\n' + '*ID :*\n",
+                "\n\n*Expiré :*\n",
+                "\n\n_Exemple *",
+                "message* Pour vérifier la boîte de réception_"
+            ],
+            "texto3": [
+                "Pas de messages, créez d'abord un e-mail\nExemple *",
+                " créer*"
+            ],
+            "texto4": [
+                "EMAIL",
+                "*De* :",
+                "*Pour* :",
+                "*Message* :",
+                "*Taille* :",
+                "*En-tête* :",
+                "*Téléchargement* :"
+            ],
+            "texto5": [
+                "*VIDE*' + '\n\n_Exemple *",
+                "supprimer* Pour supprimer les e-mails_"
+            ],
+            "texto6": "Aucun e-mail valide",
+            "texto7": "E-mail supprimé avec succès"
+        },
+        "herramientas_encuesta": {
+            "texto1": [
+                "*[❗𝐈𝐍𝐅𝐎❗] ғᴏʀᴍᴀᴛ ᴅᴇ ʟ'ᴜᴛɪʟɪsᴀᴛɪᴏɴ",
+                "Question ? |Option1|Option2...*"
+            ],
+            "texto2": [
+                "*Sondage réalisé par :*",
+                "*Question :*"
+            ]
+        },
+        "herramientas_fakereply": {
+            "texto1": [
+                "*[❗𝐈𝐍𝐅𝐎❗] UTILISATION DU 𝙲𝙾𝙼𝙰𝙽𝙳𝙾*",
+                "salut"
+            ]
+        },
+        "herramientas_hd": {
+            "texto1": "*[❗] ENVOYEZ UNE IMAGE OU RÉPONDEZ À UNE IMAGE AVEC UNE COMMANDE D'IMAGE OU DE VIDÉO",
+            "texto2": [
+                "*[❗] LE FORMAT DU FICHIER",
+                "N'EST PAS COMPATIBLE, ENVOYEZ OU RÉPONDEZ A UNE PHOTO*"
+            ],
+            "texto3": "*[❗] TRAITEMENT DE L'IMAGE...*",
+            "texto4": "*[❗] ERREUR, VEUILLEZ VÉRIFIER LE FICHIER D'ENTRÉE*"
+        },
+        "herramientas_igstalk": {
+            "texto1": "*[❗] INFORMATIONS SUR L'UTILISATEUR D'INSTAGRAM, EXEMPLE :*",
+            "texto2": [
+                "< OUTILS - IGSTALK />",
+                "▢ *Nom :*",
+                "▢ *Utilisateur :*",
+                "▢ *Abonnés :*",
+                "▢ *Suivi :*",
+                "▢ *Publications :*",
+                "▢ *Lien :*",
+                "▢ *Biographie :*"
+            ]
+        },
+        "herramientas_inspect": {
+            "texto1": "*[❗] Entrez le lien d'un groupe WhatsApp.*",
+            "texto2": [
+                "*⫹⫺ ID :*",
+                "*⫹⫺ Nom :*",
+                "*⫹⫺ Créateur :*",
+                "*⫹⫺ Description :*"
+            ]
+        },
+        "herramientas_nowa": {
+            "texto1": "⚠️ Numéro manquant.",
+            "texto2": "*Exemple d'utilisation :*",
+            "texto3": [
+                "Enregistrés\n\n",
+                "• Nro :",
+                "*• Bio :*",
+                "Aucune description",
+                "*• Date :*",
+                "\n\n*Non enregistrés*\n\n"
+            ]
+        },
+        "herramientas_ocr": {
+            "texto1": "*[❗] ERREUR, VEUILLEZ ESSAYER À NOUVEAU, N'OUBLIEZ PAS DE RÉPONDRE À UNE IMAGE*"
+        },
+        "herramientas_qrcode": {
+            "texto1": "*[❗] ERREUR : VEUILLEZ ESSAYER DE SAISIR LE TEXTE QUE VOUS SOUHAITEZ CONVERTIR EN CODE QR*"
+        },
+        "herramientas_readqrcode": {
+            "texto1": "*[❗] RÉPONDEZ / SAISISSEZ UNE IMAGE*",
+            "texto2": "*Le texte du code QR est :*"
+        },
+        "herramientas_readviewonce": {
+            "texto1": "*[❗] RÉPONDEZ À UN MESSAGE QUI A ÉTÉ ENVOYÉ EN VUE UNIQUE (VOIR SEUL)*",
+            "texto2": "*[❗] LE MESSAGE SÉLECTIONNÉ N'EST PAS UNE VUE UNIQUE (VOIR SEUL)*"
+        },
+        "herramientas_spamwa": {
+            "texto1": "*[ ⚠️ ] S'IL VOUS PLAÎT, N'ABUSEZ PAS DE L'ENVOI DE SPAMS DE MESSAGES !*\n*COMMENT UTILISER :*\n*—◉ #spamwa numéro|texte|quantité*\n*EXEMPLE :*\n*—◉ #spamwa 5219999999999|résponse :v|25*",
+            "texto2": "*[ ⚠️ ] S'IL VOUS PLAÎT, ÉVITEZ D'ENVOYER DES SPAMS DE MESSAGES POUR HACKER LE SPAM !*\n*COMMENT UTILISER :*\n*—◉ #spamwa numéro|texte|quantité*\n*EXEMPLE :*\n*—◉ #spamwa 5219999999999|résponse :v|25*",
+            "texto3": "*[ ⚠️ ] LA QUANTITÉ DOIT ÊTRE PLUS PETITE !*\n*COMMENT UTILISER :*\n*—◉ #spamwa numéro|texte|quantité*\n*EXEMPLE :*\n*—◉ #spamwa 5219999999999|résponse :v|25*",
+            "texto4": "*[ ⚠️ ] LES MESSAGES DOIVENT ÊTRE MOINS DE 50 MESSAGES*️",
+            "texto5": [
+                "*[❗] LES SPAMS DE MESSAGES DÉPASSANT LA LIMITE*\n*S'IL VOUS PLAÎT, CONTACTEZ L'ADMIN*\n*CONTACT D'URGENCE :*\n*—◉",
+                "vos*"
+            ]
+        },
+        "herramientas_ssweb": {
+            "texto1": "*[ 🔎 ] Envoyez la commande avec l'URL complète du site.*"
+        },
+        "herramientas_topdf": {
+            "texto1": "*[❗] Demandez / Taguez une image à convertir en PDF*"
+        },
+        "herramientas__translate": {
+            "texto1": [
+                "*[❗] Utilisation correcte de la commande*",
+                "(langue) (texte)*\n*EXEMPLE :",
+                "es Salut*\n\n*Connexions de langues acceptées :"
+            ],
+            "texto2": "*[❗] ERREUR, VEUILLEZ ESSAYER À NOUVEAU*",
+            "texto3": "*Traduction :*"
+        },
+        "herramientas_whatmusic": {
+            "texto1": "[❗𝐈𝐍𝐅𝐎❗]\n\nLe fichier que vous chargez est trop gros. Nous vous suggérons de découper le grand fichier en un fichier plus petit, avec 10-20 secondes de données audio, ce qui est suffisant pour l'identification.",
+            "texto2": "Non trouvé",
+            "texto3": [
+                "RÉSULTATS DE LA RECHERCHE",
+                "• 📌 TITRE :",
+                "• 👨‍🎤 ARTISTE :",
+                "• 💾 ALBUM :",
+                "• 🌐 GENRE :",
+                "• 📆 DATE DE SORTIE :"
+            ],
+            "texto4": "*[❗𝐈𝐍𝐅𝐎❗] RÉPONDEZ À UN AUDIO*"
+        },
+        "ia_bard": {
+            "texto1": "_*< IA - BARD />*_\n\n*[ ℹ️ ] Fournit un texte.*\n\n*[ 💡 ] Exemple :*",
+            "texto2": "Bonjour Bard, comment ça va ?_",
+            "texto3": "_*< IA - BARD />*_\n\n*[ ℹ️ ] Impossible d'obtenir une réponse valide.*",
+            "texto4": "_*< IA - BARD />*_\n\n*[ ℹ️ ] Une erreur s'est produite. Veuillez réessayer plus tard.*"
+        },
+        "ia_character_ai": {
+            "texto1": [
+                "_*< IA - CHARACTER.AI />*_\n\n*[ ℹ️ ] Fournit un texte.*\n\n*[ 💡 ] Exemple :*",
+                "Bonjour, comment ça va ?"
+            ],
+            "texto2": "_*< IA - CHARACTER.AI />*_\n\n*[ ℹ️ ] Impossible d'obtenir une réponse valide.*",
+            "texto3": "_*< IA - CHARACTER.AI />*_\n\n*[ ℹ️ ] Une erreur s'est produite. Veuillez réessayer plus tard.*"
+        },
+        "info_covid": {
+            "texto1": "*[❗] Informations sur le nombre de cas dans le pays, Exemple :*",
+            "texto2": [
+                "🌏 Pays :",
+                "✅ Confirmés :",
+                "📉 Rétablis :",
+                "☠️ Décès :",
+                "💌 Infos Mises à Jour :"
+            ]
+        },
+        "info_creador": {
+            "texto1": [
+                "*—◉ Le numéro de mon créateur est wa.me/5219992095479*",
+                "*—◉ Le numéro du collaborateur 1 est wa.me/34642467703*",
+                "*—◉ Le numéro du collaborateur 2 est wa.me/50499698072*",
+                "*—◉ Le numéro du collaborateur 3 est wa.me/595986460945*",
+                "*—◉ Le numéro du collaborateur 4 est wa.me/51940617554*",
+                "*—◉ Le numéro du collaborateur 5 est wa.me/51995386439*",
+                "*—◉ Le numéro du collaborateur 6 est wa.me/593991398786*",
+                "*—◉ Le numéro du collaborateur 7 est wa.me/51996089079*",
+                "*—◉ Le numéro du collaborateur 8 est wa.me/573225236629*",
+                "*—◉ Le numéro du collaborateur 9 est wa.me/593959425714*",
+                "*—◉ Le numéro du collaborateur 10 est wa.me/50246028932*",
+                "*—◉ Le contact du collaborateur 11 est https://instagram.com/gata_dios*",
+                "*—◉ Le numéro du collaborateur 12 est wa.me/5212412377467*",
+                "*—◉ Le numéro du collaborateur 13 au Brésil est wa.me/5545998331383*"
+            ],
+            "texto2": [
+                "「 Bonjour le Monde 」",
+                "Le meilleur bot WhatsApp"
+            ]
+        },
+        "info_donar": {
+            "texto1": [
+                "DONNER",
+                "SALUT",
+                "👉🏻 POUR SOUTENIR LES DONNÉES",
+                "SI VOUS VOULEZ DONNER :3",
+                " ➤ CLÉ :",
+                "646180192175788481",
+                "➤ BANQUE : STP",
+                "➤ BÉNÉFICIAIRE : Bruno Sobrino",
+                "➤ CONCEPT : SOUTIEN",
+                "➤ PAYPAL : https://www.paypal.me/TheShadowBrokers133",
+                "👉🏻 CONTACTEZ-NOUS EN CAS DE BESOIN",
+                "PLUS DE DONNÉES ET POUR REMERCIER",
+                "wa.me/5219992095479"
+            ]
+        },
+        "info_estado": {
+            "texto1": [
+                "*< INFORMATIONS - ÉTAT />*_",
+                "▢ *Prop. :* Bruno Sobrino",
+                "▢ *WA :* +5219992095479",
+                "▢ *PayPal :* paypal.me/TheShadowBrokers133",
+                "▢ *Ping :*",
+                "▢ *Temps d'activité :*",
+                "▢ *Préfixe :*",
+                "▢ *Mode :* ",
+                "▢ *Utilisateurs enregistrés :*",
+                "▢ *Total des utilisateurs :*",
+                "▢ *Type de bot :*",
+                "▢ *Chats privés :*",
+                "▢ *Groupes :*",
+                "▢ *Total des chats :*",
+                "▢ *Autolecture :* ",
+                "▢ *Restriction :* ",
+                "▢ *Seulement PC :* ",
+                "▢ *Seulement GP :*",
+                "▢ *Anti-privé :*",
+                "▢ *Anti-appel :*",
+                "▢ *Mode JadiBot :*"
+            ],
+            "texto2": "Dépôt - GitHub"
+        },
+        "info_groupsofc": {
+            "texto1": [
+                "*𝙷𝙾𝙻𝙰 𝚄𝚂𝚄𝙰𝚁𝙸𝙾 👋🏻, 𝙰𝚀𝚄𝙸 𝙴𝚂𝚃𝙰 𝙴𝙼 𝙰𝙻𝙶𝚄𝙽𝚂 𝙶𝚁𝚄𝙿𝙾𝚂 𝙳𝙾 𝚂𝙷𝙰𝙳𝙾𝚆 𝙱𝚁𝙾𝙺𝙴𝚁𝚂 - 𝚃𝙴𝙰𝙼 𝙿𝙰𝚁𝙰 𝙲𝙾𝙽𝚅𝙸𝚅𝙸𝚁 𝙲𝙾𝙼 𝙻𝙰 𝙲𝙾𝙼𝚄𝙽𝙸𝙳𝙰𝙳𝙴 :D*",
+                "*➤ Groupes officiels du Bot :*",
+                "*1.-* https://chat.whatsapp.com/LjJbmdO0qSDEKgB60qivZj",
+                "*2.-* https://chat.whatsapp.com/DbXBmsydWBE1ZN3EoY0hRs",
+                "*3.-* https://chat.whatsapp.com/BW0P22xx7EGBTdH5IM851F",
+                "*4.-* https://chat.whatsapp.com/CjexkGVr37J6GuSdDVAHzC",
+                "*5.-* https://chat.whatsapp.com/DLrFJUPxEQ2IrOm7sJWJ0k"
+            ],
+            "texto2": "「  Bonjour le Monde 」",
+            "texto3": "ᴇʟ ᴍᴇᴊᴏʀ ʙᴏᴛ ᴅᴇ ᴡʜᴀᴛsᴀᴘᴘ⁩"
+        },
+        "info_host": {
+            "texto1": [
+                "*🚀 -----[ Cafirexos]------- 🚀*",
+                "*Bonjour à tous 👋🏻 Nous sommes ravis d'annoncer notre nouvelle collaboration avec Cafirexos 🤖 Désormais, vous pouvez avoir votre propre bot THE-MYSTIC-BOT-MD sur votre plateforme en ligne, permettant à vos bots d'être actifs 24/7. 💻*",
+                "_L'installation de ces versions a été approuvée et est déjà pleinement opérationnelle. De plus, *les serveurs sont entièrement compatibles, vous permettant de choisir le type de démarrage du bot selon vos besoins.* Préparez-vous à une expérience utilisateur fluide et passionnante !_ ",
+                "*Page officielle :*",
+                "https://www.cafirexos.com/",
+                "*Tableau de bord :*",
+                "https://dash.cafirexos.com",
+                "*Panneau :*",
+                "https://panel.cafirexos.com",
+                "*WhatsApp*",
+                "https://wa.me/50497150165",
+                "*E-mail*",
+                "contacto@cafirexos.com",
+                "*Chaîne WhatsApp*",
+                "https://whatsapp.com/channel/0029VaFVSkRCMY0KFmCMDX2q",
+                "*Des questions ? (UNIQUEMENT SUR L'HÉBERGEMENT) :*",
+                "https://chat.whatsapp.com/FBtyc8Q5w2iJXVl5zGJdFJ"
+            ],
+            "texto2": "Le meilleur hébergement 🚀"
+        },
