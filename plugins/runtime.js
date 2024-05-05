@@ -16,7 +16,7 @@ await conn.sendMessage(m.chat, { react: { text: '🟢', key: m.key }})
 }
 handler.help = ['runtime']
 handler.tags = ['main']
-handler.command = ['runtime', 'time']
+handler.command = ['runtime','', 'time']
 export default handler
 
 function clockString(ms) {
