@@ -32,6 +32,6 @@ m.reply(`${hasill.result}`.trim())
 }
 handler.help = ['ai2']
 handler.tags = ['ai']
-handler.command = ['', 'chatgpt', 'ia2', 'robot2']
+handler.command = ['kobi', 'chatgpt', 'ia2', 'robot2']
 
 export default handler
