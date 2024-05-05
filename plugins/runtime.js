@@ -10,6 +10,8 @@ let handler = async (m, { conn, args, usedPrefix, command }) => {
       }) * 1000
     }
     let muptime = clockString(_muptime)
+await conn.sendMessage(m.chat, { react: { text: '🟢', key: m.key }})
+
    m.reply(`> 🧠إشتغل ⏳ البوت  🟢 \n\n${muptime}`) 
 }
 handler.help = ['runtime']
