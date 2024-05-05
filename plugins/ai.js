@@ -53,7 +53,7 @@ if (!text) throw `مثال${usedPrefix}${command} من هو النبي صلى ا
   }
 }
 
-handler.help = ['gpt <pertanyaan>']
+handler.help = ['simo <سؤالك>']
 handler.tags = ['ai']
 handler.command = /^gpt|simo|ai$/i
 handler.limit = 3
