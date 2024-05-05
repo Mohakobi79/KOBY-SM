@@ -17,7 +17,7 @@ case 'video': return `🚩 *Título:* ${v.title}
 conn.sendFile(m.chat, tes[0].thumbnail, 'yts.jpeg', teks, m)
 
 }
-handler.help = ['ytsearch']
+handler.help = ['yts']
 handler.tags = ['internet']
 handler.command = /^yts|ytbuscar|yts(earch)?$/i
 
