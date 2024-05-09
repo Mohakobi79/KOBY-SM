@@ -18,7 +18,7 @@ conn.sendFile(m.chat, tes[0].thumbnail, 'yts.jpeg', teks, m)
 
 }
 handler.help = ['yts']
-handler.tags = ['internet']
+handler.tags = ['downloader']
 handler.command = /^yts|ytbuscar|yts(earch)?$/i
 
 handler.register = false
