@@ -14,8 +14,8 @@ await conn.sendMessage(m.chat, { react: { text: '🟢', key: m.key }})
 
    m.reply(`> 🧠إشتغل ⏳ البوت  🟢 \n\n${muptime}`) 
 }
-handler.help = ['runtime']
-handler.tags = ['main']
+handler.help = ['time']
+handler.tags = ['owner']
 handler.command = ['runtime','', 'time']
 export default handler
 
