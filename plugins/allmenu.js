@@ -272,8 +272,8 @@ contextInfo: {
 externalAdReply: {
 title: '♥♥♥',
 body: "",
-thumbnailUrl: 'https://telegra.ph/file/27dfe370c433f44c5ad4c.jpg',
-sourceUrl: 'instagram.com/noureddine_ouafy',
+thumbnailUrl: 'https://telegra.ph/file/2dec8453252894e54330c.jpg',
+sourceUrl: 'https://youtube.com/watch?v=6yKLzUmHG9U',
 mediaType: 1,
 renderLargerThumbnail: true
 }}}, { quoted: m})
@@ -289,8 +289,8 @@ renderLargerThumbnail: true
     throw e
   }
 }
-handler.help = ['help']
-handler.tags = ['main']
+handler.help = ['all']
+handler.tags = ['owner']
 handler.command = ['all','menu2'] 
 
 export default handler
