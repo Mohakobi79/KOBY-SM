@@ -30,7 +30,7 @@ m.reply(`${hasill.result}`.trim())
 }}}
 
 }
-handler.help = ['ai2']
+handler.help = ['kobi']
 handler.tags = ['ai']
 handler.command = ['kobi', 'chatgpt', 'ia2', 'robot2']
 
