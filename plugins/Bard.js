@@ -18,7 +18,7 @@ let handler = async (m, { text, usedPrefix, command }) => {
 		},
 	});
 };
-handler.help = ["bardgoogle *ᴛᴇxᴛ*"];
+handler.help = ["b *ᴛᴇxᴛ*"];
 handler.tags = ["ai"];
 handler.command = /^(b)$/i;
 export default handler;
