@@ -49,7 +49,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
 
 handler.command = /^(apk)$/i;
 handler.help = ['apk'];
-handler.tags = ['applications'];
+handler.tags = ['downloader'];
 handler.premium = false;
 
 export default handler;
