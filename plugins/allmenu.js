@@ -270,7 +270,7 @@ let nao = await conn.sendMessage(m.chat, {text: '___________________🚂🚃🚃
 text: text,
 contextInfo: {
 externalAdReply: {
-title: '♥♥♥',
+title: 'wm',
 body: "",
 thumbnailUrl: 'https://telegra.ph/file/2dec8453252894e54330c.jpg',
 sourceUrl: 'https://youtube.com/watch?v=6yKLzUmHG9U',
