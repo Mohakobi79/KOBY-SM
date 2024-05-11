@@ -29,7 +29,7 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
 };
 
 handler.help = ['gemini0 <Query>'];
-handler.tags = ['tools'];
+handler.tags = ['ai'];
 handler.limit = 2;
 handler.register = false;
 
