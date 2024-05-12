@@ -83,13 +83,13 @@ if (!result) throw 'Video Not Found, Try Another Title';
 const { title, thumbnail, timestamp, views, ago, url } = result;
 
 // Create a message caption with video information
-        const formattedText = BixbyChar(`> 👻✼ ••๑⋯ ❀ Y O U T U B E ❀ ⋯⋅๑•• ✼👻
+        const formattedText = BixbyChar`> 👻✼ ••๑⋯ ❀ Y O U T U B E ❀ ⋯⋅๑•• ✼👻
 > ❏ *titre:* ${title}❇
 > ❐ *time:* ${timestamp}⏳
 > ❑ *views:* ${views}🧿
 > ❒ *date:* ${ago}⏱
 > ❒ *url:* ${url} 🔗
-> *⊱─KOBY━━⊱༻●༺⊰BOT━─⊰*`);
+> *⊱─KOBY━━⊱༻●༺⊰BOT━─⊰*`;
 
 // Send the video information along with the thumbnail to the Discord channel
 conn.sendMessage(m.chat, { image: { url: thumbnail }, caption: captvid, footer: author }, { quoted: m });
