@@ -35,7 +35,7 @@ let handler = async (m, { conn, text }) => {
     
     await conn.sendMessage(m.chat, doc, { quoted: m });
 }
-handler.help = ['spotify'];
+handler.help = ['so'];
 handler.tags = ['downloader'];
 handler.command = /^(so)$/i;
 
