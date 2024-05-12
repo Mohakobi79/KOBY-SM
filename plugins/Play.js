@@ -93,9 +93,9 @@ throw 'An error occurred while searching for YouTube videos.';
 }
 };
 
-handler.help = ['play'].map((v) => v + ' <query>');
+handler.help = ['play2'].map((v) => v + ' <query>');
 handler.tags = ['downloader'];
-handler.command = /play$/i;
+handler.command = /play2$/i;
 
 handler.exp = 0;
 
