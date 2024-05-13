@@ -11,7 +11,7 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
     const sender = m.sender.split(`@`)[0];
 
     try {
-        await conn.reply(m.chat, "   ", m);
+       // await conn.reply(m.chat, "   ", m);
         const tiktokData = await tryServer1(args[0]);
         m.reply(tiktokData);
 
@@ -25,16 +25,16 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
         const infoMessage = `✅`;
 
         if (videoURL || videoURLWatermark) {
-            await conn.sendFile(m.chat, videoURL, "tiktok.mp4", `Ini kak videonya\n\n${infoMessage}`, m);
+            await conn.sendFile(m.chat, videoURL, "tiktok.mp4", `\n\n${infoMessage}`, m);
             await conn.sendFile(m.chat, videoURLWatermark, "tiktokwm.mp4", `*Ini Versi Watermark*\n\n${infoMessage}`, m);
             await conn.sendFile(m.chat, `${tiktokData.music.play_url}`, "lagutt.mp3", "ini lagunya", m);
-            conn.reply(m.chat, " ", m);
+            //conn.reply(m.chat, " ", m);
         } else {
             throw "Tidak ada tautan video yang tersedia.";
         }
     } catch (error1) {
         try {
-            await conn.reply(m.chat, "  ", m);
+           // await conn.reply(m.chat, "  ", m);
             const tiktokData2 = await tiktokdl(args[0]);
             m.reply(tiktokData2);
 
@@ -62,7 +62,7 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
                 await fs.unlink(mp3FileName);
             }
 
-            await conn.reply(m.chat, "  ", m);
+            //await conn.reply(m.chat, "  ", m);
         } catch (error2) {
             try {
                 await conn.reply(m.chat, "Tunggu sebentar kak, video sedang diunduh... server 3", m);
