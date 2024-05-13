@@ -5,7 +5,7 @@ import { tiktokdl } from "@bochilteam/scraper-sosmed";
 
 const handler = async (m, { conn, args, usedPrefix, command }) => {
     if (!args[0]) {
-        throw `*[❗] Contoh: ${usedPrefix + command} https://www.tiktok.com/@tuanliebert/video/7313159590349212934?is_from_webapp=1&sender_device=pc*`;
+        throw `*✅ Contoh: ${usedPrefix + command} https://www.tiktok.com/@tuanliebert/video/7313159590349212934?is_from_webapp=1&sender_device=pc*`;
     }
 
     const sender = m.sender.split(`@`)[0];
