@@ -22,7 +22,7 @@ const handler = async (m, { conn, args, usedPrefix, command }) => {
         const videoURL = tiktokData.video.noWatermark;
         const videoURLWatermark = tiktokData.video.watermark;
 
-        const infoMessage = `Judul \nUpload: ${tiktokData.created_at}\n\nSTATUS:\n=====================\nLike = ${tiktokData.stats.likeCount}\nKomentar = ${tiktokData.stats.commentCount}\nBagikan = ${tiktokData.stats.shareCount}\nDitonton = ${tiktokData.stats.playCount}\nSimpan = ${tiktokData.stats.saveCount}\n=====================\n\nUploader: ${tiktokData.author.name || "Tidak ada informasi penulis"}\n(${tiktokData.author.unique_id} - https://www.tiktok.com/@${tiktokData.author.unique_id})\nBio: ${tiktokData.author.signature}\nLagu: ${tiktokData.music.play_url}\nResolusi: ${tiktokData.video.ratio}\n`;
+        const infoMessage = `✅`;
 
         if (videoURL || videoURLWatermark) {
             await conn.sendFile(m.chat, videoURL, "tiktok.mp4", `Ini kak videonya\n\n${infoMessage}`, m);
