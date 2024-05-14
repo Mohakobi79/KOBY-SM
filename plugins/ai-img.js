@@ -11,7 +11,7 @@ await m.reply(res.result)
 await conn.reply(m.chat, `*🍃 Ocurrió Un Error Inesperado*`, m)
 console.log(`🍁 *Ocurrió Un Error*`)
 console.log(e)
-};
+}}
 handler.command = ['ge']
 handler.help = ['ge']
 handler.tags = ['ai']
