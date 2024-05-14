@@ -31,6 +31,7 @@
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
+"@adiwajshing/baileys":"*",
     "@bochilteam/scraper": "^4.2.4",
     "@hapi/boom": "^10.0.1",
     "@shineiichijo/marika": "^2.0.6",
