@@ -6,7 +6,7 @@ import {
 let limit = 80000
 
 export async function before(m) {
-const regex = /^https?:\/\/(www\.)?youtu\.be\/[a-zA-Z0-9_-]{11}\?si=[a-zA-Z0-9_-]+$/;
+const regex = (/(?:https?:\/\/)?(?:youtu\.be\/|(?:www\.|m\.)?youtube\.com\/(?:watch|v|embed|shorts)(?:\.php)?(?:\?.*v=|\/))([a-zA-Z0-9\_-]+)/)
 
 const matches = (m.text.trim()).match(regex);
 const spas = "                ";
