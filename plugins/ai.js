@@ -56,7 +56,7 @@ if (!text) throw `مثال${usedPrefix}${command} من هو النبي صلى ا
 handler.help = ['simo <سؤالك>']
 handler.tags = ['ai']
 handler.command = /^gpt|simo$/i
-handler.limit = 3
+handler.limit = 0
 handler.register = false
 
 export default handler
