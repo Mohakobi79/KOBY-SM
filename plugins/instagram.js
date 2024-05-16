@@ -23,7 +23,7 @@ let handler = async (m, { conn, usedPrefix, args, command, text }) => {
     const mediaType = mediaData.type;
     const mediaURL = mediaData.url_download;
 
-    let cap = `< TÉLÉCHARGÉ✅${mediaType.toUpperCase()}`;
+    let cap = `> TÉLÉCHARGÉ ✅ ${mediaType.toUpperCase()}`;
 
     if (mediaType === 'video') {
 
