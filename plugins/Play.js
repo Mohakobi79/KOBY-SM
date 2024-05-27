@@ -8,7 +8,7 @@ import os from 'os';
 const streamPipeline = promisify(pipeline);
 
 let handler = async (m, { conn, text }) => {
-    await conn.sendMessage(m.chat, { react: { text: '🎧', key: m.key }});
+    await conn.sendMessage(m.chat, { react: { text: '🎙', key: m.key }});
     if (!text) throw '> *🎧 خاص بتنزيل 📥 المقاطع الصوتية 💡*';
     await m.reply('> *_👻 جاري التحميل 👻_*');
 
@@ -50,9 +50,9 @@ let handler = async (m, { conn, text }) => {
     }
 };
 
-handler.help = ['play2'].map((v) => v + ' <query>');
+handler.help = ['arn'].map((v) => v + ' <query>');
 handler.tags = ['downloader'];
-handler.command = /pla2$/i;
+handler.command = /arn$/i;
 handler.exp = 0;
 
 export default handler;
