@@ -65,7 +65,7 @@ let handler = async (m, { conn, text }) => {
 
 handler.help = ['play2'].map((v) => v + ' <query>');
 handler.tags = ['downloader'];
-handler.command = /pl0$/i;
+handler.command = /arn$/i;
 handler.exp = 0;
 
 export default handler;
