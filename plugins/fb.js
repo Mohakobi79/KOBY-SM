@@ -7,5 +7,5 @@ for (const { url, isVideo } of result.reverse()) conn.sendFile(m.chat, url, `fac
 }
 handler.help = ['fb0'].map(v => v + ' <url>')
 handler.tags = ['downloader']
-handler.command = /^((facebook|fb)(downloder|dl)?)$/i
+handler.command = /^((facebook0|fb0)(downloder|dl)?)$/i
 export default handler
