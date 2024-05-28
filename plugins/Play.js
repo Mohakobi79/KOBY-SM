@@ -8,7 +8,7 @@ import os from 'os';
 const streamPipeline = promisify(pipeline);
 
 let handler = async (m, { conn, text }) => {
-    await conn.sendMessage(m.chat, { react: { text: '🎙', key: m.key } });
+    await conn.sendMessage(m.chat, { react: { text: '🎧', key: m.key } });
     if (!text) throw '> *🎧 خاص بتنزيل 📥 المقاطع الصوتية 💡*';
     await m.reply('> *_👻 جاري التحميل 👻_*');
 
@@ -21,10 +21,10 @@ let handler = async (m, { conn, text }) => {
 
         const { title, url, thumbnail } = result;
 
-        // إرسال الصورة المصغرة أولاً
+        // إرسال الصورة المصغرة، العنوان، والرابط أولاً
         await conn.sendMessage(m.chat, {
             image: { url: thumbnail },
-            caption: `📹 *${title}*`
+            caption: `📹 *${title}*\n🔗 ${url}`
         }, { quoted: m });
 
         const audioStream = ytdl(url, {
@@ -65,7 +65,7 @@ let handler = async (m, { conn, text }) => {
 
 handler.help = ['play2'].map((v) => v + ' <query>');
 handler.tags = ['downloader'];
-handler.command = /arn$/i;
+handler.command = /arni$/i;
 handler.exp = 0;
 
 export default handler;
