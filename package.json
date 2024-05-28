@@ -57,7 +57,6 @@
     "link-preview-js": "^3.0.0",
     "lodash": "^4.17.21",
     "lowdb": "^3.0.0",
-"@adiwajshing/baileys":"*",
     "md5": "^2.3.0",
     "webcrack":"*",
     "mongoose": "^6.3.3",
