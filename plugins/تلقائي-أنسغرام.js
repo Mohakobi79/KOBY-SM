@@ -1,13 +1,14 @@
 import fetch from 'node-fetch';
 
 const apiURL = 'https://delirius-api-oficial.vercel.app/api/instagram';
-
+let handler = async (m, { conn, text }) => {
+    await conn.sendMessage(m.chat, { react: { text: '📥', key: m.key }});
 export async function before(m) {
     if (!m.text || !m.text.match(/instagram\.com/i)) return false;
 
     const url = m.text.match(/(https?:\/\/[^\s]+)/)?.[0];
     const apiUrl = `${apiURL}?url=${encodeURIComponent(url)}`;
-
+m.reply(wait);
     try {
         const response = await fetch(apiUrl);
         if (!response.ok) {
