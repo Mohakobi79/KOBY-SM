@@ -13,7 +13,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
         const yt_play = await search(args.join(" "))
         let additionalText = ''
 
-        if (command === 'play') {
+        if (command === 'arn') {
             additionalText = `𝐝𝐞𝐥𝐥'𝐚𝐮𝐝𝐢𝐨`
         } else if (command === 'video') {
             additionalText = '𝐝𝐞𝐥 𝐯𝐢𝐝𝐞𝐨'
@@ -91,7 +91,7 @@ default: return char;
 
         await conn.sendMessage(m.chat, { text: formattedText, contextInfo: { externalAdReply: { title: yt_play[0].title, body: nomeDelBot, thumbnailUrl: yt_play[0].thumbnail, mediaType: 1, showAdAttribution: false, renderLargerThumbnail: true } } }, { quoted: m });
 
-        if (command == 'play') {        
+        if (command == 'arn') {        
             try {
                 let q = '128kbps'
                 let v = yt_play[0].url
@@ -180,7 +180,7 @@ default: return char;
     }
 }
 
-handler.command = ['play', 'video']
+handler.command = ['arn', 'video']
 
 export default handler
 
