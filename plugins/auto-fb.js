@@ -11,10 +11,7 @@ const handler = async (m, { conn }) => {
   const videoUrl = match[0];
 await m.reply(wait);
   const result = await fg.fbdl(videoUrl);
-  const tex = `
-⊱ ─── {* REM FBDL*} ─── ⊰
-↳ *Titulo del video:* ${result.title}
-⊱ ────── {⋆♬⋆} ────── ⊰`;
+  const tex = `> THIS IS ☝🏻YOUR VIDEO 🎥`;
 
   const response = await fetch(result.videoUrl);
   const arrayBuffer = await response.arrayBuffer();
