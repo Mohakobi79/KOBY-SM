@@ -9,24 +9,18 @@ const handler = async (m, { conn }) => {
   }
 
   const videoUrl = match[0];
-  
-  m.react(rwait);
-
-  try {
-    const result = await fg.fbdl(videoUrl);
-    const tex = `> THIS IS ☝🏻 YOUR VIDEO 🎥
+await m.reply(wait);
+  const result = await fg.fbdl(videoUrl);
+  const tex = `
+⊱ ─── {* REM FBDL*} ─── ⊰
+↳ *Titulo del video:* ${result.title}
 ⊱ ────── {⋆♬⋆} ────── ⊰`;
 
-    const response = await fetch(result.videoUrl);
-    const arrayBuffer = await response.arrayBuffer();
-    const videoBuffer = Buffer.from(arrayBuffer);
+  const response = await fetch(result.videoUrl);
+  const arrayBuffer = await response.arrayBuffer();
+  const videoBuffer = Buffer.from(arrayBuffer);
 
-    conn.sendFile(m.chat, videoBuffer, 'fb.mp4', tex, m);
-    m.react(done);
-  } catch (error) {
-    console.log(error);
-    m.reply('⚠️ Se produjo un error al procesar la solicitud. Por favor, inténtelo de nuevo más tarde.');
-  }
+  await conn.sendFile(m.chat, videoBuffer, 'fb.mp4', tex, m);
 };
 
 handler.tags = ['downloader'];
