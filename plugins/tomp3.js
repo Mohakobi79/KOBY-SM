@@ -27,7 +27,7 @@ await conn.sendMessage(m.chat, {text: loadd[i], edit: key })}
 }
 handler.help = ['tomp3']
 handler.tags = ['tools']
-handler.limit = true
+handler.limit = false
 handler.command = /^to(mp3|a(udio)?)$/i
 
 export default handler
