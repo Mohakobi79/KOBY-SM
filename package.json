@@ -49,6 +49,8 @@
     "file-type": "^17.1.1",
     "fluent-ffmpeg": "^2.1.2",
     "formdata-node": "^4.3.2",
+"youtube-yts":"*",
+"youtubedl-core":"*",
     "fs": "^0.0.1-security",
     "google-it": "^1.6.3",
     "hispamemes": "^1.0.7",
