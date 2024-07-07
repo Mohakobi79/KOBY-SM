@@ -9,7 +9,7 @@ const streamPipeline = promisify(pipeline);
 
 let handler = async (m, { conn, text }) => {
     await conn.sendMessage(m.chat, { react: { text: '🎧', key: m.key } });
-    if (!text) throw '> *🎧 خاص بتنزيل 📥 المقاطع الصوتية 💡*';
+    if (!text) throw '> *🎧 خاص بتنزيل المقاطع الصوتية 💡*';
     await m.reply('> *_👻 جاري التحميل 👻_*');
 
     try {
