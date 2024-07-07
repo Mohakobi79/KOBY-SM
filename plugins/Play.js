@@ -19,12 +19,12 @@ let handler = async (m, { conn, text }) => {
 
         if (!result) throw 'لم يتم العثور على الفيديو، حاول عنوان آخر';
 
-        const { title, url, thumbnail } = result;
+        const { title, thumbnail } = result;
 
         // إرسال الصورة المصغرة، العنوان، والرابط أولاً
         await conn.sendMessage(m.chat, {
             image: { url: thumbnail },
-            caption: `📹 *${title}*\n🔗 ${url}`
+            caption: `📹 *${title}*`
         }, { quoted: m });
 
         const audioStream = ytdl(url, {
