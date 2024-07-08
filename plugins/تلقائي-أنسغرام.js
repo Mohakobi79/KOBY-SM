@@ -1,12 +1,16 @@
 import fetch from 'node-fetch';
 
-const apiURL = 'https://delirius-api-oficial.vercel.app/api/instagram';
+const apiURL = 'https://www.guruapi.tech/api/igdlv1';
+
 export async function before(m) {
     if (!m.text || !m.text.match(/instagram\.com/i)) return false;
 
     const url = m.text.match(/(https?:\/\/[^\s]+)/)?.[0];
+    if (!url) return;
+
     const apiUrl = `${apiURL}?url=${encodeURIComponent(url)}`;
-m.reply(wait);
+    m.reply(wait);
+
     try {
         const response = await fetch(apiUrl);
         if (!response.ok) {
@@ -14,35 +18,27 @@ m.reply(wait);
             throw 'Ocurrió un error al buscar el contenido de Instagram';
         }
 
-        const data = await response.json();
-        const mediaData = data.data;
+        const api_response = await response.json();
 
-        if (!mediaData || mediaData.length === 0) 
-            throw 'No se encontraron datos válidos de la publicación de Instagram';
+        if (!api_response || !api_response.data) {
+            throw 'No video or image found or Invalid response from API.';
+        }
 
-        for (const media of mediaData) {
-            if (!media.url) continue;
+        const mediaArray = api_response.data;
 
-            const mediaResponse = await fetch(media.url);
-            if (!mediaResponse.ok) {
-                console.error('Error al descargar el contenido de Instagram:', mediaResponse.statusText);
-                throw 'Ocurrió un error al descargar el contenido de Instagram';
+        for (const mediaData of mediaArray) {
+            const mediaType = mediaData.type;
+            const mediaURL = mediaData.url_download;
+            let cap = `> TÉLÉCHARGÉ ✅ ${mediaType.toUpperCase()}`;
+
+            if (mediaType === 'video') {
+                await this.sendFile(m.chat, mediaURL, 'instagram.mp4', cap, m, null);
+            } else if (mediaType === 'image') {
+                await this.sendFile(m.chat, mediaURL, 'instagram.jpg', cap, m, null);
             }
-
-            const mediaBuffer = await mediaResponse.buffer();
-
-            const caption = `> هاذا هو  للفيديو 🔗`;
-
-            await this.sendFile(
-                m.chat,
-                mediaBuffer,
-                'video.mp4',
-                caption,
-                m
-            );
         }
     } catch (error) {
-        await m.reply(error);
+        await m.reply(`حدث خطأ في هذه 👉🏻: ${error.message}`);
     }
 }
 
