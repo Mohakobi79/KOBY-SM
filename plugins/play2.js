@@ -7,7 +7,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
     if (!text) throw `> ⓘ يرجى إدخال الأمر بشكل صحيح.\n> ${usedPrefix + command} اسم الأغنية أو البحث`;
 
     try {
-        await conn.sendMessage(m.chat, { react: { text: '🎧', key: m.key } });
+        await conn.sendMessage(m.chat, { react: { text: '📥', key: m.key } });
         await m.reply('wait');
 
         const yt_play = await search(args.join(" "));
