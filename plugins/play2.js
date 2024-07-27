@@ -8,7 +8,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
 
     try {
         await conn.sendMessage(m.chat, { react: { text: '🎧', key: m.key } });
-        await m.reply('ko');
+        await m.reply('wait');
 
         const yt_play = await search(args.join(" "));
 
