@@ -1,75 +1,52 @@
-import ytdl from 'ytdl-core';
-import yts from 'yt-search';
-import fs from 'fs';
-import { pipeline } from 'stream';
-import { promisify } from 'util';
-import os from 'os';
-const streamPipeline = promisify(pipeline);
+import yts from 'yt-search'
+import { youtubedl, youtubedlv2 } from '@bochilteam/scraper-sosmed'
 
-var handler = async (m, { conn, command, text, usedPrefix }) => {
-  if (!text) throw `> Téléchargé music`;
+let handler = async (m, { conn, command, text }) => {
+    if (!text) throw `مثال :\n*.play* sami yusuf`
+    let loadd = [
+ '《██▒▒▒▒▒▒▒▒▒▒▒》10%',
+ '《████▒▒▒▒▒▒▒▒▒》30%',
+ '《███████▒▒▒▒▒▒》50%',
+ '《██████████▒▒▒》70%',
+ '《█████████████》100%',
+ '> *_☯️ تم التحويل ✅ بنجاح ..._*'
+ ]
 
-  let search = await yts(text);
-  let vid = search.videos[0];
-  if (!search) throw 'Video Not Found, Try Another Title';
-  let { title, thumbnail, timestamp, views, ago, url } = vid;
-  let wm = '☯️KOBY-BOT☯️';
+let { key } = await conn.sendMessage(m.chat, {text: '_Loading_'})//Pengalih isu
 
-  let captvid = `╭──── 〔 Y O U T U B E 〕 ─⬣
-  ⬡ TITLE: ${title}
-  ⬡ DURATION: ${timestamp}
-  ⬡ VIEWS: ${views}
-  ⬡ UPLOAD: ${ago}
-  ⬡ LINK: ${url}
-╰────────⬣`;
-
-  conn.sendMessage(m.chat, { image: { url: thumbnail }, caption: captvid, viewOnce: true, footer: author }, { quoted: m });
-
-
-  const audioStream = ytdl(url, {
-    filter: 'audioonly',
-    quality: 'highestaudio',
-  });
-
-  // Create writable stream in the temporary directory
-  const writableStream = fs.createWriteStream(`./tmp/${title}.mp3`);
-
-  // Start the download
-  await streamPipeline(audioStream, writableStream);
-  let doc = {
-    audio: {
-      url: `./tmp/${title}.mp3`
-    },
-    mimetype: 'audio/mp4',
-    fileName: `${title}`,
-    contextInfo: {
-      externalAdReply: {
-        showAdAttribution: true,
-        mediaType: 2,
-        mediaUrl: url,
-        title: wm,
-        body: wm,
-        sourceUrl: url,
-        thumbnail: await (await conn.getFile(thumbnail)).data
-      }
+for (let i = 0; i < loadd.length; i++) {
+await conn.sendMessage(m.chat, {text: loadd[i], edit: key })}
+    let res = await yts(text)
+    let vid = res.videos[0]
+    
+    await conn.sendMessage(m.chat, { react: { text: "⏳", key: m.key } })
+    
+    if (!vid) throw 'لم يتم العثور عليه، حاول عكس العنوان والمؤلف'
+    
+    const url = 'https://www.youtube.com/watch?v=' + vid.videoId
+    
+    // تنزيل الصوت فقط
+    const yt = await youtubedl(url).catch(async () => await youtubedlv2(url))
+    const link = await yt.audio['128kbps'].download()
+    
+    // إعداد الرسالة لإرسال الملف الصوتي فقط
+    let doc = { 
+        audio: { 
+            url: link 
+        }, 
+        mimetype: 'audio/mp4', 
+        fileName: `${vid.title}.mp4` // إضافة لاحقة mp4 لاسم الملف
     }
-  };
+    
+    return conn.sendMessage(m.chat, doc, { quoted: m })
+}
 
-  await conn.sendMessage(m.chat, doc, { quoted: m });
+handler.help = ['song', 'play']
+handler.tags = ['downloader']
+handler.command = /^song/i
 
-  // Delete the audio file
-  fs.unlink(`./tmp/${title}.mp3`, (err) => {
-    if (err) {
-      console.error(`Failed to delete audio file: ${err}`);
-    } else {
-      console.log(`Deleted audio file: ${tmpDir}/${title}.mp3`);
-    }
-  });
-};
+export default handler
 
-handler.help = ['play1'].map((v) => v + ' <judul lagu>');
-handler.tags = ['downloader'];
-handler.command = /^(play1)$/i;
-
-
-export default handler;
+function pickRandom(list) {
+    return list[Math.floor(list.length * Math.random())]
+}
