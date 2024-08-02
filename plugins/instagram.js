@@ -6,6 +6,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     if (!text) throw `🚩 Input Instagram Url`;
     
     //m.react('🕑');
+await m.reply(wait);
     try {
         let media = await igdl(text);
         if (media.length === 0) throw "🚩 No media found";
