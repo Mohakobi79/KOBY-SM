@@ -38,7 +38,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
     }
 };
 
-handler.command = ['play2'];
+handler.command = ['play0'];
 
 export default handler;
 
