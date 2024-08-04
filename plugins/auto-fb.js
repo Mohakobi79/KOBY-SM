@@ -7,7 +7,7 @@ export async function before(m) {
     if (!url) return;
 
     const sender = m.sender.split(`@`)[0];
-    await m.reply(wait);
+    await m.reply('wait');
 
     try {
         const apiUrl = `https://widipe.com/download/fbdl?url=${encodeURIComponent(url)}`;
@@ -25,13 +25,6 @@ export async function before(m) {
             }
 
             const videoLink = result.result.url.isHdAvailable ? result.result.url.urls[0].hd : result.result.url.urls[1].sd;
-            const caption = `
-*Title*: ${result.result.url.title || 'No title'}
-
-*HD Link*: ${result.result.url.isHdAvailable ? result.result.url.urls[0].hd : 'Not available'}
-*SD Link*: ${result.result.url.urls[1].sd}
-`;
-
             const videoBuffer = await fetch(videoLink).then(res => res.buffer());
 
             await conn.sendMessage(
@@ -39,7 +32,6 @@ export async function before(m) {
                 video: videoBuffer,
                 mimetype: "video/mp4",
                 fileName: `video.mp4`,
-                caption: `Ini kak videonya @${sender} \n${caption}`,
                 mentions: [m.sender],
             }, {
                 quoted: m
@@ -47,15 +39,6 @@ export async function before(m) {
         } else {
             // Handle the first API response
             const videoLink = result.result.HD || result.result.Normal_video;
-            const caption = `
-*Title*: ${result.result.title || 'No title'}
-
-${result.result.description || 'No description'}
-
-*HD Link*: ${result.result.HD || 'Not available'}
-*Normal Video Link*: ${result.result.Normal_video || 'Not available'}
-`;
-
             const videoBuffer = await fetch(videoLink).then(res => res.buffer());
 
             await conn.sendMessage(
@@ -63,7 +46,6 @@ ${result.result.description || 'No description'}
                 video: videoBuffer,
                 mimetype: "video/mp4",
                 fileName: `video.mp4`,
-                caption: `Ini kak videonya @${sender} \n${caption}`,
                 mentions: [m.sender],
             }, {
                 quoted: m
