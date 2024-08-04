@@ -19,7 +19,7 @@ try {
 let gpt = await fetch(`https://delirius-api-oficial.vercel.app/api/chatgpt?q=${text}`)
 let res = await gpt.json()
 await m.reply(res.data)
-await conn.sendMessage(m.chat, { react: { text: '✅️', key: m.key } })
+await conn.sendMessage(m.chat, { react: { text: '▶️', key: m.key } })
 } catch {
 }}}
 handler.help = ['openia', 'chatgpt', 'ia']
