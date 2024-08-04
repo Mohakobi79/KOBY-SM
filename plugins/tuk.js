@@ -21,7 +21,7 @@ let handler = async (message, { conn, text, usedPrefix, command }) => {
         let { data: response } = await axios.get(`https://apis-starlights-team.koyeb.app/starlight/tiktoksearch?text=${text}`);
         let searchResults = response.data;
         shuffleArray(searchResults);
-        let selectedResults = searchResults.splice(0, 7);
+        let selectedResults = searchResults.splice(0, 4);
 
         // تحميل الفيديوهات بشكل متوازي
         const videoMessages = await Promise.all(selectedResults.map(result => createVideoMessage(result.nowm)));
