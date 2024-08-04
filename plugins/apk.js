@@ -7,7 +7,7 @@
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
-  if (!args[0]) throw `*تحميل التطبيقات مع الملف الإضافي obb* \n\n مثـال :\n  ${usedPrefix}${command} firee fire`;
+  if (!args[0]) throw `*تحميل التطبيقات مع الملف الإضافي obb* \n\n مثـال :\n  ${usedPrefix}${command} whatssap`;
   let info = await apkinfo(text);
   let res = await apk(text);
 
