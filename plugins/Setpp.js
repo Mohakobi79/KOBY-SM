@@ -30,7 +30,7 @@ let handler = async (m, { conn, command, usedPrefix }) => {
    m.reply('تم بنجاح تغيير صورة بروفيل البوت')
   } catch (e) {
    console.log(e)
-   m.reply('حدث خطأ، حاول مرة أخرى لاحقًا')
+   m.reply('حد خطأ، حاول مرة أخرى لاحقًا')
   }
  } else {
   m.reply(`أرسل الصورة مع التسمية التوضيحية ${usedPrefix + command} \nأو قم  بالاشارة  للصورة التي تريد وضعها كبروفايل البوت`)
