@@ -26,14 +26,14 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
  caption: `📹 *${ttl}*`
  }, { quoted: m });
 
- // إرسال المقطع الصوتي
+ // تشغيل المقطع الصوتي مباشرة عبر رابط التحميل
  await conn.sendMessage(m.chat, { audio: { url: dl_url }, mimetype: 'audio/mp4', ptt: true }, { quoted: m });
 
  // حذف الرسائل بعد دقيقة واحدة
  setTimeout(async () => {
      await conn.sendMessage(m.chat, { delete: waitMessage.key });
      await conn.sendMessage(m.chat, { delete: thumbMessage.key });
- }, 20000); // 60000 ميلي ثانية = 1 دقيقة
+ }, 60000); // 60000 ميلي ثانية = 1 دقيقة
  }
  } catch (error) {
  console.error(error);
