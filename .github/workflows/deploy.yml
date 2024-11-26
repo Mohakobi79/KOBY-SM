@@ -4,6 +4,8 @@ on:
     branches: master
   pull_request:
     branches: master
+  schedule:
+    - cron: "0 */4 * * *" # تشغيل كل 4 ساعات
 
 jobs:
   deploy:
@@ -13,32 +15,43 @@ jobs:
     permissions:
       id-token: write # Needed for auth with Deno Deploy
       contents: read # Needed to clone the repository
+      actions: write # Needed to cancel other workflows
 
     steps:
+      # Step to cancel previous workflows
+      - name: Cancel Previous Runs
+        uses: styfle/cancel-workflow-action@0.11.0
+        with:
+          access_token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Clone the repository
       - name: Clone repository
         uses: actions/checkout@v4
 
+      # Install Deno
       - name: Install Deno
         uses: denoland/setup-deno@v2
         with:
-          deno-version: v2.x
+          deno-version: v1.x
 
+      # Install Node.js
       - name: Install Node.js
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
 
+      # Install dependencies
       - name: Install step
-        run: "npm install"
+        run: "npm i"
 
+      # Build the project
       - name: Build step
-        run: "npm run build"
+        run: "npm run start"
 
+      # Upload to Deno Deploy
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "mohakobi79-bobizaa-65"
-          entrypoint: "jsr:@deno/nextjs-start"
-          root: "."
-          include: .next, public
-          
+          project: "mohakobi79-bobizaa-65 "
+          entrypoint: "Dockerfile"
+          root: "./"
