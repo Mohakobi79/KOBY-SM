@@ -1,6 +1,6 @@
 import fetch from "node-fetch";
 let handler = async (m, { text, usedPrefix, command }) => {
-	if (!text) throw `*_✅مرحبا✌🏻، كيف يمكنني مساعدتك_*`;
+	if (!text) throw `*_✅مربا✌🏻، كيف يمكنني مساعدتك_*`;
 	await m.reply(wait);
 	let putra = await fetch(`https://aemt.me/bard?text=${text}`);
 	let hasil = await putra.json();
