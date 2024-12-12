@@ -1,57 +1,43 @@
-name: Deploy
+name: Node.js CI
+
 on:
   push:
-    branches: master
+    branches:
+      - main
   pull_request:
-    branches: master
+    branches:
+      - main
   schedule:
-    - cron: "0 */4 * * *" # تشغيل كل 4 ساعات
+    - cron: '0 */6 * * *'  # BY 𝙎-𝙏𝞢𝞜 
 
 jobs:
-  deploy:
-    name: Deploy
+  build:
+
     runs-on: ubuntu-latest
 
-    permissions:
-      id-token: write # Needed for auth with Deno Deploy
-      contents: read # Needed to clone the repository
-      actions: write # Needed to cancel other workflows
+    strategy:
+      matrix:
+        node-version: [20.x]
 
     steps:
-      # Step to cancel previous workflows
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.11.0
-        with:
-          access_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-      # Clone the repository
-      - name: Clone repository
-        uses: actions/checkout@v4
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
 
-      # Install Deno
-      - name: Install Deno
-        uses: denoland/setup-deno@v2
-        with:
-          deno-version: v1.x
+    - name: Install dependencies
+      run: npm install
 
-      # Install Node.js
-      - name: Install Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
+    - name: Install FFmpeg
+      run: sudo apt-get install -y ffmpeg
 
-      # Install dependencies
-      - name: Install step
-        run: "npm i"
+    - name: Start application with timeout
+      run: |
+        timeout 21590s npm start  # Limite l'exécution à 5h 59m 50s
 
-      # Build the project
-      - name: Build step
-        run: "npm run start"
-
-      # Upload to Deno Deploy
-      - name: Upload to Deno Deploy
-        uses: denoland/deployctl@v1
-        with:
-          project: "mohakobi79-bobizaa-65 "
-          entrypoint: "Dockerfile"
-          root: "./"
+    - name: Save state (Optional)
+      run: |
+        ./save_state.sh
