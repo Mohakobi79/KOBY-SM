@@ -53,5 +53,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "mohakobi79-themystic-b-5"
-          entrypoint: "Dockerfile"
+          entrypoint: "main.ts"
           root: "./"
