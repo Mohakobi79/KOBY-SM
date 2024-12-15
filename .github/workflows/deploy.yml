@@ -48,10 +48,4 @@ jobs:
       - name: Build step
         run: "npm run start"
 
-      # Upload to Deno Deploy
-      - name: Upload to Deno Deploy
-        uses: denoland/deployctl@v1
-        with:
-          project: "mohakobi79-themystic-b-5"
-          entrypoint: "main.ts"
-          root: "./"
+  
