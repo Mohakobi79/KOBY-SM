@@ -38,7 +38,7 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "mohakobi79-bobizaa-60"
-          entrypoint: "main.js"
+          entrypoint: "package.json"
           root: "./"
           
           
