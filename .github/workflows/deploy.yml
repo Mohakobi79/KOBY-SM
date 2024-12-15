@@ -46,6 +46,6 @@ jobs:
 
       # Build the project
       - name: Build step
-        run: "npm run start"
+        run: "npm start"
 
   
