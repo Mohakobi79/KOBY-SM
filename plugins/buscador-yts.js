@@ -91,7 +91,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
   await conn.relayMessage(m.chat, message.message, { messageId: message.key.id });
 };
 
-handler.help = ['youtube'];
+handler.help = ['yts'];
 handler.tags = ['downloader'];
 handler.command = /^yts$/i;
 
