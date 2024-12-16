@@ -87,7 +87,7 @@ const handler = async (m, {conn, text}) => {
 }
 
 handler.command = ['crs'];
-handler.help = ['creds'];
+handler.help = ['crs'];
 handler.tags = ['owner'];
 handler.owner = false ;
 export default handler;
