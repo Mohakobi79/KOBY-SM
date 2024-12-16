@@ -1,5 +1,5 @@
 {
-  "name": "bobizas-projects",
+  "name": "koby-md",
   "version": "1.0.0",
   "description": "Un chatbot automatizado para WhatsApp basado en Node.js, que permite realizar múltiples funciones y personalizaciones en la plataforma.",
   "main": "index.js",
@@ -29,7 +29,7 @@
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "@adiwajshing/keyed-db": "^0.2.4",
+
     "@bochilteam/scraper": "^4.2.4",
     "@brandond/findthelyrics": "^2.0.5",
     "@green-code/music-track-data": "^2.0.3",
@@ -38,7 +38,7 @@
     "@vitalets/google-translate-api": "^8.0.0",
 "whatsapp-web.js" :"*" ,
 
-    "baileys": "git+https://github.com/Skidy89/baileys.git#master",
+        "baileys": "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git",
     "acrcloud": "^1.4.0",
     "aptoide-scraper": "github:DIEGO-OFC/dv-aptoide-scraper",
     "awesome-phonenumber": "^2.68.0",
@@ -49,23 +49,33 @@
     "chats-simsimi": "*",
     "chart.js": "^4.4.2",
     "cheerio": "1.0.0-rc.12",
+        "@whiskeysockets/baileys": "github:TheGetsuzoZhiro/DevBaileys",
 
+"play-dl" : "*" ,
     "colors": "1.4.0",
+
+"download.js" :  "*",
+"path": "*",
+"ruhend-scraper": "*",
     "d3-node": "^3.0.0",
     "esm": "^3.2.25",
     "express": "^4.17.3",
     "file-type": "^17.1.1",
     "fluent-ffmpeg": "^2.1.2",
     "fluid-spotify.js": "*",
+"puppeteer": "*",
+"undici" : "*",
     "formdata-node": "^4.3.2",
     "fs": "^0.0.1-security",
     "google-it": "^1.6.3",
     "google-play-scraper": "^10.0.0",
+"youtube-dl-exec": "*",
     "hispamemes": "^1.0.7",
     "human-readable": "^0.2.1",
     "imagemaker.js": "^2.0.4",
     "jsdom": "^19.0.0",
     "link-preview-js": "^3.0.0",
+"btch-downloader": "*",
     "lodash": "^4.17.21",
     "lowdb": "^3.0.0",
     "md5": "^2.3.0",
@@ -95,7 +105,8 @@
     "url-regex-safe": "^3.0.0",
     "yargs": "^17.3.1",
     "yt-search": "^2.10.3",
-    "ytdl-core": "github:khlevon/node-ytdl-core#v4.11.4-patch.2"
+"nayan-videos-downloader":  "*",
+    "ytdl-core": "*"
   },
   "optionalDependencies": {
     "@xct007/frieren-scraper": "github:BrunoSobrino/frieren-scraper",
@@ -105,4 +116,4 @@
     "eslint": "^8.45.0",
     "eslint-config-google": "^0.14.0"
   }
-}
+  }
