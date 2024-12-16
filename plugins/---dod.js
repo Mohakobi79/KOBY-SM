@@ -36,7 +36,7 @@ let handler = async (m, { conn, text, args, command, usedPrefix }) => { 
     }
 }
 
-handler.help = ['download <url>']
+handler.help = ['dow <url>']
 handler.tags = ['downloader']
 handler.command = /^(dow)$/i
 
