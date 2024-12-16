@@ -1,4 +1,4 @@
-name: KOBY
+name: Deploy 
 on:
   push:
     branches: master
