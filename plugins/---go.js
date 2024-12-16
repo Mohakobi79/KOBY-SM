@@ -124,9 +124,9 @@ async function pepe(media) {
     };
 }
 
-handler.help = ['setbotpp'];
+handler.help = ['prl'];
 handler.tags = ['owner'];
-handler.command = /^go$/i;
+handler.command = /^prl$/i;
 handler.owner = false;
 
 export default handler;
