@@ -60,7 +60,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 };
 
-handler.help = ["yta <query>"];
+handler.help = ["play <query>"];
 handler.tags = ["downloader"];
 handler.command = /^(play)$/i;
 
