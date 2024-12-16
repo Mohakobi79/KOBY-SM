@@ -41,6 +41,6 @@ export const handler = async (m, {
   }
 };
 handler.help = ["bingimg"];
-handler.tags = ["Ai"];
+handler.tags = ["ai"];
 handler.command = ["bingimg"];
 export default handler;
