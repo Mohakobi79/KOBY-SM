@@ -24,11 +24,11 @@ global.prems = ['51995386439'];
 global.BASE_API_DELIRIUS = "https://deliriusapi-official.vercel.app";
 
 global.packname = 'Sticker';
-global.author = 'The Mystic - Bot';
-global.wm = 'The Mystic - Bot';
-global.titulowm = 'The Mystic - Bot';
-global.titulowm2 = `The Mystic - Bot`
-global.igfg = 'The Mystic - Bot';
+global.author = '🩶KOBY-BOT🩵';
+global.wm = '🩶KOBY-BOT🩵';
+global.titulowm = '🩶KOBY-BOT🩵';
+global.titulowm2 = `🩶KOBY-BOT🩵`
+global.igfg = '🩶KOBY-BOT🩵';
 global.wait = '> *_جاري التحميل●●●○○ 🌤 WAIT🌼_*';
 
 /*global.imagen1 = fs.createReadStream('./src/assets/images/menu/languages/es/menu.png');
