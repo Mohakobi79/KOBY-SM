@@ -138,7 +138,7 @@ await conn.relayMessage(message.chat, responseMessage.message, { messageId: resp
 await conn.reply(message.chat, error.toString(), message)
 }}
 
-handler.help = ['tiktoksearch <txt>']
+handler.help = ['tks <txt>']
 handler.tags = ['buscador']
-handler.command = ['tiktoksearch', 'tiktoks']
+handler.command = ['tiktoksearch', 'tks']
 export default handler*/
