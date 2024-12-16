@@ -35,7 +35,7 @@ const handler = async (m, { text, usedPrefix, command, conn }) => {
   }
 }
 
-handler.help = ['gemini <pertanyaan>']
+handler.help = ['simo <pertanyaan>']
 handler.tags = ['ai']
 handler.command = /^simo$/i
 
