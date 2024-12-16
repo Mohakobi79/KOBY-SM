@@ -36,9 +36,9 @@ const handler = async (m, { conn, command, text, usedPrefix }) => {
   }
 };
 
-handler.help = ['play'].map((v) => v + ' <query>');
+handler.help = ['ply'].map((v) => v + ' <query>');
 handler.tags = ['downloader'];
-handler.command = /^(py)$/i;
+handler.command = /^(ply)$/i;
 
 handler.register = false;
 handler.disable = false;
