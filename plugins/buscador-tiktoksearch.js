@@ -139,6 +139,6 @@ await conn.reply(message.chat, error.toString(), message)
 }}
 
 handler.help = ['tks <txt>']
-handler.tags = ['buscador']
+handler.tags = ['downloader']
 handler.command = ['tiktoksearch', 'tks']
 export default handler*/
