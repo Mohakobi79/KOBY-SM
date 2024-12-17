@@ -33,7 +33,8 @@ const handler = async (m, { conn }) => {
     throw '> *♻️ تحويل فيديو أو أوديو إلى مقطع صوتي♻️*';
   }
 };
-
+handler.help = ['to video/audio']
+handler.tags = ['Toul']
 handler.command = /^to$/i;
 export default handler;
 
