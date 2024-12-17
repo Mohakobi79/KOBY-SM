@@ -11,13 +11,13 @@ let handler = async (m, { conn, usedPrefix: _p }) => {
     before: `
 > *_乂 KOBY-MD - BOT_*
  
-
+_© ${conn.user.name}_ 
   %readmore
   `.trimStart(),
-    header: '╭┉┉┉≻ *“%category”* ≺┉┉┉',
-    body: `┆ \t ➦ _%cmd%islimit%isPremium_ `,
+    header: '╭┉┉🩵┉≻ *“%category”* ≺┉🩶┉┉',
+    body: `┆ \t ♧ _%cmd%islimit%isPremium_ `,
     footer: '┆',
-    after: `╰┉┉┉≻\t _© ${conn.user.name}_ \t`,
+    after: `╰┉┉🌼┉≻\t _© ${conn.user.name}_ \t`,
   }
 
   try {
