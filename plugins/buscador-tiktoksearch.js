@@ -93,7 +93,7 @@ function shuffleArray(array) {
 const {proto, generateWAMessageFromContent, prepareWAMessageMedia, generateWAMessageContent, getDevice} = (await import("baileys")).default
 
 let handler = async (message, { conn, text, usedPrefix, command }) => {
-if (!text) return conn.reply(message.chat, '[❗️] *¿Que quieres buscar en tiktok?*', message)
+if (!text) return conn.reply(message.chat, '*_🩶البحث في تيكتوك 🩵_*', message)
 async function createVideoMessage(url) {
 const { videoMessage } = await generateWAMessageContent({ video: { url } }, { upload: conn.waUploadToServer })
 return videoMessage
@@ -128,7 +128,7 @@ deviceListMetadata: {},
 deviceListMetadataVersion: 2
 },
 interactiveMessage: proto.Message.InteractiveMessage.fromObject({
-body: proto.Message.InteractiveMessage.Body.create({ text: '[❗️] Resultado de: ' + text }),
+body: proto.Message.InteractiveMessage.Body.create({ text: '🩶' + text }),
 footer: proto.Message.InteractiveMessage.Footer.create({ text: '🔎 `T I K T O K - S E A R C H`' }),
 header: proto.Message.InteractiveMessage.Header.create({ hasMediaAttachment: false }),
 carouselMessage: proto.Message.InteractiveMessage.CarouselMessage.fromObject({ cards: [...results] })})}}
@@ -140,5 +140,5 @@ await conn.reply(message.chat, error.toString(), message)
 
 handler.help = ['tks <txt>']
 handler.tags = ['downloader']
-handler.command = ['tiktoksearch', 'tks']
-export default handler*/
+handler.command = ['tks', 'tks']
+export default handler
