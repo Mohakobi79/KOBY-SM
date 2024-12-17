@@ -12,7 +12,7 @@ const handler = async (m, {args, usedPrefix, command}) => {
   if (!args || !args[0]) return m.reply(msg);
   let lang = args[0];
   let text = args.slice(1).join(' ');
-  const defaultLang = 'es';
+  const defaultLang = 'en';
   if ((args[0] || '').length !== 2) {
     lang = defaultLang;
     text = args.join(' ');
@@ -32,5 +32,7 @@ const handler = async (m, {args, usedPrefix, command}) => {
     }
   }
 };
-handler.command = /^(translate|traducir|t)$/i;
+handler.help = ['tr <text>']
+handler.tags = ['Toul']
+handler.command = /^(translate|tr|t)$/i;
 export default handler;
