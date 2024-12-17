@@ -1,10 +1,9 @@
-// Codigo hecho para The Mystic - Bot - MD por https://github.com/BrunoSobrino
-// By @BrunoSobrino
+
 import axios from 'axios';
 const { proto, generateWAMessageFromContent, generateWAMessageContent } = (await import("baileys")).default;
 
 let handler = async (message, { conn, text }) => {
-    if (!text) return conn.sendMessage(message.chat, { text: '[❗] ¿Qué quieres buscar en TikTok?' }, { quoted: message });
+    if (!text) return conn.sendMessage(message.chat, { text: '*_🩶البحث في ايكوتوك🩵_*' }, { quoted: message });
 
     try {
         //conn.sendMessage(message.chat, { text: global.wait }, { quoted: message });
@@ -30,7 +29,7 @@ let handler = async (message, { conn, text }) => {
                         deviceListMetadataVersion: 2
                     },
                     interactiveMessage: proto.Message.InteractiveMessage.fromObject({
-                        body: proto.Message.InteractiveMessage.Body.create({ text: `*< TIKTOK SEARCH >*\n\n` + `📌 *Texto buscado:* ${text}\n\n` + `📈 *Resultados obtenidos:*` }),
+                        body: proto.Message.InteractiveMessage.Body.create({ text: `*< TIKTOK SEARCH >*\n\n` + ` *♻️* ${text}\n\n` + `🌼` }),
                         footer: proto.Message.InteractiveMessage.Footer.create({ text: '' }),
                         header: proto.Message.InteractiveMessage.Header.create({ hasMediaAttachment: false }),
                         carouselMessage: proto.Message.InteractiveMessage.CarouselMessage.fromObject({ cards: results })
