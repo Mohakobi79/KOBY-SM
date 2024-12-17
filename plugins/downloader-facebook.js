@@ -2,7 +2,7 @@ import axios from 'axios';
 
 let handler = async (m, { conn, text, args, command, usedPrefix }) => {
   if (!args[0]) {
-    return m.reply(`❌ يرجى تقديم رابط Instagram صالح.\n• *الاستخدام:* ${usedPrefix}${command} <الرابط>`);
+    return m.reply(`🛡 يرجى تقديم رابط Instagram صالح.\n• *الاستخدام:* ${usedPrefix}${command} <الرابط>`);
   }
 
   const url = args[0];
