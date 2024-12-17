@@ -8,7 +8,7 @@ let handler = async (m, {
     command
 }) => {
 
-    let info = `masukan link! `
+    let info = `الرابط 📎! `
     if (!text) return m.reply(info)
     try {
         await m.reply(wait)
