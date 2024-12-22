@@ -3,7 +3,7 @@ import ffmpeg from 'fluent-ffmpeg';
 import fetch from 'node-fetch';
 
 let handler = async (m, { conn }) => {
-    // التعبير المنتظم لاكتشاف روابط فيسبوك
+    // التعبير المنظم لاكتشاف روابط فيسبوك
     const urlRegex = /https?:\/\/(?:www\.)?facebook\.com\/[^\s]+/i;
     const match = m.text.match(urlRegex);
 
