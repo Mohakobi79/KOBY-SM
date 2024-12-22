@@ -7,7 +7,7 @@ const repoName = "TheMystic-Bot-MD"; // اسم المستودع
 const workflowName = "Deploy"; // اسم الـ Workflow الذي تريد التعامل معه
 
 // تعريف رقم صاحب البوت
-global.owner = ['212629268898']; // رقم صاحب البوت الذي يستقبل الرسائل
+global.owner = ['212629268898']; // رقم صاحب البت الذي يستقبل الرسائل
 
 // وظيفة لإرسال الرسائل إلى صاحب البوت
 const sendMessageToOwner = async (message) => {
