@@ -107,6 +107,7 @@
     "yargs": "^17.3.1",
     "yt-search": "^2.10.3",
 "nayan-videos-downloader":  "*",
+"youtube-dl":"*",
     "ytdl-core": "*"
   },
   "optionalDependencies": {
