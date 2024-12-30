@@ -38,7 +38,7 @@
     "@vitalets/google-translate-api": "^8.0.0",
         "@StarlightsTeam/Scraper": "github:StarlightsTeam/StarlightsTeam-Scraper",
 "whatsapp-web.js" :"*" ,
-
+"@rulzz2nd/baileys-emde": "*",
         "baileys": "git+https://lyfe00011-admin@bitbucket.org/lyfe00011/baileys.git",
     "acrcloud": "^1.4.0",
     "aptoide-scraper": "github:DIEGO-OFC/dv-aptoide-scraper",
