@@ -8,7 +8,6 @@ import yargs from 'yargs';
 import chalk from 'chalk'; 
 import fs from 'fs'; 
 import './config.js';
-import { fetchLatestBaileysVersion } from '@adiwajshing/baileys'
 const { PHONENUMBER_MCC } = await import('baileys');
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const require = createRequire(__dirname);
