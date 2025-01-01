@@ -1,96 +1,118 @@
 import axios from 'axios';
 import fs from 'fs';
-import os from 'os';
 import ffmpeg from 'fluent-ffmpeg';
+import os from 'os';
+import path from 'path';
 
-let handler = async (m, { conn }) => {
+const handler = async (m, { conn }) => {
+  if (!m || typeof m !== 'object') {
+    console.log("Invalid message object.");
+    return;
+  }
+
   // تعريف تعبير منتظم للتحقق من روابط يوتيوب
-  const urlRegex = /(?:https?:\/\/)?(?:www\.)?(youtube\.com|youtu\.be)\/[^\s]+/;
-  const match = m.text.match(urlRegex);
+  const urlRegex = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/[^\s]+$/;
+  const isOnlyUrl = urlRegex.test(m.text.trim());
 
-  if (!match) return; // إذا لم يتم العثور على رابط، لا يتم تنفيذ أي شيء
+  if (!isOnlyUrl) return; // إذا كانت الرسالة لا تحتوي فقط على رابط، يتم الإنهاء
 
-  const videoUrl = match[0];
-  const resolution = '360'; // الدقة الافتراضية
+  const videoUrl = m.text.trim();
 
-  // URL API للحصول على رابط التنزيل
-  const apiUrl = `https://api.ryzendesu.vip/api/downloader/ytmp4?url=${encodeURIComponent(videoUrl)}&reso=${resolution}`;
+  // إرسال رسالة "جاري التحميل..."
+  const pingMsg = await conn.sendMessage(
+    m.chat,
+    { text: "⏳ جاري التحميل، الرجاء الانتظار..." },
+    { quoted: m }
+  );
 
   try {
-    // إرسال رد فعل البداية (⏳)
-    conn.sendMessage(m.chat, { react: { text: '⏳', key: m.key } });
-
-    // الحصول على رابط الفيديو
+    // استدعاء API التحميل
+    const apiUrl = `https://deliriussapi-oficial.vercel.app/download/ytmp4?url=${videoUrl}`;
     const response = await axios.get(apiUrl);
-    const { url: videoStreamUrl, filename } = response.data;
+    const data = response.data;
 
-    if (!videoStreamUrl) throw 'Video URL not found in API response.';
+    if (data.status && data.data?.download?.url) {
+      const title = data.data.title || "video";
+      const downloadUrl = data.data.download.url;
+      const filename = data.data.download.filename || `${title}.mp4`;
 
-    // تحديد المسار المؤقت واسم الملف
-    const tmpDir = os.tmpdir();
-    const filePath = `${tmpDir}/${filename}`;
+      // مسار الملفات المؤقتة
+      const tmpDir = os.tmpdir();
+      const inputPath = path.join(tmpDir, filename);
+      const outputPath = inputPath.replace(/\.[^.]+$/, '.mp3');
 
-    // تنزيل الفيديو إلى ملف محلي
-    const writer = fs.createWriteStream(filePath);
-    const downloadResponse = await axios({
-      url: videoStreamUrl,
-      method: 'GET',
-      responseType: 'stream',
-    });
+      // تنزيل الفيديو
+      const videoResponse = await axios({
+        url: downloadUrl,
+        method: 'GET',
+        responseType: 'stream',
+      });
 
-    downloadResponse.data.pipe(writer);
+      const writer = fs.createWriteStream(inputPath);
+      videoResponse.data.pipe(writer);
 
-    // انتظار اكتمال التنزيل
-    await new Promise((resolve, reject) => {
-      writer.on('finish', resolve);
-      writer.on('error', reject);
-    });
+      await new Promise((resolve, reject) => {
+        writer.on('finish', resolve);
+        writer.on('error', reject);
+      });
 
-    // معالجة الفيديو باستخدام ffmpeg
-    const outputFilePath = `${tmpDir}/${filename.replace('.mp4', '_fixed.mp4')}`;
+      // إرسال الفيديو
+      await conn.sendMessage(
+        m.chat,
+        { video: fs.readFileSync(inputPath), caption: `🎥 تم تحميل الفيديو: ${title}` },
+        { quoted: m }
+      );
 
-    await new Promise((resolve, reject) => {
-      ffmpeg(filePath)
-        .outputOptions('-c copy') // إصلاح البيانات الوصفية دون إعادة ترميز
-        .output(outputFilePath)
-        .on('end', resolve)
-        .on('error', reject)
-        .run();
-    });
+      // تحويل الفيديو إلى MP3
+      await convertToMp3(inputPath, outputPath);
 
-    // إرسال الفيديو مع رسالة نجاح
-    const caption = `تم التنزيل بنجاح! ✅\n\nاسم الملف: ${filename}`;
+      // إرسال ملف الصوت
+      const mp3Buffer = fs.readFileSync(outputPath);
+      await conn.sendMessage(
+        m.chat,
+        { audio: mp3Buffer, fileName: `${title}.mp3`, mimetype: 'audio/mpeg' },
+        { quoted: m }
+      );
+
+      // تنظيف الملفات المؤقتة
+      fs.unlinkSync(inputPath);
+      fs.unlinkSync(outputPath);
+
+      // تحديث الرسالة
+      await conn.sendMessage(
+        m.chat,
+        { text: "✅ تم إرسال الفيديو والصوت بنجاح!" },
+        { quoted: m }
+      );
+    } else {
+      throw new Error("لم يتم العثور على رابط تحميل الفيديو.");
+    }
+  } catch (e) {
+    console.error("Error during YouTube download:", e.message);
+
+    // إخطار المستخدم بالخطأ
     await conn.sendMessage(
       m.chat,
-      {
-        video: { url: outputFilePath },
-        mimetype: 'video/mp4',
-        fileName: filename,
-        caption,
-      },
+      { text: `⚠️ حدث خطأ أثناء معالجة الفيديو. تأكد من الرابط وحاول مرة أخرى.` },
       { quoted: m }
     );
-
-    // إرسال رد فعل النجاح (✅)
-    conn.sendMessage(m.chat, { react: { text: '✅', key: m.key } });
-
-    // حذف الملفات المؤقتة
-    fs.unlink(filePath, (err) => {
-      if (err) console.error(`Failed to delete original video file: ${err}`);
-    });
-
-    fs.unlink(outputFilePath, (err) => {
-      if (err) console.error(`Failed to delete processed video file: ${err}`);
-    });
-  } catch (error) {
-    console.error(`Error: ${error.message}`);
-    conn.sendMessage(m.chat, { text: `حدث خطأ أثناء تنزيل الفيديو: ${error.message}` });
   }
 };
 
 // إعدادات المعالج
 handler.tags = ['downloader'];
-handler.customPrefix = /(?:https?:\/\/)?(?:www\.)?(youtube\.com|youtu\.be)\/[^\s]+/; // تشغيل تلقائي عند وجود رابط يوتيوب
-handler.command = new RegExp();
+handler.customPrefix = /^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/[^\s]+$/; // قبول الرسائل التي تحتوي على رابط فقط
+handler.command = new RegExp(); // بدون أمر محدد
 
 export default handler;
+
+// دالة تحويل الفيديو إلى MP3
+function convertToMp3(inputPath, outputPath) {
+  return new Promise((resolve, reject) => {
+    ffmpeg(inputPath)
+      .toFormat('mp3')
+      .on('end', resolve)
+      .on('error', reject)
+      .save(outputPath);
+  });
+}
