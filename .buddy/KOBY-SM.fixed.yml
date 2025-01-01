@@ -3,6 +3,9 @@
   - type: "PUSH"
     refs:
     - "refs/heads/master"
+  - type: "CREATE_REF"
+    refs:
+    - "refs/heads/master"
   fail_on_prepare_env_warning: true
   actions:
   - action: "npm test"
