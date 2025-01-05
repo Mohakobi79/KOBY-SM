@@ -6,8 +6,8 @@ const handler = async (m, { conn }) => {
   const urlRegex = /https?:\/\/(?:www\.)?instagram\.com\/[^\s]+/i;
   const match = m.text.match(urlRegex);
 
-  if (!match) {
-    return; // لا يوجد رابط إنستغرام
+  if (!match || m.text.trim() !== match[0]) {
+    return; // لا يوجد رابط إنستغرام أو يوجد نص إضافي مع الرابط
   }
 
   const videoUrl = match[0];
