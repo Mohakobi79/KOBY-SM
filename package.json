@@ -40,8 +40,9 @@
     "@shineiichijo/marika": "^2.0.6",
     "@vitalets/google-translate-api": "^8.0.0",
 "whatsapp-web.js" :"*",
-   
+       "baileys": "https://github.com/Eximinati/Baileys-.git",
      "baileys":"npm:@rulzz2nd/baileys-emde",
+    "baileys": "npm:@queenanya/baileys@^6.8.2",
     "acrcloud": "^1.4.0",
     "aptoide-scraper": "github:DIEGO-OFC/dv-aptoide-scraper",
     "awesome-phonenumber": "^2.68.0",
