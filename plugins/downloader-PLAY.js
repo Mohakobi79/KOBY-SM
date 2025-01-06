@@ -21,7 +21,7 @@ var handler = async (m, { text, conn, args, command, usedPrefix }) => {
             footer: "©2020", // العلامة التجارية
             buttons: [
                 {
-                    buttonId: `.play ${videoInfo.url}`,
+                    buttonId: `.ytmp3 ${videoInfo.url}`,
                     buttonText: { displayText: "AUDIO 🎧" }
                 },
                 {
