@@ -1,52 +1,102 @@
-import yts from 'yt-search'; // Pastikan Anda sudah menginstal yt-search
+import makeWASocket from 'baileys';
+import yts from 'yt-search';
 
-const handler = async (m, { conn, text }) => {
-    if (!text) return conn.reply(m.chat, 'Masukkan judul lagu', m);
-    m.reply(wait);
-    
-    let res;
-    try {
-        res = await yts(text);
-    } catch (error) {
-        console.error(error); // Log error ke konsol untuk debugging
-        return conn.reply(m.chat, 'Terjadi kesalahan saat melakukan pencarian, silahkan coba lagi nanti', m);
+var handler = async (m, { text, conn, args, command, usedPrefix }) => {
+    if (!text) {
+        await conn.sendMessage(m.chat, { text: "يرجى إدخال نص البحث. مثال: yts تعلم البرمجة" }, { quoted: m });
+        return;
     }
 
-    if (!res || !res.videos || res.videos.length === 0) {
-        return conn.reply(m.chat, 'Tidak ada hasil ditemukan', m);
-    }
+    // البحث عن الفيديو
+    const videoInfo = await getFirstVideoInfo(text);
 
-    let hsl = res.videos[0]; // Ambil video pertama dari hasil pencarian
-    let url = hsl.url;
-    let thumbnail = hsl.thumbnail;
-    let title = hsl.title;
-    let duration = hsl.timestamp;
-    let views = hsl.views;
-    let author = hsl.author.name;
+    if (videoInfo) {
+        // إعداد الرسالة مع الأزرار
+        const message = {
+            text: `العنوان: ${videoInfo.title}\n` +
+                  `الوصف: ${videoInfo.description}\n` +
+                  `الرابط: ${videoInfo.url}\n` +
+                  `المدة: ${videoInfo.duration}\n` +
+                  `المشاهدات: ${videoInfo.views}`,
+            footer: "©2020", // العلامة التجارية
+            buttons: [
+                {
+                    buttonId: `.play ${videoInfo.url}`,
+                    buttonText: { displayText: "AUDIO 🎧" }
+                },
+                {
+                    buttonId: `${videoInfo.url}`,
+                    buttonText: { displayText: "VIDEO 🎥" }
+                }
+            ],
+            headerType: 1, // استخدام النص كعنوان
+            viewOnce: true // عرض مرة واحدة
+        };
 
-    try {
-        // Mengirim gambar thumbnail dengan informasi detail
+        // إرسال الصورة مع الرسالة
         await conn.sendMessage(m.chat, {
-            image: { url: thumbnail },
-            caption: `*Judul:* ${title}\n*Durasi:* ${duration}\n*Views:* ${views}\n*Author:* ${author}\n*Link:* ${url}`,
+            image: { url: 'https://qu.ax/hvhcP.jpg' },
+            caption: message.text,
+            footer: message.footer,
+            buttons: message.buttons,
+            headerType: message.headerType,
+            viewOnce: message.viewOnce
         }, { quoted: m });
 
-        // Mengirim audio menggunakan sendMessage
-        await conn.sendMessage(m.chat, {
-            audio: { url: `http://alibaka.botwaaa.web.id:8081/yt/dl?url=${encodeURIComponent(url)}` },
-            mimetype: 'audio/mp4',
-            ptt: true, // Set true jika ingin mengirim sebagai pesan suara
-        }, { quoted: m });
-
-        
-    } catch (e) {
-        console.error(e); // Log error ke konsol untuk debugging
-        return conn.reply(m.chat, 'Terjadi kesalahan saat memuat data, silahkan coba lagi nanti', m);
+    } else {
+        // إرسال رسالة إذا لم يتم العثور على فيديو
+        await conn.sendMessage(m.chat, { text: "لم يتم العثور على نتائج." }, { quoted: m });
     }
 };
 
-handler.help = ["play <judul lagu>"];
-handler.tags = ["music"];
-handler.command = ["ply"];
+// دالة لاستخراج معلومات الفيديو الأول
+async function getFirstVideoInfo(query) {
+    try {
+        const searchResults = await yts(query);
+        const firstVideo = searchResults.videos[0];
 
+        if (firstVideo) {
+            return {
+                title: firstVideo.title,
+                description: firstVideo.description,
+                url: firstVideo.url,
+                duration: firstVideo.timestamp,
+                views: firstVideo.views
+            };
+        } else {
+            return null;
+        }
+    } catch (error) {
+        console.error('حدث خطأ:', error);
+        return null;
+    }
+}
+
+// تحديد الأوامر التي ستشغل هذا المعالج
+handler.command = /^play$/i;
 export default handler;
+
+// إنشاء اتصال باستخدام مكتبة Baileys
+export async function start() {
+    const conn = makeWASocket();
+    conn.ev.on('messages.upsert', async ({ messages }) => {
+        const m = messages[0];
+        if (!m.message) return;
+
+        const args = m.body ? m.body.split(' ') : [];
+        const command = args.shift().toLowerCase();
+        const text = args.join(' ');
+
+        // استدعاء المعالج إذا تطابق الأمر
+        if (handler.command.test(command)) {
+            try {
+                await handler(m, { text, conn, args, command, usedPrefix: '!' });
+            } catch (error) {
+                console.error('خطأ أثناء معالجة الرسالة:', error);
+            }
+        }
+    });
+}
+
+// تشغيل البوت
+start();
