@@ -52,7 +52,7 @@ const handler = async (m, { conn, text, usedPrefix, command }) => {
   }
 };
 
-handler.command = handler.help = ['play'];
+handler.command = handler.help = ['ytmp3'];
 handler.tags = ['downloader'];
 
 
