@@ -11,15 +11,15 @@ const handler = async (m, { conn }) => {
   }
 
   const videoUrl = match[0];
-  await m.reply(wait);
+  await m.reply('⏳ جاري معالجة الرابط...');
 
   try {
-    // استدعاء API لتنزيل الفيديو
-    const api = await fetch(`https://deliriussapi-oficial.vercel.app/download/instagram?url=${videoUrl}`);
+    // استدعاء API لتنزيل الوسائط
+    const api = await fetch(`https://weeb-api.vercel.app/insta?url=${videoUrl}`);
     const json = await api.json();
-    const { data } = json;
+    const { urls } = json;
 
-    for (let item of data) {
+    for (let item of urls) {
       const mediaUrl = item.url;
 
       if (item.type === 'image') {
