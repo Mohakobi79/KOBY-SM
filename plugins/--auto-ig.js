@@ -11,7 +11,7 @@ const handler = async (m, { conn }) => {
   }
 
   const videoUrl = match[0];
-  await m.reply('⏳ جاري معالجة الرابط...');
+  await m.reply(wait);
 
   try {
     // استدعاء API لتنزيل الوسائط
