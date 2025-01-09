@@ -36,8 +36,7 @@ jobs:
             ffmpeg \
             imagemagick \
             webp && \
-          sudo apt-get upgrade -y && \
-sudo rm -rf /var/lib/apt/lists/*
+          sudo apt-get upgrade -y
 
       # Install Node.js
       - name: Install Node.js
