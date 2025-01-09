@@ -155,7 +155,7 @@ const connectionOptions = {
     //msgRetryCounterMap,
     defaultQueryTimeoutMs: undefined,
     cachedGroupMetadata: (jid) => global.conn.chats[jid] ?? {},
-    version,
+    version: [2, 3000, 1015901307],
     //userDeviceCache: msgRetryCounterCache <=== quien fue el pendejo?????
 };
 
@@ -189,7 +189,7 @@ rl.close()
         setTimeout(async () => {
             let codigo = await conn.requestPairingCode(numeroTelefono)
             codigo = codigo?.match(/.{1,4}/g)?.join("-") || codigo
-            console.log(chalk.yellow('🌼 HELLO IN MY BOT...🌤'));
+            console.log(chalk.yellow('[ ℹ️ ] introduce el código de emparejamiento en WhatsApp.'));
             console.log(chalk.black(chalk.bgGreen(`Su código de emparejamiento: `)), chalk.black(chalk.white(codigo)))
         }, 3000)
 }}
@@ -197,7 +197,7 @@ rl.close()
 
 conn.isInit = false;
 conn.well = false;
-conn.logger.info(`🌼 HELLO IN MY BOT...🌤\n`);
+conn.logger.info(`[ ℹ️ ] Cargando...\n`);
 
 if (!opts['test']) {
   if (global.db) {
@@ -268,13 +268,13 @@ fs.watch(dirToWatchccc, (eventType, filename) => {
 
 function purgeSession() {
 let prekey = []
-let directorio = readdirSync("./KOBYsession")
+let directorio = readdirSync("./MysticSession")
 let filesFolderPreKeys = directorio.filter(file => {
 return file.startsWith('pre-key-') /*|| file.startsWith('session-') || file.startsWith('sender-') || file.startsWith('app-') */
 })
 prekey = [...prekey, ...filesFolderPreKeys]
 filesFolderPreKeys.forEach(files => {
-unlinkSync(`./KOBYsession/${files}`)
+unlinkSync(`./MysticSession/${files}`)
 })
 } 
 
@@ -299,7 +299,7 @@ console.log(chalk.bold.red(`[ ℹ️ ] Algo salio mal durante la eliminación, a
 }}
 
 function purgeOldFiles() {
-const directories = ['./KOBYsession/', './jadibts/']
+const directories = ['./MysticSession/', './jadibts/']
 const oneHourAgo = Date.now() - (60 * 60 * 1000)
 directories.forEach(dir => {
 readdirSync(dir, (err, files) => {
@@ -339,7 +339,7 @@ if (opcion == '1' || methodCodeQR) {
   }
 let reason = new Boom(lastDisconnect?.error)?.output?.statusCode;
 if (reason == 405) {
-await fs.unlinkSync("./KOBYsession/" + "creds.json")
+await fs.unlinkSync("./MysticSession/" + "creds.json")
 console.log(chalk.bold.redBright(`[ ⚠ ] Conexión replazada, Por favor espere un momento me voy a reiniciar...\nSi aparecen error vuelve a iniciar con : npm start`)) 
 process.send('reset')}
 if (connection === 'close') {
@@ -531,7 +531,7 @@ setInterval(async () => {
   if (stopped === 'close' || !conn || !conn?.user) return;
   const _uptime = process.uptime() * 1000;
   const uptime = clockString(_uptime);
-  const bio = `🌼 Uptime:♻️ ${uptime}🌤`;
+  const bio = `• Activo: ${uptime} | TheMystic-Bot-MD`;
   await conn?.updateProfileStatus(bio).catch((_) => _);
 }, 60000);
 function clockString(ms) {
