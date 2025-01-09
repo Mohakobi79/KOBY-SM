@@ -44,6 +44,7 @@
     "acrcloud": "^1.4.0",
     "ffmpeg": "*",
     "file-type": "^18.0.0",
+"async-lock":"*",
     "fluent-ffmpeg": "*",
     "form-data": "^4.0.0",
     "formdata-node": "^5.0.0",
