@@ -3,7 +3,7 @@ import yts from 'yt-search';
 
 var handler = async (m, { text, conn, args, command, usedPrefix }) => {
     if (!text) {
-        await conn.sendMessage(m.chat, { text: "يرجى إدخال نص البحث. مثال: yts تعلم البرمجة" }, { quoted: m });
+        await conn.sendMessage(m.chat, { text: "YOUTUBE URL OR TITLE" }, { quoted: m });
         return;
     }
 
