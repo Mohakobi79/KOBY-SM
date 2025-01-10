@@ -47,6 +47,6 @@ const handler = async (m, { conn, text }) => {
 
 handler.help = ["play <judul lagu>"];
 handler.tags = ["music"];
-handler.command = ["ply"];
+handler.command = ["ply0"];
 
 export default handler;
