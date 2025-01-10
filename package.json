@@ -57,6 +57,7 @@
         "lowdb": "^3.0.0",
     "md5": "^2.3.0",
     "moment-timezone": "^0.5.41",
+    "@google/generative-ai": "^0.21.0",
     "mongoose": "^7.0.0",
     "node-cache": "*",
     "node-fetch": "*",
