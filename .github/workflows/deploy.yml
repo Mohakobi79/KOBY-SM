@@ -18,12 +18,6 @@ jobs:
       actions: write # Needed to cancel other workflows
 
     steps:
-      # Step to cancel previous workflows
-      - name: Cancel Previous Runs
-        uses: styfle/cancel-workflow-action@0.11.0
-        with:
-          access_token: ${{ secrets.GITHUB_TOKEN }}
-
       # Clone the repository
       - name: Clone repository
         uses: actions/checkout@v4
@@ -41,6 +35,12 @@ jobs:
       # Install dependencies
       - name: Install Dependencies
         run: npm install 
+
+      # Cancel Running Workflows Before npm start
+      - name: Cancel Running Workflows Before Build
+        uses: styfle/cancel-workflow-action@0.11.0
+        with:
+          access_token: ${{ secrets.GITHUB_TOKEN }}
 
       # Build the project
       - name: Build Project
