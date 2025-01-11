@@ -24,7 +24,7 @@ jobs:
         with:
           access_token: ${{ secrets.GITHUB_TOKEN }}
 
-      # Clone the repository
+      # تنزيل البوت
       - name: Clone repository
         uses: actions/checkout@v4
 
@@ -36,7 +36,10 @@ jobs:
     - name: Install FFmpeg
       run: sudo apt-get install -y ffmpeg
 
-      # Install dependencies
+      # تنزيل الملفات 
       - name: Install Dependencies
         run: npm install
-             npm start
+              # تشغيل البوت
+      - name: Install Dependencies
+        run: npm start
+             
