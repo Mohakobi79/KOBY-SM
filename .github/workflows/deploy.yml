@@ -33,8 +33,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: lts/*
-     - name: Install FFmpeg
-      run: sudo apt-get install -y ffmpeg
 
       # Install dependencies
       - name: Install Dependencies
